@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 namespace Final
 {
-    class ManejoDeUsuario
+    class UsserManagment
     {
         List<Client> clients;
         List<Admin> admins;
@@ -13,7 +13,7 @@ namespace Final
         public Bank bank;
         public Admin admin;
         public Client client;
-        public ManejoDeUsuario(List<Client> clients, List<Local> locales, Bank bank)
+        public UsserManagment(List<Client> clients, List<Local> locales, Bank bank)
         {
             this.clients = new List<Client>();
             this.admins = new List<Admin>();
@@ -22,7 +22,7 @@ namespace Final
         }
 
 
-        public void DescribriLocales2()
+        public void DescribeLocals2()
         {
             admin.DescribirLocales
             int LargoLocales =
@@ -31,31 +31,31 @@ namespace Final
                 Console.WriteLine(l.GetNameLocal());
             }
         }
-        public void CrearCliente(Client client)
+        public void AddClient(Client client)
         {
             this.clients.Add(client);
         }
-        public void CrearAdmin(Admin admin)
+        public void CreateAdmin(Admin admin)
         {
             this.admins.Add(admin);
 
         }
-        public void CrearLocal(Local local)
+        public void CreateLocal(Local local)
         {
             locales.Add(local);
         }
-        public bool VerificarRut2(int Rut)
+        public bool VerificationRut2(int Rut)
         {
-            foreach (Admin a in admins)
+            foreach (Admin admin in admins)
             {
-                if (a.GetRut() == Rut)
+                if (admin.GetRut() == Rut)
                 {
                     return true;
                 }
             }
             return false;
         }
-        public bool VerificarRut(int Rut)
+        public bool ClientRutVerification(int Rut)
         {
             foreach (Client c in clients)
             {
@@ -66,7 +66,7 @@ namespace Final
             }
             return false;
         }
-        public Client VerificarRutInicioDeSesion(int rut)
+        public Client ClientLoginRutVerification(int rut)
         {
             foreach (Client c in clients)
             {
@@ -77,18 +77,18 @@ namespace Final
             }
             return null;
         }
-        public Client VerificarClaveClientInicioDeSesion(string clave)
+        public Client ClientLoginPassVerification(string password)
         {
             foreach (Client c in clients)
             {
-                if (c.GetClave() == clave)
+                if (c.GetClave() == password)
                 {
                     return c;
                 }
             }
             return null;
         }
-        public Admin VerificarRutAdmin(int rut)
+        public Admin AdminRutVerification(int rut)
         {
             foreach (Admin a in admins)
             {
@@ -99,7 +99,7 @@ namespace Final
             }
             return null;
         }
-        public Admin VerificarRutAdminIncioDeSesion(int rut) // para registrar
+        public Admin AdminLoginRutVerification(int rut) // para registrar
         {
             foreach (Admin a in admins)
             {
@@ -110,55 +110,55 @@ namespace Final
             }
             return null;
         }
-        public Admin VerificarClaveAdminInicioDeSesion(string clave)
+        public Admin AdminLoginPassVerification(string password)
         {
             foreach (Admin a in admins)
             {
-                if (a.GetClave() == clave)
+                if (a.GetClave() == password)
                 {
                     return a;
                 }
             }
             return null;
         }
-        public void CrearMenu()
+        public void CreateMenu()
         {
             while (true)
             {
                 Console.WriteLine("1.Nuevo Cliente" + Environment.NewLine + "2.Nuevo Administrador de Locales" + Environment.NewLine + "3.Salir");
-                string opcion1;
-                opcion1 = Convert.ToString(Console.ReadLine());
-                if (opcion1 == "1")
+                string option1;
+                option1 = Convert.ToString(Console.ReadLine());
+                if (option1 == "1")
                 {
                     Console.WriteLine("Ingrese su nombre");
-                    string Nombre;
-                    Nombre = Console.ReadLine();
+                    string name;
+                    name = Console.ReadLine();
                     Console.WriteLine("Ingrese su Rut");
                     int rut;
                     rut = Convert.ToInt32(Console.ReadLine());
-                    if (VerificarRut(rut))
+                    if (ClientRutVerification(rut))
                     {
                         Console.WriteLine("Este rut ya existe");
                     }
                     else
                     {
-                        string Mail;
+                        string mail;
                         Console.WriteLine("Ingrese su Mail");
-                        Mail = Console.ReadLine();
+                        mail = Console.ReadLine();
                         while (true)
                         {
-                            string Clave;
+                            string password;
                             Console.WriteLine("Ingrese su Clave: ");
-                            Clave = Console.ReadLine();
+                            password = Console.ReadLine();
                             Console.WriteLine("Compruebe su clave: ");
                             string clave2;
                             clave2 = Console.ReadLine();
-                            if (Clave == clave2)
+                            if (password == clave2)
                             {
                                 Console.WriteLine("Ingrese su Numero de Cuenta");
                                 string num;
                                 num = Convert.ToString(Console.ReadLine());
-                                bank.AgregarCuenta(num);
+                                bank.AddAccount(num);
                                 string claveBanco;
                                 while (true)
                                 {
@@ -169,12 +169,12 @@ namespace Final
                                     c2 = Console.ReadLine();
                                     if (claveBanco == c2)
                                     {
-                                        bank.AgregarClave(claveBanco);
-                                        int SaldoDisp;
+                                        bank.AddPassword(claveBanco);
+                                        int saldoDisp;
                                         Random dinero = new Random();
-                                        SaldoDisp = dinero.Next(10000, 500000);
-                                        client = new Client(Nombre, Mail, Clave, rut, claveBanco, num, SaldoDisp);
-                                        CrearCliente(client);
+                                        saldoDisp = dinero.Next(10000, 500000);
+                                        client = new Client(name, mail, password, rut, claveBanco, num, saldoDisp);
+                                        AddClient(client);
                                         Console.WriteLine("Has sido Agregado con exito");
                                         break;
                                     }
@@ -192,36 +192,36 @@ namespace Final
                         }
                     }
                 }
-                else if (opcion1 == "2")
+                else if (option1 == "2")
                 {
                     Console.WriteLine("Ingrese su nombre");
-                    string Nombre;
-                    Nombre = Console.ReadLine();
+                    string name;
+                    name = Console.ReadLine();
                     Console.WriteLine("Ingrese su Rut");
                     int rut;
                     rut = Convert.ToInt32(Console.ReadLine());
-                    if (VerificarRut2(rut))
+                    if (VerificationRut2(rut))
                     {
                         Console.WriteLine("Este rut ya existe");
                     }
                     else
                     {
-                        bank.AgregarNombreAdmin(rut);
-                        string Mail;
+                        bank.AddAdminName(rut);
+                        string mail;
                         Console.WriteLine("Ingrese su Mail");
-                        Mail = Console.ReadLine();
+                        mail = Console.ReadLine();
                         while (true)
                         {
-                            string Clave;
+                            string password;
                             Console.WriteLine("Ingrese su Clave: ");
-                            Clave = Console.ReadLine();
+                            password = Console.ReadLine();
                             Console.WriteLine("Compruebe su clave: ");
-                            string clave2;
-                            clave2 = Console.ReadLine();
-                            if (Clave == clave2)
+                            string password2;
+                            password2 = Console.ReadLine();
+                            if (password == password2)
                             {
-                                admin = new Admin(Nombre, Mail, Clave, rut, null);
-                                CrearAdmin(admin);
+                                admin = new Admin(name, mail, password, rut, null);
+                                CreateAdmin(admin);
                                 Console.WriteLine("Has sido Agregado con exito");
                                 break;
                             }
@@ -232,73 +232,73 @@ namespace Final
                         }
                     }
                 }
-                else if (opcion1 == "3")
+                else if (option1 == "3")
                 {
                     break;
                 }
             }
         }
-        public void InicioSesionAdmin()
+        public void AdminLogin()
         {
             Console.WriteLine("Ingrese Su Rut :");
             int rut;
             rut = Convert.ToInt32(Console.ReadLine());
-            admin = this.VerificarRutAdminIncioDeSesion(rut);
+            admin = this.AdminLoginRutVerification(rut);
             if (admin != null)
             {
                 Console.WriteLine("Ingrese su Clave: ");
-                string clave;
-                clave = Console.ReadLine();
-                admin = this.VerificarClaveAdminInicioDeSesion(clave);
+                string password;
+                password = Console.ReadLine();
+                admin = this.AdminLoginPassVerification(password);
                 while (true)
                 {
                     if (admin != null)
                     {
                         Console.WriteLine("Bienvenido" + " " + admin.GetName());
-                        string opcion2;
+                        string option2;
                         Console.WriteLine("1. Crear Nuevo Local" + Environment.NewLine + "2.Administrar Locales" + Environment.NewLine + "3.Cerrar Sesion");
-                        opcion2 = Convert.ToString(Console.ReadLine());
+                        option2 = Convert.ToString(Console.ReadLine());
                         while (true)
                         {
-                            if (opcion2 == "1")
+                            if (option2 == "1")
                             {
-                                string nombre;
+                                string name;
                                 string delivery;
-                                string direccion;
+                                string direction;
                                 Console.WriteLine("Ingrese Nombre del Local :");
-                                nombre = Console.ReadLine();
+                                name = Console.ReadLine();
                                 Console.WriteLine("Ingrese Direccion del Local :");
-                                direccion = Console.ReadLine();
+                                direction = Console.ReadLine();
                                 Console.WriteLine("Ingrese el Codigo Identificador Para su Local " + Environment.NewLine + "Si pertenece a la Uandes Escriba Uandes seguido de su RUT" + Environment.NewLine + "Si es fuera de la Uandes ingrese Outside seguido de su Rut");
-                                string cod;
-                                cod = Console.ReadLine();
+                                string code;
+                                code = Console.ReadLine();
                                 Console.WriteLine("El Local tiene Delivery" + Environment.NewLine + "1.Si" + Environment.NewLine + "2.No");
                                 delivery = Convert.ToString(Console.ReadLine());
                                 if (delivery == "1")
                                 {
-                                    Local local = new Local(true, null, direccion, 0, nombre, cod);
+                                    Local local = new Local(true, null, direction, 0, name, code);
                                     admin.AgregarLocal(local);
-                                    CrearLocal(local);
+                                    CreateLocal(local);
                                     Console.WriteLine("Desea Agregar Productos Ahora Para este Local" + Environment.NewLine + "1.Si" + Environment.NewLine + "2.No");
-                                    string opcion3;
-                                    opcion3 = Convert.ToString(Console.ReadLine());
-                                    if (opcion3 == "1")
+                                    string option3;
+                                    option3 = Convert.ToString(Console.ReadLine());
+                                    if (option3 == "1")
                                     {
                                         while (true)
                                         {
                                             Console.WriteLine("Tus Productos son: ");
-                                            local.DescribirProductos();
+                                            local.ListProducts();
                                             Console.WriteLine("Ingrese Nombre del Producto: ");
                                             string nprod;
-                                            int Stock;
-                                            int Precio;
+                                            int stock;
+                                            int price;
                                             nprod = Console.ReadLine();
                                             Console.WriteLine("Ingrese Precio del Producto :");
-                                            Precio = Convert.ToInt32(Console.ReadLine());
+                                            price = Convert.ToInt32(Console.ReadLine());
                                             Console.WriteLine("Ingrese Stock del Producto :");
-                                            Stock = Convert.ToInt32(Console.ReadLine());
-                                            Producto producto = new Producto(Stock, nprod, Precio);
-                                            local.AgregarProducto(producto);
+                                            stock = Convert.ToInt32(Console.ReadLine());
+                                            Product producto = new Product(stock, nprod, price);
+                                            local.AddProduct(producto);
                                             Console.WriteLine("Desea Agregar Mas Productos" + Environment.NewLine + "1.Si" + Environment.NewLine + "2.No");
                                             string op0;
                                             op0 = Convert.ToString(Console.ReadLine());
@@ -311,29 +311,29 @@ namespace Final
                                 }
                                 else if (delivery == "2")
                                 {
-                                    Local local = new Local(false, null, direccion, 0, nombre, cod);
+                                    Local local = new Local(false, null, direction, 0, name, code);
                                     admin.AgregarLocal(local);
-                                    CrearLocal(local);
+                                    CreateLocal(local);
                                     Console.WriteLine("Desea Agregar Productos Ahora Para este Local" + Environment.NewLine + "1.Si" + Environment.NewLine + "2.No");
-                                    string opcion3;
-                                    opcion3 = Convert.ToString(Console.ReadLine());
-                                    if (opcion3 == "1")
+                                    string option3;
+                                    option3 = Convert.ToString(Console.ReadLine());
+                                    if (option3 == "1")
                                     {
                                         while (true)
                                         {
                                             Console.WriteLine("Tus Productos son: ");
-                                            local.DescribirProductos();
+                                            local.ListProducts();
                                             Console.WriteLine("Ingrese Nombre del Producto: ");
                                             string nprod;
-                                            int Stock;
-                                            int Precio;
+                                            int stock;
+                                            int price;
                                             nprod = Console.ReadLine();
                                             Console.WriteLine("Ingrese Precio del Producto :");
-                                            Precio = Convert.ToInt32(Console.ReadLine());
+                                            price = Convert.ToInt32(Console.ReadLine());
                                             Console.WriteLine("Ingrese Stock del Producto :");
-                                            Stock = Convert.ToInt32(Console.ReadLine());
-                                            Producto producto = new Producto(Stock, nprod, Precio);
-                                            local.AgregarProducto(producto);
+                                            stock = Convert.ToInt32(Console.ReadLine());
+                                            Product producto = new Product(stock, nprod, price);
+                                            local.AddProduct(producto);
                                             Console.WriteLine("Desea Agregar Mas Productos" + Environment.NewLine + "1.Si" + Environment.NewLine + "2.No");
                                             string op0;
                                             op0 = Convert.ToString(Console.ReadLine());
@@ -345,7 +345,7 @@ namespace Final
                                     }
                                 }
                             }
-                            else if (opcion2 == "2")
+                            else if (option2 == "2")
                             {
                                 // string opcion3;
                                 Console.WriteLine("Los locales son:");
@@ -366,18 +366,18 @@ namespace Final
                 Console.WriteLine("ESTE RUT NO ESTA INSCRITO EN NUESTRAS BASE DE DATOS COMO ADMINISTRADOR DE LOCAL");
             }
         }
-        public void InicioSesionClient()
+        public void LoginClient()
         {
             Console.WriteLine("Ingrese Su Rut");
             int rut;
             rut = Convert.ToInt32(Console.ReadLine());
-            client = this.VerificarRutInicioDeSesion(rut);
+            client = this.ClientLoginRutVerification(rut);
             if (client != null)
             {
                 Console.WriteLine("Ingrese su Clave: ");
-                string clave;
-                clave = Console.ReadLine();
-                client = this.VerificarClaveClientInicioDeSesion(clave);
+                string password;
+                password = Console.ReadLine();
+                client = this.ClientLoginPassVerification(password);
                 while (true)
                 {
                     if (client != null)
@@ -386,16 +386,16 @@ namespace Final
                         {
                             Console.WriteLine("Bievenido" + " " + client.GetName() + " " + "Su Saldo es: " + " " + client.GetDinero());
                             Console.WriteLine("Que Desea Hacer" + Environment.NewLine + "1.Comprar" + Environment.NewLine + "2. Ver Locales" + "3.Cerrar Sesion");
-                            string opcion4;
-                            opcion4 = Convert.ToString(Console.ReadLine());
-                            if (opcion4 == "1")
+                            string option4;
+                            option4 = Convert.ToString(Console.ReadLine());
+                            if (option4 == "1")
                             {
                                 
                             }
-                            else if (opcion4 == "2")
+                            else if (option4 == "2")
                             {
                                 Console.WriteLine("Los Locales son : ");
-                                DescribriLocales2();
+                                DescribeLocals2();
                             }
                             else
                             {
@@ -416,3 +416,4 @@ namespace Final
         }
     }
 }
+

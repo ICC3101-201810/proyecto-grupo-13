@@ -5,59 +5,59 @@ using System.Threading;
 
 namespace Final
 {
-    class Compras
+    class Purchase
     {
         Local local;
-        List<Producto> carrito = new List<Producto>();
-        public Compras(Local local)
+        List<Product> shoppingCart = new List<Product>();
+        public Purchase(Local local)
         {
             this.local = local;
         }
-        public List<Producto> GetCarrito()
+        public List<Product> GetShoppingCart()
         {
-            return carrito;
+            return shoppingCart;
         }
-        public void Agregar()
+        public void AddToCart()
         {
             int input;
-            Limpiar();
-            List<Producto> menu = local.GetMenu();
-            int LargoMenu = menu.Count;
+            Cleaner();
+            List<Product> menu = local.GetMenu();
+            int largeMenu = menu.Count;
             while (true)
             {
                 Console.WriteLine("---> SELECCIONE UN PRODUCTO PARA AGREGAR O DEJAR EN BLANCO PARA SALIR <---");
-                for (int i = 0; i < LargoMenu; i++)
+                for (int i = 0; i < largeMenu; i++)
                 {
-                    Producto producto = menu[i];
-                    string NombreProducto = producto.GetNombre();
-                    int PrecioProducto = producto.GetPrecio();
-                    int Stock = producto.GetStock();
-                    Console.WriteLine(String.Format("\t{0}. {1} - ${2} - Stock: {3}", i, NombreProducto, PrecioProducto, Stock));
+                    Product producto = menu[i];
+                    string productName = producto.GetName();
+                    int productPrice = producto.GetPrice();
+                    int stock = producto.GetStock();
+                    Console.WriteLine(String.Format("\t{0}. {1} - ${2} - Stock: {3}", i, productName, productPrice, stock));
                 }
-                List<Producto> carro = GetCarrito();
-                Price(carro);
+                List<Product> cart = GetShoppingCart();
+                FinalPrice(cart);
                 Console.Write("=> Su respuesta: ");
                 string linea = Console.ReadLine();
                 if (linea == "")
                 {
-                    if (carrito.Count == 0)
+                    if (shoppingCart.Count == 0)
                     {
                         Console.WriteLine("=> Debe seleccionar un elemento para proceder con su compra.");
                         Thread.Sleep(1000);
-                        Limpiar();
+                        Cleaner();
                         continue;
                     }
-                    Limpiar();
-                    Procesando();
+                    Cleaner();
+                    Processing();
                     Thread.Sleep(100);
                     break;
                 }
                 input = int.Parse(linea);
-                if (input >= LargoMenu || input < 0)
+                if (input >= largeMenu || input < 0)
                 {
                     Console.WriteLine("Opcion incorrecta, intente nuevamente");
                     Thread.Sleep(1000);
-                    Limpiar();
+                    Cleaner();
                     continue;
                 }
                 else
@@ -66,34 +66,34 @@ namespace Final
                     {
                         Console.WriteLine("No hay stock");
                         Thread.Sleep(1000);
-                        Limpiar();
+                        Cleaner();
                         continue;
                     }
-                    carrito.Add(menu[input]);
-                    menu[input].disminuirStock();
+                    shoppingCart.Add(menu[input]);
+                    menu[input].DecreaseStock();
                     Console.WriteLine("Producto agregado correctamente.");
                     Thread.Sleep(750);
-                    Limpiar();
+                    Cleaner();
                 }
             }
         }
 
-        public void Limpiar()
+        public void Cleaner()
         {
             Console.Clear();
             Console.WriteLine("\t\t ### Fast Food ###\n");
         }
 
-        public bool VerificarDelivery()
+        public bool CheckDelivery()
         {
             string Linea;
-            Limpiar();
+            Cleaner();
             Console.WriteLine("Escriba (1) si desea entrega por delivery.");
             Console.WriteLine("Escriba (2) si desea retirar pedido en local: ");
             Linea = Console.ReadLine();
             int respuestaDelivery = int.Parse(Linea);
             Thread.Sleep(0500);
-            Limpiar();
+            Cleaner();
 
             while (respuestaDelivery != 2 && respuestaDelivery != 1)
             {
@@ -103,27 +103,27 @@ namespace Final
                 Linea = Console.ReadLine();
                 respuestaDelivery = int.Parse(Linea);
                 Thread.Sleep(0250);
-                Limpiar();
+                Cleaner();
             }
             if (respuestaDelivery == 1) { return true; }
             else { return false; }
         }
-        public void Price(List<Producto> carrito)
+        public void FinalPrice(List<Product> carrito)
         {
             int price;
-            int Sumatoria = 0;
+            int summation = 0;
             for (int i = 0; i < carrito.Count; i++)
             {
-                Producto producto = carrito[i];
-                price = producto.GetPrecio();
-                Sumatoria += price;
+                Product product = carrito[i];
+                price = product.GetPrice();
+                summation += price;
             }
-            Console.WriteLine("=> Precio actual de su compra: " + Sumatoria);
+            Console.WriteLine("=> Precio actual de su compra: " + summation);
 
         }
-        public void Procesando()
+        public void Processing()
         {
-            Limpiar();
+            Cleaner();
             Console.Write("=> Procesando su compra");
             Console.Write(".");
             Thread.Sleep(1000);

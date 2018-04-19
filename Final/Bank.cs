@@ -7,36 +7,34 @@ namespace Final
 {
     public class Bank
     {
-        List<string> Cuentas;
-        List<string> Claves;
-        List<int> RutAdmin;
-        List<int> DineroAcumulado;
+        List<string> accounts;
+        List<string> passwords;
+        List<int> rutAdmin;
+        List<int> moneyAccumulate;
         public Bank(List<string> Cuentas, List<string> Claves, List<int> RutAdmin, List<int> DineroAcumulado)
         {
-            this.Cuentas = new List<string>();
-            this.Claves = new List<string>();
-            this.RutAdmin = new List<int>();
-            this.DineroAcumulado = new List<int>();
-
-
+            this.accounts = new List<string>();
+            this.passwords = new List<string>();
+            this.rutAdmin = new List<int>();
+            this.moneyAccumulate = new List<int>();
         }
-        public void AgregarCuenta(string cuenta)
+        public void AddAccount(string account)
         {
-            Cuentas.Add(cuenta);
+            accounts.Add(account);
 
         }
-        public void AgregarClave(string clave)
+        public void AddPassword(string password)
         {
-            Claves.Add(clave);
+            passwords.Add(password);
         }
-        public void AgregarNombreAdmin(int rut)
+        public void AddAdminName(int rut)
         {
-            RutAdmin.Add(rut);
+            rutAdmin.Add(rut);
 
         }
-        public void AgregarDineroAcumulado(int Saldo)
+        public void AddMoneyAcumulate(int balance)
         {
-            DineroAcumulado.Add(Saldo);
+            moneyAccumulate.Add(balance);
         }
     }
 }

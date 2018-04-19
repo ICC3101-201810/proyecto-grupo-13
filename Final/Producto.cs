@@ -5,21 +5,24 @@ using System.Text;
 using System.Threading.Tasks;
 namespace Final
 {
-    public class Producto
+    public class Product
     {
-        int Stock;
-        string Nombre;
-        int Precio;
+        private int stock;
+        string name;
+        int price;
 
-        public Producto(int Stock, string Nombre, int Precio)
+        public Product(int Stock, string Nombre, int Precio)
         {
-            this.Stock = Stock;
-            this.Nombre = Nombre;
-            this.Precio = Precio;
+            this.stock = Stock;
+            this.name = Nombre;
+            this.price = Precio;
         }
-        public string GetName()
+        public void DecreaseStock()
         {
-            return this.Nombre;
+            this.stock--;
         }
+        public int GetStock() { return stock; }
+        public string GetName() { return name; }
+        public int GetPrice() { return price; }
     }
 }

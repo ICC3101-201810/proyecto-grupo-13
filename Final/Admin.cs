@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 namespace Final
 {
-    public class Admin : Usuario
+    public class Admin : Usser
     {
         List<Local> locales;
         public Admin(string Nombre, string Mail, string Clave, int Rut, List<Local> locales) : base(Nombre, Mail, Clave, Rut)

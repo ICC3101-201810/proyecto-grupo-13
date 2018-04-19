@@ -9,41 +9,41 @@ namespace Final
     {
 
         bool delivery;
-        List<Producto> Menu;
-        string Direccion;
-        int DineroAcumulado;
-        string Nombre;
-        string Codigo;
+        List<Product> menu;
+        string direction;
+        int accumulatedMoney;
+        string name;
+        string code;
 
-        public Local(bool Delivery, List<Producto> Menu, string Direccion, int DineroAcumulado, string Nombre, string Codigo)
+        public Local(bool Delivery, List<Product> Menu, string Direccion, int DineroAcumulado, string Nombre, string Codigo)
         {
             this.delivery = Delivery;
-            this.Menu = new List<Producto>();
-            this.Direccion = Direccion;
-            this.DineroAcumulado = DineroAcumulado;
-            this.Nombre = Nombre;
-            this.Codigo = Codigo;
+            this.menu = new List<Product>();
+            this.direction = Direccion;
+            this.accumulatedMoney = DineroAcumulado;
+            this.name = Nombre;
+            this.code = Codigo;
         }
-        public void AgregarProducto(Producto producto)
+        public void AddProduct(Product product)
         {
-            Menu.Add(producto);
+            menu.Add(product);
 
         }
-        public void DescribirProductos()
+        public void ListProducts()
         {
-            foreach (Producto p in Menu)
+            foreach (Product producto in menu)
             {
-                Console.WriteLine(p.GetName());
+                Console.WriteLine(producto.GetName());
             }
         }
-        public string GetNameLocal() { return this.Nombre; }
-        public string GetDireccion() { return this.Direccion; }
-        public string GetCodigo() { return this.Codigo; }
-        public List<Producto> GetMenu()
+        public string GetNameLocal() { return this.name; }
+        public string GetDirection() { return this.direction; }
+        public string GetCodigo() { return this.code; }
+        public List<Product> GetMenu()
         {
-            return Menu;
+            return menu;
         }
-        public bool getDelivery()
+        public bool GetDelivery()
         {
             return delivery;
         }

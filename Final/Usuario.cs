@@ -5,23 +5,23 @@ using System.Text;
 using System.Threading.Tasks;
 namespace Final
 {
-    public abstract class Usuario
+    public abstract class Usser
     {
 
-        string Nombre;
-        string Mail;
-        string Clave;
-        int Rut;
-        public Usuario(string Nombre, string Mail, string Clave, int Rut)
+        string name;
+        string mail;
+        string password;
+        int rut;
+        public Usser(string Nombre, string Mail, string Clave, int Rut)
         {
-            this.Nombre = Nombre;
-            this.Mail = Mail;
-            this.Clave = Clave;
-            this.Rut = Rut;
+            this.name = Nombre;
+            this.mail = Mail;
+            this.password = Clave;
+            this.rut = Rut;
         }
-        public string GetName() { return this.Nombre; }
-        public int GetRut() { return this.Rut; }
-        public string GetMail() { return this.Mail; }
-        public string GetClave() { return this.Clave; }
+        public string GetName() { return this.name; }
+        public int GetRut() { return this.rut; }
+        public string GetMail() { return this.mail; }
+        public string GetClave() { return this.password; }
     }
 }

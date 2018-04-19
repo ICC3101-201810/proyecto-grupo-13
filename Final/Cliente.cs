@@ -5,24 +5,21 @@ using System.Text;
 using System.Threading.Tasks;
 namespace Final
 {
-    public class Client : Usuario
+    public class Client : Usser
     {
-        string ClaveCuenta;
-        string NdeCuenta;
-        int Billetera;
+        string passAccount;
+        string numberAccount;
+        int moneyAccount;
 
         public Client(string Nombre, string Mail, string Clave, int Rut, string ClaveCuenta, string NdeCuenta, int Billetera) : base(Nombre, Mail, Clave, Rut)
         {
-            this.ClaveCuenta = ClaveCuenta;
-            this.NdeCuenta = NdeCuenta;
-            this.Billetera = Billetera;
+            this.passAccount = ClaveCuenta;
+            this.numberAccount = NdeCuenta;
+            this.moneyAccount = Billetera;
 
         }
-
-        public string GetClaveCuenta() { return ClaveCuenta; }
-        public string GetNdeCuenta() { return this.NdeCuenta; }
-        public int GetDinero() { return Billetera; }
-
-
+        public string GetClaveCuenta() { return passAccount; }
+        public string GetNdeCuenta() { return this.numberAccount; }
+        public int GetDinero() { return moneyAccount; }
     }
 }
