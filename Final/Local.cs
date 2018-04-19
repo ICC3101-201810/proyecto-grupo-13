@@ -8,7 +8,7 @@ namespace Final
     public class Local
     {
 
-        bool Delivery;
+        bool delivery;
         List<Producto> Menu;
         string Direccion;
         int DineroAcumulado;
@@ -17,7 +17,7 @@ namespace Final
 
         public Local(bool Delivery, List<Producto> Menu, string Direccion, int DineroAcumulado, string Nombre, string Codigo)
         {
-            this.Delivery = Delivery;
+            this.delivery = Delivery;
             this.Menu = new List<Producto>();
             this.Direccion = Direccion;
             this.DineroAcumulado = DineroAcumulado;
@@ -39,6 +39,13 @@ namespace Final
         public string GetNameLocal() { return this.Nombre; }
         public string GetDireccion() { return this.Direccion; }
         public string GetCodigo() { return this.Codigo; }
-
+        public List<Producto> GetMenu()
+        {
+            return Menu;
+        }
+        public bool getDelivery()
+        {
+            return delivery;
+        }
     }
 }
