@@ -5,7 +5,7 @@ using System.Threading;
 
 namespace Final
 {
-    class Purchase
+    public class Purchase
     {
         Local local;
         List<Product> shoppingCart = new List<Product>();
@@ -15,7 +15,7 @@ namespace Final
         }
         public List<Product> GetShoppingCart()
         {
-            return shoppingCart;
+            return this.shoppingCart;
         }
         public void AddToCart()
         {
@@ -35,7 +35,7 @@ namespace Final
                     Console.WriteLine(String.Format("\t{0}. {1} - ${2} - Stock: {3}", i, productName, productPrice, stock));
                 }
                 List<Product> cart = GetShoppingCart();
-                FinalPrice(cart);
+                ShowFinalPrice(cart);
                 Console.Write("=> Su respuesta: ");
                 string linea = Console.ReadLine();
                 if (linea == "")
@@ -49,6 +49,7 @@ namespace Final
                     }
                     Cleaner();
                     Processing();
+                    CheckPayPal();
                     Thread.Sleep(100);
                     break;
                 }
@@ -83,7 +84,6 @@ namespace Final
             Console.Clear();
             Console.WriteLine("\t\t ### Fast Food ###\n");
         }
-
         public bool CheckDelivery()
         {
             string Linea;
@@ -108,18 +108,17 @@ namespace Final
             if (respuestaDelivery == 1) { return true; }
             else { return false; }
         }
-        public void FinalPrice(List<Product> carrito)
+        public void ShowFinalPrice(List<Product> cart)
         {
             int price;
             int summation = 0;
-            for (int i = 0; i < carrito.Count; i++)
+            for (int i = 0; i < cart.Count; i++)
             {
-                Product product = carrito[i];
+                Product product = cart[i];
                 price = product.GetPrice();
                 summation += price;
             }
-            Console.WriteLine("=> Precio actual de su compra: " + summation);
-
+            Console.WriteLine("=> Precio actual de su compra: " + summation );
         }
         public void Processing()
         {
@@ -134,6 +133,42 @@ namespace Final
             Console.Write(".");
             Thread.Sleep(600);
             Console.Write(":D");
+        }
+        public bool CheckPayPal()
+        {
+            string Linea;
+            Cleaner();
+            Console.WriteLine("Escriba (1) si desea pago por tarjeta: ");
+            Console.WriteLine("Escriba (2) si desea pago por efectivo: ");
+            Linea = Console.ReadLine();
+            int ansCPP = int.Parse(Linea);
+            Thread.Sleep(0500);
+            Cleaner();
+
+            while (ansCPP != 2 && ansCPP != 1)
+            {
+                Console.WriteLine("Opcion invalida.");
+                Console.WriteLine("Escriba (1) si desea pago por tarjeta: ");
+                Console.WriteLine("Escriba (2) si desea pago por efectivo: ");
+                Linea = Console.ReadLine();
+                ansCPP = int.Parse(Linea);
+                Thread.Sleep(0250);
+                Cleaner();
+            }
+            if (ansCPP == 1) { return true; }
+            else { return false; }
+        }
+        public int FinalPrice(List<Product> cart)
+        {
+            int price;
+            int summation = 0;
+            for (int i = 0; i < cart.Count; i++)
+            {
+                Product product = cart[i];
+                price = product.GetPrice();
+                summation += price;
+            }
+            return summation;
         }
     }
 }

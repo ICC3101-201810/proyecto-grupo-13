@@ -7,14 +7,12 @@ namespace Final
 {
     public class Local
     {
-
         bool delivery;
         List<Product> menu;
         string direction;
         int accumulatedMoney;
         string name;
         string code;
-
         public Local(bool Delivery, List<Product> Menu, string Direccion, int DineroAcumulado, string Nombre, string Codigo)
         {
             this.delivery = Delivery;
@@ -27,13 +25,17 @@ namespace Final
         public void AddProduct(Product product)
         {
             menu.Add(product);
-
         }
         public void ListProducts()
         {
-            foreach (Product producto in menu)
+            int largeMenu = menu.Count;
+            for (int i = 0; i < largeMenu; i++)
             {
-                Console.WriteLine(producto.GetName());
+                Product producto = menu[i];
+                string productName = producto.GetName();
+                int productPrice = producto.GetPrice();
+                int stock = producto.GetStock();
+                Console.WriteLine(String.Format("\t{0}. {1} - ${2} - Stock: {3}", i, productName, productPrice, stock));
             }
         }
         public string GetNameLocal() { return this.name; }
@@ -46,6 +48,11 @@ namespace Final
         public bool GetDelivery()
         {
             return delivery;
+        }
+        public int GetProductLenght()
+        {
+            int lenght = menu.Count;
+            return lenght;
         }
     }
 }

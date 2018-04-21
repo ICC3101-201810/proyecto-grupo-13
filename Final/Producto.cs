@@ -24,5 +24,17 @@ namespace Final
         public int GetStock() { return stock; }
         public string GetName() { return name; }
         public int GetPrice() { return price; }
+        public int NewStock(int num)
+        {
+            this.stock = 0;
+            this.stock += num;
+            return stock;
+        }
+        public int NewPrice(int num)
+        {
+            this.price = 0;
+            this.price += num;
+            return price;
+        }
     }
 }

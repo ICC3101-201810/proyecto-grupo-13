@@ -17,12 +17,23 @@ namespace Final
         {
             locales.Add(local);
         }
-        public void DescribirLocales()
+        public void ShowLocals()
         {
+            int i = 0;
             foreach (Local local in locales)
             {
-                Console.WriteLine(local.GetNameLocal());
+                Console.WriteLine("\t"+ i +".-   Local "+local.GetNameLocal()+"\n");
+                i++;
             }
+        }
+        public int GetListLenght()
+        {
+            int lenght = locales.Count();
+            return lenght;
+        }
+        public List<Local> GetLocalList()
+        {
+            return locales;
         }
     }
 }

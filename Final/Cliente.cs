@@ -20,6 +20,10 @@ namespace Final
         }
         public string GetClaveCuenta() { return passAccount; }
         public string GetNdeCuenta() { return this.numberAccount; }
-        public int GetDinero() { return moneyAccount; }
+        public int GetDinero() { return this.moneyAccount; }
+        public void DecreaseWallet(int input)
+        {
+            this.moneyAccount -= input;
+        }
     }
 }
