@@ -45,6 +45,9 @@
             this.CONFCLAVE = new System.Windows.Forms.Label();
             this.RUT1 = new System.Windows.Forms.TextBox();
             this.MAIL_textbox = new System.Windows.Forms.TextBox();
+            this.nCuenta = new System.Windows.Forms.TextBox();
+            this.clavecuenta = new System.Windows.Forms.TextBox();
+            this.registro = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -223,6 +226,36 @@
             this.MAIL_textbox.TabIndex = 20;
             this.MAIL_textbox.TextChanged += new System.EventHandler(this.MAIL_textbox_TextChanged);
             // 
+            // nCuenta
+            // 
+            this.nCuenta.Location = new System.Drawing.Point(260, 387);
+            this.nCuenta.Name = "nCuenta";
+            this.nCuenta.Size = new System.Drawing.Size(273, 20);
+            this.nCuenta.TabIndex = 21;
+            this.nCuenta.Visible = false;
+            // 
+            // clavecuenta
+            // 
+            this.clavecuenta.Location = new System.Drawing.Point(260, 417);
+            this.clavecuenta.Name = "clavecuenta";
+            this.clavecuenta.Size = new System.Drawing.Size(273, 20);
+            this.clavecuenta.TabIndex = 22;
+            this.clavecuenta.Visible = false;
+            // 
+            // registro
+            // 
+            this.registro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.registro.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.registro.ForeColor = System.Drawing.Color.Navy;
+            this.registro.Location = new System.Drawing.Point(557, 469);
+            this.registro.Name = "registro";
+            this.registro.Size = new System.Drawing.Size(150, 50);
+            this.registro.TabIndex = 23;
+            this.registro.Text = "Registrarse";
+            this.registro.UseVisualStyleBackColor = false;
+            this.registro.Visible = false;
+            this.registro.Click += new System.EventHandler(this.button1_Click_2);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -230,6 +263,9 @@
             this.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.fondo_1_poo;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(918, 593);
+            this.Controls.Add(this.registro);
+            this.Controls.Add(this.clavecuenta);
+            this.Controls.Add(this.nCuenta);
             this.Controls.Add(this.MAIL_textbox);
             this.Controls.Add(this.RUT1);
             this.Controls.Add(this.CONFCLAVE);
@@ -274,6 +310,9 @@
         private System.Windows.Forms.Label CONFCLAVE;
         private System.Windows.Forms.TextBox RUT1;
         private System.Windows.Forms.TextBox MAIL_textbox;
+        private System.Windows.Forms.TextBox nCuenta;
+        private System.Windows.Forms.TextBox clavecuenta;
+        private System.Windows.Forms.Button registro;
     }
 }
 

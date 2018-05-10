@@ -7,6 +7,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Runtime.Serialization;
+using System.Runtime.Serialization.Formatters.Binary;
+using System.IO;
+
 
 namespace WindowsFormsApp1
 {
@@ -17,9 +21,11 @@ namespace WindowsFormsApp1
             
             InitializeComponent();
             Client c1 = new Client("Paz Torres", "cptorres@miuandes.cl", "paz45", 193226000, "pezdorado", "0210025", 500000);
-            Admin a1 = new Admin("Matias Cabezas", "saima12@miuandes.cl", "weedlover", 192439396,null);
+            Admin a1 = new Admin("Matias Cabezas", "mcabezas@miuandes.cl", "weedlover", 192439396,null);
             UserManagment.CreateAdmin(a1);
             UserManagment.AddClient(c1);
+            String path = Directory.GetCurrentDirectory();
+
             
 
 
@@ -113,11 +119,18 @@ namespace WindowsFormsApp1
                     verclave.Visible = false;
                     textBox1.Visible = false;
                     RUT1.Visible = false;
-
+                    ru1.Text = "Numero de Cuenta";
+                    nCuenta.Visible = true;
+                    RUT.Text = "ClaveCuentaBanco";
+                    lmail.Visible = false;
+                    CLAVE12.Visible = false;
+                    CONFCLAVE.Visible = false;
+                    clavecuenta.Visible = true;
+                    registro.Visible = true;
                 }
                 else
                 {
-                    MessageBox.Show("malo feo pesao");
+                    MessageBox.Show("Las claves no coiciden");
                 }
             }
         }
@@ -140,6 +153,23 @@ namespace WindowsFormsApp1
                     textBox1.Enabled = true; 
                 }
             }
+        }
+
+        private void button1_Click_2(object sender, EventArgs e)
+        {
+            int rut;
+            rut = Convert.ToInt32(RUT1.Text);
+            int saldoDisp;
+            Random random = new Random();
+            saldoDisp = random.Next(5000, 150000);
+            
+            Client client = new Client(clientenombre.Text, MAIL_textbox.Text, verclave.Text, rut, clavecuenta.Text, nCuenta.Text,saldoDisp);
+            UserManagment.AddClient(client);
+            UserManagment.SaveData();
+            UserManagment.SaveData.Close();
+           
+            
+           
         }
     }
 }

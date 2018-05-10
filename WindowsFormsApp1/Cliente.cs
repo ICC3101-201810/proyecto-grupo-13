@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 namespace WindowsFormsApp1
 {
-    [Serializable]
+    [Serializable()]
     public class Client : Usser
     {
         string passAccount;

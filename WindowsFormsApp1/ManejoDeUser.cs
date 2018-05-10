@@ -9,8 +9,8 @@ using System.IO;
 
 namespace WindowsFormsApp1
 {
-    
-    public static class UserManagment 
+
+    public static class UserManagment
     {
         static List<Client> clients = new List<Client>();
         static List<Admin> admins = new List<Admin>();
@@ -18,20 +18,14 @@ namespace WindowsFormsApp1
         static public Bank bank;
         static public Admin admin;
         static public Client client;
-    
-        public static void SaveData()
+
+        // agregar SAVE DATA 
+        // Load DATA
+        
+        public static void AddClient(Client client)
         {
-            IFormatter formatter = new BinaryFormatter();
-            Stream stream = new FileStream("clients.bin",
-                         FileMode.Create,
-                         FileAccess.Write, FileShare.None);
-            formatter.Serialize(stream, client);
-            stream.Close();
-
-
-        }
-
-        public static void AddClient(Client client) => clients.Add(client);
+            clients.Add(client);
+        } 
         public static  void CreateAdmin(Admin admin)
         {
             admins.Add(admin);
@@ -41,7 +35,6 @@ namespace WindowsFormsApp1
         {
             locales.Add(local);
         }
-
         public static bool VerificationRut2(int Rut)
         {
             foreach (Admin admin in admins)
