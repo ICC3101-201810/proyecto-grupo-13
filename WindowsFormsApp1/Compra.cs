@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading;
 
-namespace Final
+namespace WindowsFormsApp1
 {
     public class Purchase
     {

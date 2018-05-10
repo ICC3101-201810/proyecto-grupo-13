@@ -3,38 +3,46 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading;
-namespace Final
+using System.Runtime.Serialization;
+using System.Runtime.Serialization.Formatters.Binary;
+using System.IO;
+
+namespace WindowsFormsApp1
 {
-    class UserManagment
+    
+    public static class UserManagment 
     {
-        List<Client> clients;
-        List<Admin> admins;
-        List<Local> locales;
-        public Bank bank;
-        public Admin admin;
-        public Client client;
-        public UserManagment(List<Client> clients, List<Local> locales, Bank bank)
+        static List<Client> clients = new List<Client>();
+        static List<Admin> admins = new List<Admin>();
+        static List<Local> locales = new List<Local>();
+        static public Bank bank;
+        static public Admin admin;
+        static public Client client;
+    
+        public static void SaveData()
         {
-            this.clients = new List<Client>();
-            this.admins = new List<Admin>();
-            this.locales = new List<Local>();
-            this.bank = bank;
-        }
-        public void AddClient(Client client)
-        {
-            this.clients.Add(client);
-        }
-        public void CreateAdmin(Admin admin)
-        {
-            this.admins.Add(admin);
+            IFormatter formatter = new BinaryFormatter();
+            Stream stream = new FileStream("clients.bin",
+                         FileMode.Create,
+                         FileAccess.Write, FileShare.None);
+            formatter.Serialize(stream, client);
+            stream.Close();
+
 
         }
-        public void CreateLocal(Local local)
+
+        public static void AddClient(Client client) => clients.Add(client);
+        public static  void CreateAdmin(Admin admin)
+        {
+            admins.Add(admin);
+
+        }
+        public static void CreateLocal(Local local)
         {
             locales.Add(local);
         }
 
-        public bool VerificationRut2(int Rut)
+        public static bool VerificationRut2(int Rut)
         {
             foreach (Admin admin in admins)
             {
@@ -45,7 +53,7 @@ namespace Final
             }
             return false;
         }
-        public bool ClientRutVerification(int Rut)
+        public static bool ClientRutVerification(int Rut)
         {
             foreach (Client c in clients)
             {
@@ -56,7 +64,7 @@ namespace Final
             }
             return false;
         }
-        public Client ClientLoginRutVerification(int rut)
+        public static Client ClientLoginRutVerification(int rut)
         {
             foreach (Client c in clients)
             {
@@ -67,7 +75,7 @@ namespace Final
             }
             return null;
         }
-        public Client ClientLoginPassVerification(string password)
+        public static  Client ClientLoginPassVerification(string password)
         {
             foreach (Client c in clients)
             {
@@ -78,7 +86,7 @@ namespace Final
             }
             return null;
         }
-        public Admin AdminRutVerification(int rut)
+        public  static Admin AdminRutVerification(int rut)
         {
             foreach (Admin a in admins)
             {
@@ -89,7 +97,7 @@ namespace Final
             }
             return null;
         }
-        public Admin AdminLoginRutVerification(int rut) // para registrar
+        public  static Admin AdminLoginRutVerification(int rut) // para registrar
         {
             foreach (Admin a in admins)
             {
@@ -100,7 +108,7 @@ namespace Final
             }
             return null;
         }
-        public Admin AdminLoginPassVerification(string password)
+        public static Admin AdminLoginPassVerification(string password)
         {
             foreach (Admin a in admins)
             {
@@ -111,21 +119,21 @@ namespace Final
             }
             return null;
         }
-        public void CreateUserInterface()
+        public  static void CreateUserInterface()
         {
             while (true)
             {
-                Clean();
+                
                 Console.WriteLine(" => 1.Nuevo Cliente" + Environment.NewLine + " => 2.Nuevo Administrador de Locales" + Environment.NewLine + " => 3.Volver Atras");
                 string option1;
                 option1 = Convert.ToString(Console.ReadLine());
                 if (option1 == "1")
                 {
-                    Clean();
+                    
                     Console.WriteLine(" => Ingrese su nombre: ");
                     string name;
                     name = Console.ReadLine();
-                    Clean();
+                    
                     Console.WriteLine(" => Ingrese su Rut: ");
                     int rut;
                     rut = Convert.ToInt32(Console.ReadLine());
@@ -137,23 +145,23 @@ namespace Final
                     }
                     else
                     {
-                        Clean();
+                        
                         string mail;
                         Console.WriteLine(" => Ingrese su Mail: ");
                         mail = Console.ReadLine();
                         while (true)
                         {
-                            Clean();
+                            
                             string password;
                             Console.WriteLine(" => Ingrese su Clave: ");
                             password = Console.ReadLine();
-                            Clean();
+                            
                             Console.WriteLine(" => Compruebe su clave: ");
                             string password2;
                             password2 = Console.ReadLine();
                             if (password == password2)
                             {
-                                Clean();
+                                
                                 Console.WriteLine(" => Ingrese su Numero de Cuenta de Banco: ");
                                 string num;
                                 num = Convert.ToString(Console.ReadLine());
@@ -161,11 +169,11 @@ namespace Final
                                 string claveBanco;
                                 while (true)
                                 {
-                                    Clean();
+                                   
                                     Console.WriteLine(" => Ingrese su Clave del Banco:");
                                     claveBanco = Console.ReadLine();
                                     string c2;
-                                    Clean();
+                                    
                                     Console.WriteLine(" => Compruebe su Clave Banco: ");
                                     c2 = Console.ReadLine();
                                     if (claveBanco == c2)
@@ -178,7 +186,7 @@ namespace Final
                                         AddClient(client);
                                         Console.WriteLine(" => Has sido Agregado con exito!!");
                                         Thread.Sleep(1000);
-                                        Clean();
+                                       
                                         break;
                                     }
                                     else
@@ -199,11 +207,11 @@ namespace Final
                 }
                 else if (option1 == "2")
                 {
-                    Clean();
+                    
                     Console.WriteLine(" => Ingrese su nombre: ");
                     string name;
                     name = Console.ReadLine();
-                    Clean();
+                    
                     Console.WriteLine(" => Ingrese su Rut: ");
                     int rut;
                     rut = Convert.ToInt32(Console.ReadLine());
@@ -252,14 +260,14 @@ namespace Final
                 }
             }
         }
-        public void ClientLogin()
+        public static void ClientLogin()
         {
-            Clean();
+            
             Console.WriteLine(" => Ingrese Su Rut: ");
             int rut;
             rut = Convert.ToInt32(Console.ReadLine());
-            client = this.ClientLoginRutVerification(rut);
-            Clean();
+            client = ClientLoginRutVerification(rut);
+            
             if (client != null)
             {
                 Console.WriteLine(" => Ingrese su Clave: ");
@@ -278,13 +286,13 @@ namespace Final
                             Console.WriteLine(" => Los locales disponibles para comprar son: ");
                             ShowAllLocals();
                             Console.WriteLine(" => Seleccione un local o presione enter para volver atras");
-                            string option4 = (Console.ReadLine());                           
+                            string option4 = (Console.ReadLine());
                             if (option4 == "")
                             {
-                               
+
                                 break;
                             }
-                            else (OptionVerification(GetLenghtLocals(),int.Parse(option4)))
+                            else if (OptionVerification(GetLenghtLocals(), int.Parse(option4)))
                             {
                                 Local local = locales[int.Parse(option4)];
                                 Purchase purchase = new Purchase(local);
@@ -310,9 +318,9 @@ namespace Final
                                 Thread.Sleep(1000);
                                 continue;
                             }
-                            
 
-                            
+
+
                         }
                     }
                     else
@@ -328,12 +336,12 @@ namespace Final
                 Thread.Sleep(3000);
             }
         }
-        public void Clean()
+        public static void Clean()
         {
             Console.Clear();
             Console.WriteLine("\t\t ### Fast Food ###\n");
         }
-        public bool OptionVerification(int large, int input) // new
+        public static bool OptionVerification(int large, int input) // new
         {
 
             if (input > large || input < 0)
@@ -347,14 +355,14 @@ namespace Final
                 return true;
             }
         }
-        public void AdminLogin()
+        public static void AdminLogin()
         {
             int option2;
             Clean();
             Console.WriteLine(" => Ingrese Su Rut :");
             int rut;
             rut = Convert.ToInt32(Console.ReadLine());
-            admin = this.AdminLoginRutVerification(rut);
+            admin = AdminLoginRutVerification(rut);
             if (admin != null)
             {
                 Clean();
@@ -391,13 +399,13 @@ namespace Final
                             Console.WriteLine(" => Respuesta: ");
                             int input = int.Parse(Console.ReadLine());
                             while (OptionVerification(admin.GetListLenght(), input))
-                            {                            
+                            {
                                 List<Local> locales = admin.GetLocalList();
                                 Local local = locales[input];
                                 int large = admin.GetListLenght();
                                 if (OptionVerification(large, input))
                                 {
-                                    Console.WriteLine(" => Local actual:" + " "+local.GetNameLocal()); // dar nomnre de este local 
+                                    Console.WriteLine(" => Local actual:" + " " + local.GetNameLocal()); // dar nomnre de este local 
                                     Console.WriteLine(" => Seleccione ");
                                     Console.WriteLine(" => 1) Cambiar stock    2) Cambiar Precio    3)Cambiar Delivery   4)Crear Producto");
                                     int option = int.Parse(Console.ReadLine());
@@ -451,7 +459,7 @@ namespace Final
                                     }
                                 }
                             }
-                            if (OptionVerification(admin.GetListLenght(),input))
+                            if (OptionVerification(admin.GetListLenght(), input))
                             {
                                 Console.WriteLine("Ingresa algo valido po, no seai tonto!");
                                 Thread.Sleep(2000);
@@ -481,13 +489,13 @@ namespace Final
 
             }
         }
-        public void WelcomeAdmin()
+        public static void WelcomeAdmin()
         {
 
             Clean();
             Console.WriteLine("BIENVENIDO " + " " + admin.GetName() + " --->");
         }
-        public void CreateLocalInterface()
+        public static void CreateLocalInterface()
         {
             Clean();
             string name;
@@ -522,7 +530,7 @@ namespace Final
                 Thread.Sleep(1000);
             }
         }
-        public void DeliveryModification(Local currentLocal)
+        public static void DeliveryModification(Local currentLocal)
         {
             while (true)
             {
@@ -560,8 +568,8 @@ namespace Final
                 }
             }
         }
-        public void StockModification(Local currentLocal)
-        {           
+        public static void StockModification(Local currentLocal)
+        {
             List<Product> menu = currentLocal.GetMenu();
             string linea = Console.ReadLine();
             int input = int.Parse(linea);
@@ -604,7 +612,7 @@ namespace Final
                 }
             }
         }
-        public void PriceModification(Local currentLocal)
+        public static void PriceModification(Local currentLocal)
         {
             currentLocal.ListProducts();
             List<Product> menu = currentLocal.GetMenu();
@@ -649,7 +657,7 @@ namespace Final
                 }
             }
         }
-        public void CreateProduct(Local local)
+        public static void CreateProduct(Local local)
         {
             while (true)
             {
@@ -699,21 +707,21 @@ namespace Final
                 }
             }
         }
-        public void ShowAllLocals()
+        public static void ShowAllLocals()
         {
             int i = 0;
             foreach (Local local in locales)
             {
-                Console.WriteLine("\t"+i + ".- \t\t Local " + local.GetNameLocal());
+                Console.WriteLine("\t" + i + ".- \t\t Local " + local.GetNameLocal());
                 i++;
             }
         }
-        public int GetLenghtLocals()
+        public static int GetLenghtLocals()
         {
             int lenght = locales.Count();
             return lenght;
         }
-        
+
     }
 }
 
