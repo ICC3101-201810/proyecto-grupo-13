@@ -75,11 +75,14 @@ namespace WindowsFormsApp1
             BOTONCLIENT.Visible = false;
             label2.Visible = false;
         }
-        private void BOTONADMIN_Click(object sender, EventArgs e) //asdasa------------------------------------------------------------------------------------------------------------------------
+        private void BOTONADMIN_Click(object sender, EventArgs e) 
         {
         }
         private void LOGIN_Click(object sender, EventArgs e)
         {
+            this.Hide();
+            Form2 f2 = new Form2();
+            f2.Show();
         }
         private void ru1_Click(object sender, EventArgs e)
         {
