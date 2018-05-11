@@ -37,9 +37,14 @@
             this.CrearLocal = new System.Windows.Forms.Button();
             this.VerLocal = new System.Windows.Forms.Button();
             this.CrearLocales = new System.Windows.Forms.ListBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.label_nombrelocal = new System.Windows.Forms.Label();
+            this.label_Direccion = new System.Windows.Forms.Label();
+            this.label_Delivery = new System.Windows.Forms.Label();
+            this.textBox_NombreLocal = new System.Windows.Forms.TextBox();
+            this.textBox_DireccionLocal = new System.Windows.Forms.TextBox();
+            this.DeliverySi = new System.Windows.Forms.RadioButton();
+            this.DeliveryNo = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -139,38 +144,88 @@
             // 
             this.CrearLocales.FormattingEnabled = true;
             this.CrearLocales.ItemHeight = 16;
-            this.CrearLocales.Location = new System.Drawing.Point(794, 232);
+            this.CrearLocales.Location = new System.Drawing.Point(802, 281);
             this.CrearLocales.Name = "CrearLocales";
             this.CrearLocales.Size = new System.Drawing.Size(379, 292);
             this.CrearLocales.TabIndex = 8;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(35, 244);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(46, 17);
-            this.label1.TabIndex = 9;
-            this.label1.Text = "label1";
-            this.label1.Click += new System.EventHandler(this.label1_Click_1);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(35, 207);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(46, 17);
+            this.label2.Size = new System.Drawing.Size(0, 17);
             this.label2.TabIndex = 10;
-            this.label2.Text = "label2";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
-            // label3
+            // label_nombrelocal
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(35, 169);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(46, 17);
-            this.label3.TabIndex = 11;
-            this.label3.Text = "label3";
+            this.label_nombrelocal.AutoSize = true;
+            this.label_nombrelocal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_nombrelocal.Location = new System.Drawing.Point(686, 35);
+            this.label_nombrelocal.Name = "label_nombrelocal";
+            this.label_nombrelocal.Size = new System.Drawing.Size(230, 25);
+            this.label_nombrelocal.TabIndex = 11;
+            this.label_nombrelocal.Text = "Ingrese Nombre de Local";
+            this.label_nombrelocal.Click += new System.EventHandler(this.label3_Click);
+            // 
+            // label_Direccion
+            // 
+            this.label_Direccion.AutoSize = true;
+            this.label_Direccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Direccion.Location = new System.Drawing.Point(686, 86);
+            this.label_Direccion.Name = "label_Direccion";
+            this.label_Direccion.Size = new System.Drawing.Size(215, 25);
+            this.label_Direccion.TabIndex = 12;
+            this.label_Direccion.Text = "Ingrese Direccion Local";
+            // 
+            // label_Delivery
+            // 
+            this.label_Delivery.AutoSize = true;
+            this.label_Delivery.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Delivery.Location = new System.Drawing.Point(715, 128);
+            this.label_Delivery.Name = "label_Delivery";
+            this.label_Delivery.Size = new System.Drawing.Size(157, 25);
+            this.label_Delivery.TabIndex = 13;
+            this.label_Delivery.Text = "Ingrese Delivery ";
+            // 
+            // textBox_NombreLocal
+            // 
+            this.textBox_NombreLocal.Location = new System.Drawing.Point(923, 39);
+            this.textBox_NombreLocal.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox_NombreLocal.Name = "textBox_NombreLocal";
+            this.textBox_NombreLocal.Size = new System.Drawing.Size(265, 22);
+            this.textBox_NombreLocal.TabIndex = 14;
+            // 
+            // textBox_DireccionLocal
+            // 
+            this.textBox_DireccionLocal.Location = new System.Drawing.Point(923, 90);
+            this.textBox_DireccionLocal.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox_DireccionLocal.Name = "textBox_DireccionLocal";
+            this.textBox_DireccionLocal.Size = new System.Drawing.Size(265, 22);
+            this.textBox_DireccionLocal.TabIndex = 15;
+            // 
+            // DeliverySi
+            // 
+            this.DeliverySi.AutoSize = true;
+            this.DeliverySi.Location = new System.Drawing.Point(941, 131);
+            this.DeliverySi.Name = "DeliverySi";
+            this.DeliverySi.Size = new System.Drawing.Size(45, 21);
+            this.DeliverySi.TabIndex = 16;
+            this.DeliverySi.TabStop = true;
+            this.DeliverySi.Text = "Si ";
+            this.DeliverySi.UseVisualStyleBackColor = true;
+            // 
+            // DeliveryNo
+            // 
+            this.DeliveryNo.AutoSize = true;
+            this.DeliveryNo.Location = new System.Drawing.Point(1038, 132);
+            this.DeliveryNo.Name = "DeliveryNo";
+            this.DeliveryNo.Size = new System.Drawing.Size(47, 21);
+            this.DeliveryNo.TabIndex = 17;
+            this.DeliveryNo.TabStop = true;
+            this.DeliveryNo.Text = "No";
+            this.DeliveryNo.UseVisualStyleBackColor = true;
             // 
             // Form2
             // 
@@ -178,9 +233,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.Despensa1;
             this.ClientSize = new System.Drawing.Size(1224, 730);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.DeliveryNo);
+            this.Controls.Add(this.DeliverySi);
+            this.Controls.Add(this.textBox_DireccionLocal);
+            this.Controls.Add(this.textBox_NombreLocal);
+            this.Controls.Add(this.label_Delivery);
+            this.Controls.Add(this.label_Direccion);
+            this.Controls.Add(this.label_nombrelocal);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.CrearLocales);
             this.Controls.Add(this.VerLocal);
             this.Controls.Add(this.CrearLocal);
@@ -210,8 +270,13 @@
         private System.Windows.Forms.Button CrearLocal;
         private System.Windows.Forms.Button VerLocal;
         private System.Windows.Forms.ListBox CrearLocales;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label_nombrelocal;
+        private System.Windows.Forms.Label label_Direccion;
+        private System.Windows.Forms.Label label_Delivery;
+        private System.Windows.Forms.TextBox textBox_NombreLocal;
+        private System.Windows.Forms.TextBox textBox_DireccionLocal;
+        private System.Windows.Forms.RadioButton DeliverySi;
+        private System.Windows.Forms.RadioButton DeliveryNo;
     }
 }
