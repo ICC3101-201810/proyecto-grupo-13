@@ -48,6 +48,7 @@
             this.nCuenta = new System.Windows.Forms.TextBox();
             this.clavecuenta = new System.Windows.Forms.TextBox();
             this.registro = new System.Windows.Forms.Button();
+            this.BACK = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -107,6 +108,7 @@
             this.label2.Size = new System.Drawing.Size(309, 25);
             this.label2.TabIndex = 6;
             this.label2.Text = "DESEA REGISTRARSE COMO";
+            this.label2.Visible = false;
             // 
             // pictureBox1
             // 
@@ -132,7 +134,9 @@
             this.clientenombre.Name = "clientenombre";
             this.clientenombre.Size = new System.Drawing.Size(273, 20);
             this.clientenombre.TabIndex = 9;
+            this.clientenombre.Visible = false;
             this.clientenombre.TextChanged += new System.EventHandler(this.clientenombre_TextChanged);
+            this.clientenombre.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Enter_Nombre);
             // 
             // verclave
             // 
@@ -140,6 +144,7 @@
             this.verclave.Name = "verclave";
             this.verclave.Size = new System.Drawing.Size(273, 20);
             this.verclave.TabIndex = 12;
+            this.verclave.Visible = false;
             this.verclave.TextChanged += new System.EventHandler(this.verclave_TextChanged);
             this.verclave.KeyDown += new System.Windows.Forms.KeyEventHandler(this.clave_enter);
             // 
@@ -148,11 +153,12 @@
             this.ru1.AutoSize = true;
             this.ru1.BackColor = System.Drawing.Color.Transparent;
             this.ru1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ru1.Location = new System.Drawing.Point(68, 385);
+            this.ru1.Location = new System.Drawing.Point(40, 385);
             this.ru1.Name = "ru1";
             this.ru1.Size = new System.Drawing.Size(93, 24);
             this.ru1.TabIndex = 13;
             this.ru1.Text = "NOMBRE";
+            this.ru1.Visible = false;
             this.ru1.Click += new System.EventHandler(this.ru1_Click);
             // 
             // RUT
@@ -160,29 +166,31 @@
             this.RUT.AutoSize = true;
             this.RUT.BackColor = System.Drawing.Color.Transparent;
             this.RUT.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RUT.Location = new System.Drawing.Point(80, 409);
+            this.RUT.Location = new System.Drawing.Point(40, 409);
             this.RUT.Name = "RUT";
             this.RUT.Size = new System.Drawing.Size(53, 24);
             this.RUT.TabIndex = 14;
             this.RUT.Text = "RUT ";
+            this.RUT.Visible = false;
             // 
             // lmail
             // 
             this.lmail.AutoSize = true;
             this.lmail.BackColor = System.Drawing.Color.Transparent;
             this.lmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lmail.Location = new System.Drawing.Point(80, 438);
+            this.lmail.Location = new System.Drawing.Point(40, 437);
             this.lmail.Name = "lmail";
             this.lmail.Size = new System.Drawing.Size(53, 24);
             this.lmail.TabIndex = 15;
             this.lmail.Text = "MAIL";
+            this.lmail.Click += new System.EventHandler(this.lmail_Click);
             // 
             // CLAVE12
             // 
             this.CLAVE12.AutoSize = true;
             this.CLAVE12.BackColor = System.Drawing.Color.Transparent;
             this.CLAVE12.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CLAVE12.Location = new System.Drawing.Point(80, 469);
+            this.CLAVE12.Location = new System.Drawing.Point(40, 464);
             this.CLAVE12.Name = "CLAVE12";
             this.CLAVE12.Size = new System.Drawing.Size(72, 24);
             this.CLAVE12.TabIndex = 16;
@@ -195,6 +203,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(273, 20);
             this.textBox1.TabIndex = 17;
+            this.textBox1.Visible = false;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             this.textBox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ConfirmarClave);
             // 
@@ -215,6 +224,7 @@
             this.RUT1.Name = "RUT1";
             this.RUT1.Size = new System.Drawing.Size(273, 20);
             this.RUT1.TabIndex = 19;
+            this.RUT1.Visible = false;
             this.RUT1.TextChanged += new System.EventHandler(this.RUT1_TextChanged);
             this.RUT1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ENTER_RUT);
             // 
@@ -224,6 +234,7 @@
             this.MAIL_textbox.Name = "MAIL_textbox";
             this.MAIL_textbox.Size = new System.Drawing.Size(273, 20);
             this.MAIL_textbox.TabIndex = 20;
+            this.MAIL_textbox.Visible = false;
             this.MAIL_textbox.TextChanged += new System.EventHandler(this.MAIL_textbox_TextChanged);
             // 
             // nCuenta
@@ -247,7 +258,7 @@
             this.registro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.registro.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.registro.ForeColor = System.Drawing.Color.Navy;
-            this.registro.Location = new System.Drawing.Point(557, 469);
+            this.registro.Location = new System.Drawing.Point(736, 469);
             this.registro.Name = "registro";
             this.registro.Size = new System.Drawing.Size(150, 50);
             this.registro.TabIndex = 23;
@@ -256,6 +267,19 @@
             this.registro.Visible = false;
             this.registro.Click += new System.EventHandler(this.button1_Click_2);
             // 
+            // BACK
+            // 
+            this.BACK.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.BACK.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BACK.ForeColor = System.Drawing.Color.Navy;
+            this.BACK.Location = new System.Drawing.Point(580, 469);
+            this.BACK.Name = "BACK";
+            this.BACK.Size = new System.Drawing.Size(150, 50);
+            this.BACK.TabIndex = 24;
+            this.BACK.Text = "BACK";
+            this.BACK.UseVisualStyleBackColor = false;
+            this.BACK.Visible = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -263,7 +287,8 @@
             this.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.fondo_1_poo;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(918, 593);
-            this.Controls.Add(this.registro);
+            this.Controls.Add(this.BACK);
+            this.Controls.Add(this.RUT);
             this.Controls.Add(this.clavecuenta);
             this.Controls.Add(this.nCuenta);
             this.Controls.Add(this.MAIL_textbox);
@@ -271,9 +296,6 @@
             this.Controls.Add(this.CONFCLAVE);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.CLAVE12);
-            this.Controls.Add(this.lmail);
-            this.Controls.Add(this.RUT);
-            this.Controls.Add(this.ru1);
             this.Controls.Add(this.verclave);
             this.Controls.Add(this.clientenombre);
             this.Controls.Add(this.clienteRUT);
@@ -283,6 +305,9 @@
             this.Controls.Add(this.BOTONADMIN);
             this.Controls.Add(this.BOTONCLIENT);
             this.Controls.Add(this.Registrarse);
+            this.Controls.Add(this.ru1);
+            this.Controls.Add(this.lmail);
+            this.Controls.Add(this.registro);
             this.Name = "Form1";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -313,6 +338,7 @@
         private System.Windows.Forms.TextBox nCuenta;
         private System.Windows.Forms.TextBox clavecuenta;
         private System.Windows.Forms.Button registro;
+        private System.Windows.Forms.Button BACK;
     }
 }
 

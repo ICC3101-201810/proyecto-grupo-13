@@ -25,8 +25,18 @@ namespace WindowsFormsApp1
             UserManagment.CreateAdmin(a1);
             UserManagment.AddClient(c1);
             String path = Directory.GetCurrentDirectory();
+            ru1.Visible = false;
+            RUT.Visible = false;
+            lmail.Visible = false;
+            CLAVE12.Visible = false;
+            CONFCLAVE.Visible = false;
+            RUT1.Enabled = false;
+            lmail.Enabled = false;
+            verclave.Enabled = false;
+            CONFCLAVE.Enabled = false;
 
-            
+
+
 
 
         }
@@ -35,12 +45,25 @@ namespace WindowsFormsApp1
         {
             BOTONCLIENT.Visible = Visible;
             BOTONADMIN.Visible = Visible;
+            LOGIN.Visible = false;
+            Registrarse.Visible = false;
+            label2.Visible = true;
         }
 
         private void button1_Click_1(object sender, EventArgs e)
         {
             BOTONADMIN.Visible = false;
             Registrarse.Visible = false;
+            ru1.Visible = true;
+            RUT.Visible = true;
+            lmail.Visible = true;
+            CLAVE12.Visible = true;
+            CONFCLAVE.Visible = true;
+            clientenombre.Visible = true;
+            RUT1.Visible = Visible;
+            verclave.Visible = true;
+            textBox1.Visible = true;
+            MAIL_textbox.Visible = true;
         }
 
         private void BOTONADMIN_Click(object sender, EventArgs e)
@@ -84,7 +107,7 @@ namespace WindowsFormsApp1
                     }
                     else
                     {
-                        
+                        lmail.Enabled = true;
                     }
                 }
 
@@ -93,7 +116,7 @@ namespace WindowsFormsApp1
 
         private void clientenombre_TextChanged(object sender, EventArgs e)
         {
-            
+         
             
         }
 
@@ -165,11 +188,35 @@ namespace WindowsFormsApp1
             
             Client client = new Client(clientenombre.Text, MAIL_textbox.Text, verclave.Text, rut, clavecuenta.Text, nCuenta.Text,saldoDisp);
             UserManagment.AddClient(client);
-            UserManagment.SaveData();
-            UserManagment.SaveData.Close();
+           
            
             
            
+        }
+
+        private void lmail_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Enter_Nombre(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                if (clientenombre.Text == null)
+                {
+                    MessageBox.Show("No Puede estar este campo vacío");
+                    RUT1.Enabled = false;
+                    lmail.Enabled = false;
+                    verclave.Enabled = false;
+                    CONFCLAVE.Enabled = false;
+                }
+                else
+                {
+                    RUT1.Enabled = true;
+                    
+                }
+            }
         }
     }
 }
