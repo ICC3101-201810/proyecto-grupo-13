@@ -16,6 +16,10 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
         }
+        public bool Verificar()
+        {
+            return true;
+        }
 
         private void label1_Click(object sender, EventArgs e)
         {
@@ -36,17 +40,52 @@ namespace WindowsFormsApp1
 
                 rut = Convert.ToInt32(RUT_ADMIN.Text);
                 if (UserManagment.AdminLoginRutVerification(rut) != null)
-
                 {
+
+                    Verificar();
                     CLAVE_ADMIN.Enabled = true;
-
-
                 }
                 else
                 {
                     MessageBox.Show("Este Rut no esta en nuestra base de datos");
+                    
                 }
             }
+        }
+
+        private void CLAVE_ADMIN_TextChanged(object sender, EventArgs e)
+        {
+            CLAVE_ADMIN.PasswordChar = '*';
+        }
+
+        private void Password_Enter(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                if (Verificar() == true)
+                {
+                    string password;
+                    password = CLAVE_ADMIN.Text;
+                    if (UserManagment.AdminLoginPassVerification(password) != null)
+                    {
+                        
+                    }
+                    else
+                    {
+                        MessageBox.Show("Clave mala");
+                    }
+                }
+            }
+        }
+
+        private void CrearLocal_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }
