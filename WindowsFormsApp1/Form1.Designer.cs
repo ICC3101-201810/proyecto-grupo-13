@@ -55,9 +55,10 @@
             // Registrarse
             // 
             this.Registrarse.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Registrarse.Location = new System.Drawing.Point(245, 283);
+            this.Registrarse.Location = new System.Drawing.Point(327, 348);
+            this.Registrarse.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Registrarse.Name = "Registrarse";
-            this.Registrarse.Size = new System.Drawing.Size(176, 53);
+            this.Registrarse.Size = new System.Drawing.Size(235, 65);
             this.Registrarse.TabIndex = 0;
             this.Registrarse.Text = "Registrarse";
             this.Registrarse.UseVisualStyleBackColor = true;
@@ -66,9 +67,10 @@
             // BOTONCLIENT
             // 
             this.BOTONCLIENT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BOTONCLIENT.Location = new System.Drawing.Point(245, 229);
+            this.BOTONCLIENT.Location = new System.Drawing.Point(327, 282);
+            this.BOTONCLIENT.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.BOTONCLIENT.Name = "BOTONCLIENT";
-            this.BOTONCLIENT.Size = new System.Drawing.Size(176, 48);
+            this.BOTONCLIENT.Size = new System.Drawing.Size(235, 59);
             this.BOTONCLIENT.TabIndex = 2;
             this.BOTONCLIENT.Text = "CLIENTE";
             this.BOTONCLIENT.UseVisualStyleBackColor = true;
@@ -78,9 +80,10 @@
             // BOTONADMIN
             // 
             this.BOTONADMIN.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BOTONADMIN.Location = new System.Drawing.Point(431, 229);
+            this.BOTONADMIN.Location = new System.Drawing.Point(575, 282);
+            this.BOTONADMIN.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.BOTONADMIN.Name = "BOTONADMIN";
-            this.BOTONADMIN.Size = new System.Drawing.Size(176, 48);
+            this.BOTONADMIN.Size = new System.Drawing.Size(235, 59);
             this.BOTONADMIN.TabIndex = 3;
             this.BOTONADMIN.Text = "ADMINISTRADOR";
             this.BOTONADMIN.UseVisualStyleBackColor = true;
@@ -90,9 +93,10 @@
             // LOGIN
             // 
             this.LOGIN.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LOGIN.Location = new System.Drawing.Point(431, 283);
+            this.LOGIN.Location = new System.Drawing.Point(575, 348);
+            this.LOGIN.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.LOGIN.Name = "LOGIN";
-            this.LOGIN.Size = new System.Drawing.Size(180, 53);
+            this.LOGIN.Size = new System.Drawing.Size(240, 65);
             this.LOGIN.TabIndex = 4;
             this.LOGIN.Text = "LOGIN";
             this.LOGIN.UseVisualStyleBackColor = true;
@@ -103,9 +107,10 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(30, 170);
+            this.label2.Location = new System.Drawing.Point(40, 209);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(309, 25);
+            this.label2.Size = new System.Drawing.Size(400, 31);
             this.label2.TabIndex = 6;
             this.label2.Text = "DESEA REGISTRARSE COMO";
             this.label2.Visible = false;
@@ -114,25 +119,28 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::WindowsFormsApp1.Properties.Resources.LOGOFINAL;
-            this.pictureBox1.Location = new System.Drawing.Point(6, 3);
+            this.pictureBox1.Location = new System.Drawing.Point(8, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(302, 123);
+            this.pictureBox1.Size = new System.Drawing.Size(403, 151);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
             // 
             // clienteRUT
             // 
-            this.clienteRUT.Location = new System.Drawing.Point(186, 361);
+            this.clienteRUT.Location = new System.Drawing.Point(248, 444);
+            this.clienteRUT.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.clienteRUT.Name = "clienteRUT";
-            this.clienteRUT.Size = new System.Drawing.Size(0, 20);
+            this.clienteRUT.Size = new System.Drawing.Size(0, 22);
             this.clienteRUT.TabIndex = 8;
             // 
             // clientenombre
             // 
-            this.clientenombre.Location = new System.Drawing.Point(186, 387);
+            this.clientenombre.Location = new System.Drawing.Point(248, 476);
+            this.clientenombre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.clientenombre.Name = "clientenombre";
-            this.clientenombre.Size = new System.Drawing.Size(273, 20);
+            this.clientenombre.Size = new System.Drawing.Size(363, 22);
             this.clientenombre.TabIndex = 9;
             this.clientenombre.Visible = false;
             this.clientenombre.TextChanged += new System.EventHandler(this.clientenombre_TextChanged);
@@ -140,9 +148,10 @@
             // 
             // verclave
             // 
-            this.verclave.Location = new System.Drawing.Point(186, 469);
+            this.verclave.Location = new System.Drawing.Point(248, 577);
+            this.verclave.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.verclave.Name = "verclave";
-            this.verclave.Size = new System.Drawing.Size(273, 20);
+            this.verclave.Size = new System.Drawing.Size(363, 22);
             this.verclave.TabIndex = 12;
             this.verclave.Visible = false;
             this.verclave.TextChanged += new System.EventHandler(this.verclave_TextChanged);
@@ -153,9 +162,10 @@
             this.ru1.AutoSize = true;
             this.ru1.BackColor = System.Drawing.Color.Transparent;
             this.ru1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ru1.Location = new System.Drawing.Point(40, 385);
+            this.ru1.Location = new System.Drawing.Point(53, 474);
+            this.ru1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.ru1.Name = "ru1";
-            this.ru1.Size = new System.Drawing.Size(93, 24);
+            this.ru1.Size = new System.Drawing.Size(119, 29);
             this.ru1.TabIndex = 13;
             this.ru1.Text = "NOMBRE";
             this.ru1.Visible = false;
@@ -166,9 +176,10 @@
             this.RUT.AutoSize = true;
             this.RUT.BackColor = System.Drawing.Color.Transparent;
             this.RUT.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RUT.Location = new System.Drawing.Point(40, 409);
+            this.RUT.Location = new System.Drawing.Point(53, 503);
+            this.RUT.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.RUT.Name = "RUT";
-            this.RUT.Size = new System.Drawing.Size(53, 24);
+            this.RUT.Size = new System.Drawing.Size(69, 29);
             this.RUT.TabIndex = 14;
             this.RUT.Text = "RUT ";
             this.RUT.Visible = false;
@@ -178,9 +189,10 @@
             this.lmail.AutoSize = true;
             this.lmail.BackColor = System.Drawing.Color.Transparent;
             this.lmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lmail.Location = new System.Drawing.Point(40, 437);
+            this.lmail.Location = new System.Drawing.Point(53, 538);
+            this.lmail.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lmail.Name = "lmail";
-            this.lmail.Size = new System.Drawing.Size(53, 24);
+            this.lmail.Size = new System.Drawing.Size(67, 29);
             this.lmail.TabIndex = 15;
             this.lmail.Text = "MAIL";
             this.lmail.Click += new System.EventHandler(this.lmail_Click);
@@ -190,18 +202,21 @@
             this.CLAVE12.AutoSize = true;
             this.CLAVE12.BackColor = System.Drawing.Color.Transparent;
             this.CLAVE12.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CLAVE12.Location = new System.Drawing.Point(40, 464);
+            this.CLAVE12.Location = new System.Drawing.Point(53, 571);
+            this.CLAVE12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.CLAVE12.Name = "CLAVE12";
-            this.CLAVE12.Size = new System.Drawing.Size(72, 24);
+            this.CLAVE12.Size = new System.Drawing.Size(89, 29);
             this.CLAVE12.TabIndex = 16;
             this.CLAVE12.Text = "CLAVE";
+            this.CLAVE12.Click += new System.EventHandler(this.CLAVE12_Click);
             // 
             // textBox1
             // 
             this.textBox1.Enabled = false;
-            this.textBox1.Location = new System.Drawing.Point(186, 495);
+            this.textBox1.Location = new System.Drawing.Point(248, 609);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(273, 20);
+            this.textBox1.Size = new System.Drawing.Size(363, 22);
             this.textBox1.TabIndex = 17;
             this.textBox1.Visible = false;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
@@ -212,17 +227,19 @@
             this.CONFCLAVE.AutoSize = true;
             this.CONFCLAVE.BackColor = System.Drawing.Color.Transparent;
             this.CONFCLAVE.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CONFCLAVE.Location = new System.Drawing.Point(3, 495);
+            this.CONFCLAVE.Location = new System.Drawing.Point(4, 609);
+            this.CONFCLAVE.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.CONFCLAVE.Name = "CONFCLAVE";
-            this.CONFCLAVE.Size = new System.Drawing.Size(177, 24);
+            this.CONFCLAVE.Size = new System.Drawing.Size(223, 29);
             this.CONFCLAVE.TabIndex = 18;
             this.CONFCLAVE.Text = "CONFIRME CLAVE";
             // 
             // RUT1
             // 
-            this.RUT1.Location = new System.Drawing.Point(186, 417);
+            this.RUT1.Location = new System.Drawing.Point(248, 513);
+            this.RUT1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.RUT1.Name = "RUT1";
-            this.RUT1.Size = new System.Drawing.Size(273, 20);
+            this.RUT1.Size = new System.Drawing.Size(363, 22);
             this.RUT1.TabIndex = 19;
             this.RUT1.Visible = false;
             this.RUT1.TextChanged += new System.EventHandler(this.RUT1_TextChanged);
@@ -230,37 +247,46 @@
             // 
             // MAIL_textbox
             // 
-            this.MAIL_textbox.Location = new System.Drawing.Point(186, 441);
+            this.MAIL_textbox.Location = new System.Drawing.Point(248, 543);
+            this.MAIL_textbox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MAIL_textbox.Name = "MAIL_textbox";
-            this.MAIL_textbox.Size = new System.Drawing.Size(273, 20);
+            this.MAIL_textbox.Size = new System.Drawing.Size(363, 22);
             this.MAIL_textbox.TabIndex = 20;
             this.MAIL_textbox.Visible = false;
             this.MAIL_textbox.TextChanged += new System.EventHandler(this.MAIL_textbox_TextChanged);
+            this.MAIL_textbox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Mail_Enter);
             // 
             // nCuenta
             // 
-            this.nCuenta.Location = new System.Drawing.Point(260, 387);
+            this.nCuenta.Location = new System.Drawing.Point(347, 476);
+            this.nCuenta.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.nCuenta.Name = "nCuenta";
-            this.nCuenta.Size = new System.Drawing.Size(273, 20);
+            this.nCuenta.Size = new System.Drawing.Size(363, 22);
             this.nCuenta.TabIndex = 21;
             this.nCuenta.Visible = false;
+            this.nCuenta.TextChanged += new System.EventHandler(this.nCuenta_TextChanged);
+            this.nCuenta.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Ncuenta_Enter);
             // 
             // clavecuenta
             // 
-            this.clavecuenta.Location = new System.Drawing.Point(260, 417);
+            this.clavecuenta.Location = new System.Drawing.Point(347, 513);
+            this.clavecuenta.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.clavecuenta.Name = "clavecuenta";
-            this.clavecuenta.Size = new System.Drawing.Size(273, 20);
+            this.clavecuenta.Size = new System.Drawing.Size(363, 22);
             this.clavecuenta.TabIndex = 22;
             this.clavecuenta.Visible = false;
+            this.clavecuenta.TextChanged += new System.EventHandler(this.clavecuenta_TextChanged);
+            this.clavecuenta.KeyDown += new System.Windows.Forms.KeyEventHandler(this.clavecuenta_KeyDown);
             // 
             // registro
             // 
             this.registro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.registro.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.registro.ForeColor = System.Drawing.Color.Navy;
-            this.registro.Location = new System.Drawing.Point(736, 469);
+            this.registro.Location = new System.Drawing.Point(981, 577);
+            this.registro.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.registro.Name = "registro";
-            this.registro.Size = new System.Drawing.Size(150, 50);
+            this.registro.Size = new System.Drawing.Size(200, 62);
             this.registro.TabIndex = 23;
             this.registro.Text = "Registrarse";
             this.registro.UseVisualStyleBackColor = false;
@@ -272,21 +298,23 @@
             this.BACK.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.BACK.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BACK.ForeColor = System.Drawing.Color.Navy;
-            this.BACK.Location = new System.Drawing.Point(580, 469);
+            this.BACK.Location = new System.Drawing.Point(773, 577);
+            this.BACK.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.BACK.Name = "BACK";
-            this.BACK.Size = new System.Drawing.Size(150, 50);
+            this.BACK.Size = new System.Drawing.Size(200, 62);
             this.BACK.TabIndex = 24;
             this.BACK.Text = "BACK";
             this.BACK.UseVisualStyleBackColor = false;
             this.BACK.Visible = false;
+            this.BACK.Click += new System.EventHandler(this.BACK_Click);
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.fondo_1_poo;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(918, 593);
+            this.ClientSize = new System.Drawing.Size(1224, 730);
             this.Controls.Add(this.BACK);
             this.Controls.Add(this.RUT);
             this.Controls.Add(this.clavecuenta);
@@ -308,6 +336,7 @@
             this.Controls.Add(this.ru1);
             this.Controls.Add(this.lmail);
             this.Controls.Add(this.registro);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Form1";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
