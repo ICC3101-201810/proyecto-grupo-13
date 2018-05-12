@@ -17,6 +17,10 @@ namespace WindowsFormsApp1
         {
             locales.Add(local);
         }
+        public void BorrarLocal (Local local)
+        {
+            locales.Remove(local);
+        }
         public void ShowLocals()
         {
             int i = 0;

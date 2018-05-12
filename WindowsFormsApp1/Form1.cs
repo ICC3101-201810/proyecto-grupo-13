@@ -49,6 +49,9 @@ namespace WindowsFormsApp1
             MAIL_textbox.Enabled = false;
             verclave.Enabled = false;
             clavecuenta.Enabled = false;
+            login_cliente.Visible = false;
+            login_administrador.Visible = false;
+            label1.Visible = false;
         }
         private void button1_Click(object sender, EventArgs e)
         {
@@ -74,15 +77,24 @@ namespace WindowsFormsApp1
             MAIL_textbox.Visible = true;
             BOTONCLIENT.Visible = false;
             label2.Visible = false;
+            
         }
         private void BOTONADMIN_Click(object sender, EventArgs e) 
         {
         }
         private void LOGIN_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Form2 f2 = new Form2();
-            f2.Show();
+           
+            login_cliente.Visible = true;
+            login_administrador.Visible = true;
+            label1.Visible = true;
+            LOGIN.Visible = false;
+            Registrarse.Visible = false;
+
+
+
+                 
+
         }
         private void ru1_Click(object sender, EventArgs e)
         {
@@ -296,6 +308,22 @@ namespace WindowsFormsApp1
         }
         private void CLAVE12_Click(object sender, EventArgs e)
         {
+        }
+
+        private void login_administrador_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form2 f2 = new Form2();
+            f2.Show();
+        }
+
+        private void login_cliente_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form3 f3 = new Form3();
+            f3.Show();
+
+
         }
     }
 }

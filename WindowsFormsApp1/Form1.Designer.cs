@@ -49,6 +49,9 @@
             this.clavecuenta = new System.Windows.Forms.TextBox();
             this.registro = new System.Windows.Forms.Button();
             this.BACK = new System.Windows.Forms.Button();
+            this.login_administrador = new System.Windows.Forms.Button();
+            this.login_cliente = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -56,7 +59,7 @@
             // 
             this.Registrarse.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Registrarse.Location = new System.Drawing.Point(327, 348);
-            this.Registrarse.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Registrarse.Margin = new System.Windows.Forms.Padding(4);
             this.Registrarse.Name = "Registrarse";
             this.Registrarse.Size = new System.Drawing.Size(235, 65);
             this.Registrarse.TabIndex = 0;
@@ -68,7 +71,7 @@
             // 
             this.BOTONCLIENT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BOTONCLIENT.Location = new System.Drawing.Point(327, 282);
-            this.BOTONCLIENT.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BOTONCLIENT.Margin = new System.Windows.Forms.Padding(4);
             this.BOTONCLIENT.Name = "BOTONCLIENT";
             this.BOTONCLIENT.Size = new System.Drawing.Size(235, 59);
             this.BOTONCLIENT.TabIndex = 2;
@@ -81,7 +84,7 @@
             // 
             this.BOTONADMIN.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BOTONADMIN.Location = new System.Drawing.Point(575, 282);
-            this.BOTONADMIN.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BOTONADMIN.Margin = new System.Windows.Forms.Padding(4);
             this.BOTONADMIN.Name = "BOTONADMIN";
             this.BOTONADMIN.Size = new System.Drawing.Size(235, 59);
             this.BOTONADMIN.TabIndex = 3;
@@ -94,7 +97,7 @@
             // 
             this.LOGIN.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LOGIN.Location = new System.Drawing.Point(575, 348);
-            this.LOGIN.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.LOGIN.Margin = new System.Windows.Forms.Padding(4);
             this.LOGIN.Name = "LOGIN";
             this.LOGIN.Size = new System.Drawing.Size(240, 65);
             this.LOGIN.TabIndex = 4;
@@ -120,7 +123,7 @@
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::WindowsFormsApp1.Properties.Resources.LOGOFINAL;
             this.pictureBox1.Location = new System.Drawing.Point(8, 4);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(403, 151);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -130,7 +133,7 @@
             // clienteRUT
             // 
             this.clienteRUT.Location = new System.Drawing.Point(248, 444);
-            this.clienteRUT.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.clienteRUT.Margin = new System.Windows.Forms.Padding(4);
             this.clienteRUT.Name = "clienteRUT";
             this.clienteRUT.Size = new System.Drawing.Size(0, 22);
             this.clienteRUT.TabIndex = 8;
@@ -138,7 +141,7 @@
             // clientenombre
             // 
             this.clientenombre.Location = new System.Drawing.Point(248, 476);
-            this.clientenombre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.clientenombre.Margin = new System.Windows.Forms.Padding(4);
             this.clientenombre.Name = "clientenombre";
             this.clientenombre.Size = new System.Drawing.Size(363, 22);
             this.clientenombre.TabIndex = 9;
@@ -149,7 +152,7 @@
             // verclave
             // 
             this.verclave.Location = new System.Drawing.Point(248, 577);
-            this.verclave.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.verclave.Margin = new System.Windows.Forms.Padding(4);
             this.verclave.Name = "verclave";
             this.verclave.Size = new System.Drawing.Size(363, 22);
             this.verclave.TabIndex = 12;
@@ -214,7 +217,7 @@
             // 
             this.textBox1.Enabled = false;
             this.textBox1.Location = new System.Drawing.Point(248, 609);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(363, 22);
             this.textBox1.TabIndex = 17;
@@ -237,7 +240,7 @@
             // RUT1
             // 
             this.RUT1.Location = new System.Drawing.Point(248, 513);
-            this.RUT1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.RUT1.Margin = new System.Windows.Forms.Padding(4);
             this.RUT1.Name = "RUT1";
             this.RUT1.Size = new System.Drawing.Size(363, 22);
             this.RUT1.TabIndex = 19;
@@ -248,7 +251,7 @@
             // MAIL_textbox
             // 
             this.MAIL_textbox.Location = new System.Drawing.Point(248, 543);
-            this.MAIL_textbox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.MAIL_textbox.Margin = new System.Windows.Forms.Padding(4);
             this.MAIL_textbox.Name = "MAIL_textbox";
             this.MAIL_textbox.Size = new System.Drawing.Size(363, 22);
             this.MAIL_textbox.TabIndex = 20;
@@ -259,7 +262,7 @@
             // nCuenta
             // 
             this.nCuenta.Location = new System.Drawing.Point(347, 476);
-            this.nCuenta.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.nCuenta.Margin = new System.Windows.Forms.Padding(4);
             this.nCuenta.Name = "nCuenta";
             this.nCuenta.Size = new System.Drawing.Size(363, 22);
             this.nCuenta.TabIndex = 21;
@@ -270,7 +273,7 @@
             // clavecuenta
             // 
             this.clavecuenta.Location = new System.Drawing.Point(347, 513);
-            this.clavecuenta.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.clavecuenta.Margin = new System.Windows.Forms.Padding(4);
             this.clavecuenta.Name = "clavecuenta";
             this.clavecuenta.Size = new System.Drawing.Size(363, 22);
             this.clavecuenta.TabIndex = 22;
@@ -284,7 +287,7 @@
             this.registro.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.registro.ForeColor = System.Drawing.Color.Navy;
             this.registro.Location = new System.Drawing.Point(981, 577);
-            this.registro.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.registro.Margin = new System.Windows.Forms.Padding(4);
             this.registro.Name = "registro";
             this.registro.Size = new System.Drawing.Size(200, 62);
             this.registro.TabIndex = 23;
@@ -299,7 +302,7 @@
             this.BACK.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BACK.ForeColor = System.Drawing.Color.Navy;
             this.BACK.Location = new System.Drawing.Point(773, 577);
-            this.BACK.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BACK.Margin = new System.Windows.Forms.Padding(4);
             this.BACK.Name = "BACK";
             this.BACK.Size = new System.Drawing.Size(200, 62);
             this.BACK.TabIndex = 24;
@@ -308,6 +311,36 @@
             this.BACK.Visible = false;
             this.BACK.Click += new System.EventHandler(this.BACK_Click);
             // 
+            // login_administrador
+            // 
+            this.login_administrador.Location = new System.Drawing.Point(575, 216);
+            this.login_administrador.Name = "login_administrador";
+            this.login_administrador.Size = new System.Drawing.Size(235, 59);
+            this.login_administrador.TabIndex = 25;
+            this.login_administrador.Text = "Administrador";
+            this.login_administrador.UseVisualStyleBackColor = true;
+            this.login_administrador.Click += new System.EventHandler(this.login_administrador_Click);
+            // 
+            // login_cliente
+            // 
+            this.login_cliente.Location = new System.Drawing.Point(327, 216);
+            this.login_cliente.Name = "login_cliente";
+            this.login_cliente.Size = new System.Drawing.Size(235, 59);
+            this.login_cliente.TabIndex = 26;
+            this.login_cliente.Text = "Cliente";
+            this.login_cliente.UseVisualStyleBackColor = true;
+            this.login_cliente.Click += new System.EventHandler(this.login_cliente_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(382, 126);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(400, 46);
+            this.label1.TabIndex = 27;
+            this.label1.Text = "Desea ingresar como";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -315,6 +348,9 @@
             this.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.fondo_1_poo;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1224, 730);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.login_cliente);
+            this.Controls.Add(this.login_administrador);
             this.Controls.Add(this.BACK);
             this.Controls.Add(this.RUT);
             this.Controls.Add(this.clavecuenta);
@@ -336,7 +372,7 @@
             this.Controls.Add(this.ru1);
             this.Controls.Add(this.lmail);
             this.Controls.Add(this.registro);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -368,6 +404,9 @@
         private System.Windows.Forms.TextBox clavecuenta;
         private System.Windows.Forms.Button registro;
         private System.Windows.Forms.Button BACK;
+        private System.Windows.Forms.Button login_administrador;
+        private System.Windows.Forms.Button login_cliente;
+        private System.Windows.Forms.Label label1;
     }
 }
 

@@ -15,13 +15,38 @@ namespace WindowsFormsApp1
         public Form2()
         {
             InitializeComponent();
+            DeliverySi.Enabled = false;
+            DeliveryNo.Enabled = false;
+            CrearLocal.Visible = false;
+            VerLocal.Visible = false;
+            textBox_NombreLocal.Visible = false;
+            label_nombrelocal.Visible = false;
+            textBox_DireccionLocal.Visible = false;
+            label_Direccion.Visible = false;
+            label_Delivery.Visible = false;
+            DeliverySi.Visible = false;
+            DeliveryNo.Visible = false;
+            CreandoLocal.Visible = false;
+            BorrarLocal_Boton.Visible = false;
+            CrearLocales.Visible = false;
+            volver.Visible = false;
+            salir.Visible = false;
+
+
+
+
+            
+            
         }
         public bool Verificar()
         {
             return true;
         }
+        public Admin admin;
+        Admin adminLogeado = null;
+        
 
-        private void label1_Click(object sender, EventArgs e)
+        private void Label1_Click_1(object sender, EventArgs e)
         {
 
         }
@@ -30,16 +55,16 @@ namespace WindowsFormsApp1
         {
             
         }
-
+        
         private void RutAdmin_Enter(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
                 int rut;
-                RUT_ADMIN.MaxLength = 9; // MY NIGGA!!
-
                 rut = Convert.ToInt32(RUT_ADMIN.Text);
-                if (UserManagment.AdminLoginRutVerification(rut) != null)
+                RUT_ADMIN.MaxLength = 9; // MY NIGGA!!
+                admin = UserManagment.AdminLoginRutVerification(rut);
+                if (admin != null)
                 {
 
                     Verificar();
@@ -66,7 +91,8 @@ namespace WindowsFormsApp1
                 {
                     string password;
                     password = CLAVE_ADMIN.Text;
-                    if (UserManagment.AdminLoginPassVerification(password) != null)
+                    admin = UserManagment.AdminLoginPassVerification(password);
+                    if (admin!= null)
                     {
                         
                     }
@@ -80,7 +106,19 @@ namespace WindowsFormsApp1
 
         private void CrearLocal_Click(object sender, EventArgs e)
         {
-
+            CrearLocal.Visible = false;
+            VerLocal.Visible = false;
+            textBox_NombreLocal.Visible = true;
+            label_nombrelocal.Visible = true;
+            textBox_DireccionLocal.Visible = true;
+            label_Direccion.Visible = true;
+            label_Delivery.Visible = true;
+            DeliverySi.Visible = true;
+            DeliveryNo.Visible = true;
+            CreandoLocal.Visible = true;
+            BorrarLocal_Boton.Visible = true;
+            CrearLocales.Visible = true;
+            volver.Visible = true;
         }
 
         private void label1_Click_1(object sender, EventArgs e)
@@ -95,6 +133,149 @@ namespace WindowsFormsApp1
 
         private void label2_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void CrearLocales_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void NombreLocal_Enter(object sender, KeyEventArgs e)
+        {
+            if ( e.KeyCode == Keys.Enter)
+            {
+                if (textBox_NombreLocal.Text != null)
+                {
+                    textBox_DireccionLocal.Enabled = true;
+                    confirmar = true;
+                }
+                else
+                {
+                    MessageBox.Show("Debes ingresar un Nombre");
+                }
+            }
+        }
+
+        private void DireccionLocal_Enter(object sender, KeyEventArgs e)
+        {
+            if ( e.KeyCode == Keys.Enter)
+            {
+                if (textBox_DireccionLocal.Text != null)
+                {
+                    DeliverySi.Enabled = true;
+                    DeliveryNo.Enabled = true;
+                    
+                }
+            }
+        }
+        public bool confirmar { get; set; }
+        private void DeliverySi_CheckedChanged(object sender, EventArgs e)
+        {
+            if (confirmar== true)
+            {
+                CreandoLocal.Visible = true;
+                confirmar = true;
+            }
+            
+
+        }
+
+        private void DeliveryNo_CheckedChanged(object sender, EventArgs e)
+        {
+            if (confirmar == true)
+            {
+                CreandoLocal.Visible = true;
+                confirmar = true;
+            }
+        }
+
+        private void CreandoLocal_Click(object sender, EventArgs e)
+        {
+            CrearLocales.Items.Add(textBox_NombreLocal.Text);
+            if (confirmar == true)
+            {
+                Local local = new Local(true, null, textBox_DireccionLocal.Text, 0, textBox_NombreLocal.Text, "0");
+                UserManagment.CreateLocal(local);
+                adminLogeado.AgregarLocal(local);
+                MessageBox.Show("Tu local ha sido creado");
+                textBox_NombreLocal.Text = "";
+                textBox_DireccionLocal.Text = "";
+                
+
+            }
+           
+        }
+
+        private void label_Delivery_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            adminLogeado = admin;
+            CrearLocal.Visible = true;
+            VerLocal.Visible = true;
+            RUT_ADMIN.Visible = false;
+            Rut_AdminVerificar.Visible = false;
+            CLAVE_ADMIN.Visible = false;
+            ClaveAdmin.Visible = false;
+            Ingresar_boton.Visible = false;
+            salir.Visible = true;
+        }
+
+        private void textBox_DireccionLocal_TextChanged(object sender, EventArgs e)
+        {
+         
+            
+        }
+
+        private void BorrarLocal_Boton_Click(object sender, EventArgs e)
+        {
+            string  guardarSelect;
+            guardarSelect = CrearLocales.SelectedIndex.ToString();
+            int removeAt;
+            removeAt = Convert.ToInt32(guardarSelect);
+            CrearLocales.Items.RemoveAt(removeAt);
+            // no se puede borrar de la base de datos 
+            // UserMangment.RemoveLocal(Locales.Itemas...)
+            // asi mismo no funciona con admin.
+            
+
+        }
+
+        private void volver_Click(object sender, EventArgs e)
+        {
+            textBox_NombreLocal.Visible = false;
+            label_nombrelocal.Visible = false;
+            textBox_DireccionLocal.Visible = false;
+            label_Direccion.Visible = false;
+            label_Delivery.Visible = false;
+            DeliveryNo.Visible = false;
+            DeliverySi.Visible = false;
+            CreandoLocal.Visible = false;
+            BorrarLocal_Boton.Visible = false;
+            CrearLocales.Visible = false;
+            volver.Visible = false;
+            CrearLocal.Visible = true;
+            VerLocal.Visible = true;
+
+
+        }
+
+        private void salir_Click(object sender, EventArgs e)
+        {
+            RUT_ADMIN.Visible = true;
+            Rut_AdminVerificar.Visible = true;
+            CLAVE_ADMIN.Visible = true;
+            ClaveAdmin.Visible = true;
+            Ingresar_boton.Visible = true;
+            salir.Visible = false;
+            CrearLocal.Visible = false;
+            VerLocal.Visible = false;
+            RUT_ADMIN.Text = "";
+            CLAVE_ADMIN.Text = "";
 
         }
     }

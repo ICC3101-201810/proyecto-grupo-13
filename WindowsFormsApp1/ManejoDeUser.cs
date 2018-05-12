@@ -35,6 +35,10 @@ namespace WindowsFormsApp1
         {
             locales.Add(local);
         }
+        public static void RemoveLocal(Local local)
+        {
+            locales.Remove(local);
+        }
         public static bool VerificationRut2(int Rut)
         {
             foreach (Admin admin in admins)
@@ -67,6 +71,10 @@ namespace WindowsFormsApp1
                 }
             }
             return null;
+        }
+        public static Admin GetAdmin()
+        {
+            return admin;
         }
         public static  Client ClientLoginPassVerification(string password)
         {
