@@ -116,5 +116,11 @@
   <ItemGroup>
     <None Include="Resources\Despensa1.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\deliciosa-comida-mexicana-en-fondo-azul_23-2147740747.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fondo21-1030x428.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

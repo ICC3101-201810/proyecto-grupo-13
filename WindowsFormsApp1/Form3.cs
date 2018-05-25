@@ -20,6 +20,7 @@ namespace WindowsFormsApp1
             label3.Visible = false;
             label4.Visible = false;
         }
+      
         Client clogeado = null;
         Client c;
         public bool verificar;
@@ -93,6 +94,16 @@ namespace WindowsFormsApp1
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
             textBox2.PasswordChar = '*';
+        }
+
+        private void Form3_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -63,6 +63,16 @@ namespace WindowsFormsApp1.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap deliciosa_comida_mexicana_en_fondo_azul_23_2147740747 {
+            get {
+                object obj = ResourceManager.GetObject("deliciosa-comida-mexicana-en-fondo-azul_23-2147740747", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Despensa1 {
             get {
                 object obj = ResourceManager.GetObject("Despensa1", resourceCulture);
@@ -76,6 +86,16 @@ namespace WindowsFormsApp1.Properties {
         internal static System.Drawing.Bitmap fondo_1_poo {
             get {
                 object obj = ResourceManager.GetObject("fondo 1 poo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap fondo21_1030x428 {
+            get {
+                object obj = ResourceManager.GetObject("fondo21-1030x428", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
