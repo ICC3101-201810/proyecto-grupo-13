@@ -63,9 +63,29 @@ namespace WindowsFormsApp1.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _2000px_Messagebox_info {
+            get {
+                object obj = ResourceManager.GetObject("2000px-Messagebox_info", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap deliciosa_comida_mexicana_en_fondo_azul_23_2147740747 {
             get {
                 object obj = ResourceManager.GetObject("deliciosa-comida-mexicana-en-fondo-azul_23-2147740747", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap depositphotos_149002667_stock_photo_fresh_tasty_italian_pizza_fast {
+            get {
+                object obj = ResourceManager.GetObject("depositphotos_149002667-stock-photo-fresh-tasty-italian-pizza-fast", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -103,9 +123,39 @@ namespace WindowsFormsApp1.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Foto_con_fondo_azul {
+            get {
+                object obj = ResourceManager.GetObject("Foto-con-fondo-azul", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap LOGOFINAL {
             get {
                 object obj = ResourceManager.GetObject("LOGOFINAL", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Pizza {
+            get {
+                object obj = ResourceManager.GetObject("Pizza", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Sign_Info_icon {
+            get {
+                object obj = ResourceManager.GetObject("Sign-Info-icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

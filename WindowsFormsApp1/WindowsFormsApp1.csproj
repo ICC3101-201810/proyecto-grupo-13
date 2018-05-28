@@ -67,6 +67,12 @@
     <Compile Include="Form3.Designer.cs">
       <DependentUpon>Form3.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form4.Designer.cs">
+      <DependentUpon>Form4.cs</DependentUpon>
+    </Compile>
     <Compile Include="Local.cs" />
     <Compile Include="ManejoDeUser.cs" />
     <Compile Include="Producto.cs" />
@@ -83,6 +89,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form3.resx">
       <DependentUpon>Form3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form4.resx">
+      <DependentUpon>Form4.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -121,6 +130,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\fondo21-1030x428.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\depositphotos_149002667-stock-photo-fresh-tasty-italian-pizza-fast.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pizza.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Foto-con-fondo-azul.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2000px-Messagebox_info.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sign-Info-icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

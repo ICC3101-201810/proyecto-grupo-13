@@ -32,3 +32,4 @@ C:\Users\oyarc\Desktop\proyecto-grupo-13\WindowsFormsApp1\obj\Debug\WindowsForms
 C:\Users\oyarc\Desktop\proyecto-grupo-13\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csprojResolveAssemblyReference.cache
 C:\Users\oyarc\Desktop\proyecto-grupo-13\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form3.resources
 C:\Users\ING\Desktop\proyecto-grupo-13\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form3.resources
+C:\Users\ING\Desktop\proyecto-grupo-13\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form4.resources

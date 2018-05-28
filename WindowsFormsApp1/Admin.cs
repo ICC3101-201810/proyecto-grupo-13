@@ -8,7 +8,8 @@ namespace WindowsFormsApp1
 {
     public class Admin : Usser
     {
-        List<Local> locales;
+        public List<Local> locales;
+      
         public Admin(string Nombre, string Mail, string Clave, int Rut, List<Local> locales) : base(Nombre, Mail, Clave, Rut)
         {
             this.locales = new List<Local>();
@@ -39,5 +40,6 @@ namespace WindowsFormsApp1
         {
             return locales;
         }
+       
     }
 }

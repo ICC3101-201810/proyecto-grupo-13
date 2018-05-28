@@ -12,9 +12,11 @@ namespace WindowsFormsApp1
 {
     public partial class Form3 : Form
     {
-        public Form3()
+        Form1 parent;
+        public Form3(Form1 parent) 
         {
             InitializeComponent();
+            this.parent = parent;
             textBox2.Enabled = false;
             button1.Visible = false;
             label3.Visible = false;
@@ -89,6 +91,11 @@ namespace WindowsFormsApp1
             label4.Text = "Tu Saldo es  " + saldo;
             label3.Visible = true;
 
+        }
+        protected override void OnClosed(EventArgs e)
+        {
+            parent.Show();
+            base.OnClosed(e);
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)

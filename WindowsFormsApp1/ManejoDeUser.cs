@@ -14,14 +14,31 @@ namespace WindowsFormsApp1
     {
         static List<Client> clients = new List<Client>();
         static List<Admin> admins = new List<Admin>();
-        static List<Local> locales = new List<Local>();
+        static public List<Local> locales = new List<Local>();
         static public Bank bank;
         static public Admin admin;
         static public Client client;
 
         // agregar SAVE DATA 
         // Load DATA
-        
+        public static void Serialize()
+        {
+            IFormatter formatter = new BinaryFormatter();
+            Stream stream = new FileStream("clients.bin", FileMode.Create, FileAccess.Write);
+            formatter.Serialize(stream, clients);
+            stream.Close();
+
+        }
+        public static void Deserialize()
+        {
+            if (File.Exists("clients.bin"))
+            {
+                IFormatter formatter = new BinaryFormatter();
+                Stream stream = new FileStream("clients.bin", FileMode.Open, FileAccess.Read);
+                clients = (List<Client>)formatter.Deserialize(stream);
+                stream.Close();
+            }
+        }
         public static void AddClient(Client client)
         {
             clients.Add(client);

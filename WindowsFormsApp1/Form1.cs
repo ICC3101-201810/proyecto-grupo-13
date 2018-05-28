@@ -36,9 +36,14 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
             Client c1 = new Client("Paz Torres", "cptorres@miuandes.cl", "paz45", 193226000, "pezdorado", "0210025", 500000);
-            Admin a1 = new Admin("Matias Cabezas", "mcabezas@miuandes.cl", "weedlover", 192439396,null);
+            Local l1 = new Local(false, null, "Las Condes 456", 0, "Subway", "LC1");
+            Admin a1 = new Admin("Matias Cabezas", "mcabezas@miuandes.cl", "weedlover", 192439396, null);
+            a1.AgregarLocal(l1);
             UserManagment.CreateAdmin(a1);
             UserManagment.AddClient(c1);
+            UserManagment.CreateLocal(l1);
+            Product p1 = new Product(45, "BMT", 3000);
+            l1.AddProduct(p1);
             String path = Directory.GetCurrentDirectory();
             ru1.Visible = false;
             RUT.Visible = false;
@@ -52,6 +57,16 @@ namespace WindowsFormsApp1
             login_cliente.Visible = false;
             login_administrador.Visible = false;
             label1.Visible = false;
+            back1.Visible = false;
+            label_info.Visible = false;
+            back_bottom2.Visible = false;
+            UserManagment.Deserialize();
+
+        }
+        protected override void OnClosed(EventArgs e)
+        {
+            UserManagment.Serialize();
+            base.OnClosed(e);
         }
         private void button1_Click(object sender, EventArgs e)
         {
@@ -60,6 +75,8 @@ namespace WindowsFormsApp1
             LOGIN.Visible = false;
             Registrarse.Visible = false;
             label2.Visible = true;
+            back1.Visible = Visible;
+
         }
         private void button1_Click_1(object sender, EventArgs e)
         {
@@ -77,10 +94,15 @@ namespace WindowsFormsApp1
             MAIL_textbox.Visible = true;
             BOTONCLIENT.Visible = false;
             label2.Visible = false;
+            back1.Visible = false;
+            back_bottom2.Visible = true;
             
+
         }
         private void BOTONADMIN_Click(object sender, EventArgs e) 
         {
+            back1.Visible = false;
+
         }
         private void LOGIN_Click(object sender, EventArgs e)
         {
@@ -158,7 +180,7 @@ namespace WindowsFormsApp1
                     CLAVE12.Visible = false;
                     CONFCLAVE.Visible = false;
                     clavecuenta.Visible = true;
-                    BACK.Visible = true;
+                    
                 }
                 else
                 {
@@ -200,7 +222,6 @@ namespace WindowsFormsApp1
                 RUT.Visible = false;
                 nCuenta.Visible = false;
                 clavecuenta.Visible = false;
-                BACK.Visible = false;
                 BOTONCLIENT.Visible = false;
                 Registrarse.Visible = true;
                 LOGIN.Visible = true;
@@ -320,10 +341,62 @@ namespace WindowsFormsApp1
         private void login_cliente_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Form3 f3 = new Form3();
+            Form3 f3 = new Form3(this);
             f3.Show();
 
 
+        }
+
+        private void back1_Click(object sender, EventArgs e)
+        {
+            BOTONADMIN.Visible = false;
+            BOTONCLIENT.Visible = false;
+            Registrarse.Visible = true;
+            LOGIN.Visible = true;
+            back1.Visible = false;
+            registro.Visible = false;
+
+        }
+
+        private void info(object sender, EventArgs e)
+        {
+            label_info.Visible = true;
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void noinfo(object sender, EventArgs e)
+        {
+            label_info.Visible = false;
+        }
+
+        private void back_bottom2_Click(object sender, EventArgs e)
+        {
+            BOTONADMIN.Visible = true;
+            Registrarse.Visible = true;
+            ru1.Visible = false;
+            RUT.Visible = false;
+            lmail.Visible = false;
+            RUT1.Visible = false;
+            CLAVE12.Visible = false;
+            CONFCLAVE.Visible = false;
+            clavecuenta.Visible = false;
+            clientenombre.Visible = false;
+            clientenombre.Visible = false;
+            RUT1.Visible = false;
+            nCuenta.Visible = false;
+            verclave.Visible = false;
+            textBox1.Visible = false;
+            MAIL_textbox.Visible = false;
+            BOTONCLIENT.Visible = true;
+            label2.Visible = true;
+            back1.Visible = true;
+            back_bottom2.Visible = false;
+            Registrarse.Visible = false;
+            registro.Visible = false;
         }
     }
 }
