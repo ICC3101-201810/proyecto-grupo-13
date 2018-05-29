@@ -83,6 +83,16 @@ namespace WindowsFormsApp1.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap depositphotos_123750520_stock_photo_italian_food_ingredients_on_stone {
+            get {
+                object obj = ResourceManager.GetObject("depositphotos_123750520-stock-photo-italian-food-ingredients-on-stone", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap depositphotos_149002667_stock_photo_fresh_tasty_italian_pizza_fast {
             get {
                 object obj = ResourceManager.GetObject("depositphotos_149002667-stock-photo-fresh-tasty-italian-pizza-fast", resourceCulture);
@@ -103,6 +113,16 @@ namespace WindowsFormsApp1.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap diversa_comida_mexicana_en_fondo_oscuro_23_2147740705 {
+            get {
+                object obj = ResourceManager.GetObject("diversa-comida-mexicana-en-fondo-oscuro_23-2147740705", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap fondo_1_poo {
             get {
                 object obj = ResourceManager.GetObject("fondo 1 poo", resourceCulture);
@@ -116,6 +136,16 @@ namespace WindowsFormsApp1.Properties {
         internal static System.Drawing.Bitmap fondo21_1030x428 {
             get {
                 object obj = ResourceManager.GetObject("fondo21-1030x428", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap food_background {
+            get {
+                object obj = ResourceManager.GetObject("food-background", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -32,8 +32,8 @@ namespace WindowsFormsApp1
             volver.Visible = false;
             salir.Visible = false;
             ShowLocals.Visible = false;
-            ShowProducts.Visible = false;
             admin_local.Visible = false;
+            
             
         }
         public bool Verificar()
@@ -105,7 +105,7 @@ namespace WindowsFormsApp1
                 }
             }
         }
-
+        
         private void CrearLocal_Click(object sender, EventArgs e)
         {
             CrearLocal.Visible = false;
@@ -121,12 +121,14 @@ namespace WindowsFormsApp1
             BorrarLocal_Boton.Visible = true;
             CrearLocales.Visible = true;
             volver.Visible = true;
+            
             if (ver_local2 == true)
             {
                 foreach (Local locals in adminLogeado.locales)
                 {
                     CrearLocales.Items.Add(locals.GetNameLocal());
                     ver_local2 = false;
+                   
                 }
             }
             
@@ -209,15 +211,16 @@ namespace WindowsFormsApp1
             CrearLocales.Items.Add(textBox_NombreLocal.Text);
             if (confirmar == true)
             {
+        
                 Local local = new Local(true, null, textBox_DireccionLocal.Text, 0, textBox_NombreLocal.Text, "0");
                 UserManagment.CreateLocal(local);
                 adminLogeado.AgregarLocal(local);
                 MessageBox.Show("Tu local ha sido creado");
                 textBox_NombreLocal.Text = "";
-                textBox_DireccionLocal.Text = "";
-                ShowLocals.Items.Add(local.GetNameLocal());
+                textBox_DireccionLocal.Text = "";   
+                //ShowLocals.Items.Add(local.GetNameLocal());
                 
-
+            
             }
            
         }
@@ -252,6 +255,7 @@ namespace WindowsFormsApp1
             int removeAt;
             removeAt = Convert.ToInt32(CrearLocales.SelectedIndex);
             CrearLocales.Items.RemoveAt(removeAt);
+            ShowLocals.Items.RemoveAt(removeAt);
 
             for (int i =adminLogeado.locales.Count -1; i>=0; i--)
             {
@@ -260,6 +264,7 @@ namespace WindowsFormsApp1
                  {
                     
                     adminLogeado.locales.RemoveAt(i);
+                    
 
                  }
             }
@@ -312,19 +317,21 @@ namespace WindowsFormsApp1
         {
 
         }
-
         private void VerLocal_Click(object sender, EventArgs e)
         {
             admin_local.Visible = true;
             ShowLocals.Visible = true;
             if (ver_local == true)
             {
-                foreach (Local locals in adminLogeado.locales)
-                {
-                    ShowLocals.Items.Add(locals.GetNameLocal());
-                    ver_local = false;
-                }
+                
+               foreach (Local locals in adminLogeado.locales)
+               {
+                        ShowLocals.Items.Add(locals.GetNameLocal());
+                        ver_local = false;
+               }
+                
             }
+            
         }
 
         private void admin_local_Click(object sender, EventArgs e)
@@ -332,9 +339,7 @@ namespace WindowsFormsApp1
             
             admin_local.Visible = false;
             ShowLocals.Visible = false;
-            ShowProducts.Visible = true;
             string selectItem = ShowLocals.Items[ShowLocals.SelectedIndex].ToString();
-            ShowProducts.Visible = true;
             for (int i = adminLogeado.locales.Count - 1; i >= 0; i--)
             {
 
@@ -346,10 +351,7 @@ namespace WindowsFormsApp1
                     form4.Show();
                     this.Hide();
                     localSeleccionado.GetMenu();
-                    foreach (Product products in localSeleccionado.GetMenu())
-                    {
-                        ShowProducts.Items.Add(products.GetName() + " " + products.GetPrice() + " " + products.GetStock());
-                    }
+                    
 
                 }
             }

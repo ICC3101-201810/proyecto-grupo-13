@@ -146,5 +146,14 @@
   <ItemGroup>
     <None Include="Resources\Sign-Info-icon.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\depositphotos_123750520-stock-photo-italian-food-ingredients-on-stone.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\diversa-comida-mexicana-en-fondo-oscuro_23-2147740705.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\food-background.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

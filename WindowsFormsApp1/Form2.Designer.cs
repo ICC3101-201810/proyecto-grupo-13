@@ -52,17 +52,6 @@
             this.salir = new System.Windows.Forms.Button();
             this.ShowLocals = new System.Windows.Forms.ListBox();
             this.admin_local = new System.Windows.Forms.Button();
-            this.ShowProducts = new System.Windows.Forms.ListBox();
-            this.modificar_producto = new System.Windows.Forms.Button();
-            this.agregar_p = new System.Windows.Forms.Button();
-            this.volverProductos = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.nombre_producto = new System.Windows.Forms.Label();
-            this.stock_product = new System.Windows.Forms.Label();
-            this.price_product = new System.Windows.Forms.Label();
-            this.changename_product = new System.Windows.Forms.TextBox();
-            this.changestock_product = new System.Windows.Forms.TextBox();
-            this.changeprecio_product = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -315,9 +304,9 @@
             this.ShowLocals.ForeColor = System.Drawing.SystemColors.InactiveCaption;
             this.ShowLocals.FormattingEnabled = true;
             this.ShowLocals.ItemHeight = 17;
-            this.ShowLocals.Location = new System.Drawing.Point(98, 205);
+            this.ShowLocals.Location = new System.Drawing.Point(53, 224);
             this.ShowLocals.Name = "ShowLocals";
-            this.ShowLocals.Size = new System.Drawing.Size(326, 191);
+            this.ShowLocals.Size = new System.Drawing.Size(409, 242);
             this.ShowLocals.TabIndex = 24;
             this.ShowLocals.SelectedIndexChanged += new System.EventHandler(this.ShowLocals_SelectedIndexChanged);
             // 
@@ -326,7 +315,7 @@
             this.admin_local.BackColor = System.Drawing.Color.ForestGreen;
             this.admin_local.Font = new System.Drawing.Font("Britannic Bold", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.admin_local.ForeColor = System.Drawing.Color.White;
-            this.admin_local.Location = new System.Drawing.Point(98, 419);
+            this.admin_local.Location = new System.Drawing.Point(98, 497);
             this.admin_local.Name = "admin_local";
             this.admin_local.Size = new System.Drawing.Size(326, 41);
             this.admin_local.TabIndex = 25;
@@ -334,126 +323,12 @@
             this.admin_local.UseVisualStyleBackColor = false;
             this.admin_local.Click += new System.EventHandler(this.admin_local_Click);
             // 
-            // ShowProducts
-            // 
-            this.ShowProducts.BackColor = System.Drawing.Color.Wheat;
-            this.ShowProducts.Font = new System.Drawing.Font("Britannic Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ShowProducts.FormattingEnabled = true;
-            this.ShowProducts.ItemHeight = 16;
-            this.ShowProducts.Location = new System.Drawing.Point(213, 168);
-            this.ShowProducts.Name = "ShowProducts";
-            this.ShowProducts.Size = new System.Drawing.Size(451, 260);
-            this.ShowProducts.TabIndex = 26;
-            // 
-            // modificar_producto
-            // 
-            this.modificar_producto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.modificar_producto.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.modificar_producto.Location = new System.Drawing.Point(79, 489);
-            this.modificar_producto.Name = "modificar_producto";
-            this.modificar_producto.Size = new System.Drawing.Size(150, 57);
-            this.modificar_producto.TabIndex = 27;
-            this.modificar_producto.Text = "Modificar Producto";
-            this.modificar_producto.UseVisualStyleBackColor = false;
-            this.modificar_producto.Click += new System.EventHandler(this.modificar_producto_Click);
-            // 
-            // agregar_p
-            // 
-            this.agregar_p.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.agregar_p.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.agregar_p.Location = new System.Drawing.Point(241, 489);
-            this.agregar_p.Name = "agregar_p";
-            this.agregar_p.Size = new System.Drawing.Size(150, 57);
-            this.agregar_p.TabIndex = 28;
-            this.agregar_p.Text = "Agregar/Quitar Producto";
-            this.agregar_p.UseVisualStyleBackColor = false;
-            // 
-            // volverProductos
-            // 
-            this.volverProductos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.volverProductos.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.volverProductos.Location = new System.Drawing.Point(397, 489);
-            this.volverProductos.Name = "volverProductos";
-            this.volverProductos.Size = new System.Drawing.Size(150, 57);
-            this.volverProductos.TabIndex = 29;
-            this.volverProductos.Text = "Volver";
-            this.volverProductos.UseVisualStyleBackColor = false;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(426, 362);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 31;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // nombre_producto
-            // 
-            this.nombre_producto.AutoSize = true;
-            this.nombre_producto.Location = new System.Drawing.Point(371, 267);
-            this.nombre_producto.Name = "nombre_producto";
-            this.nombre_producto.Size = new System.Drawing.Size(44, 13);
-            this.nombre_producto.TabIndex = 32;
-            this.nombre_producto.Text = "Nombre";
-            // 
-            // stock_product
-            // 
-            this.stock_product.AutoSize = true;
-            this.stock_product.Location = new System.Drawing.Point(371, 293);
-            this.stock_product.Name = "stock_product";
-            this.stock_product.Size = new System.Drawing.Size(35, 13);
-            this.stock_product.TabIndex = 33;
-            this.stock_product.Text = "Stock";
-            this.stock_product.Click += new System.EventHandler(this.stock_product_Click);
-            // 
-            // price_product
-            // 
-            this.price_product.AutoSize = true;
-            this.price_product.Location = new System.Drawing.Point(371, 315);
-            this.price_product.Name = "price_product";
-            this.price_product.Size = new System.Drawing.Size(37, 13);
-            this.price_product.TabIndex = 34;
-            this.price_product.Text = "Precio";
-            // 
-            // changename_product
-            // 
-            this.changename_product.Location = new System.Drawing.Point(426, 260);
-            this.changename_product.Name = "changename_product";
-            this.changename_product.Size = new System.Drawing.Size(100, 20);
-            this.changename_product.TabIndex = 35;
-            // 
-            // changestock_product
-            // 
-            this.changestock_product.Location = new System.Drawing.Point(426, 286);
-            this.changestock_product.Name = "changestock_product";
-            this.changestock_product.Size = new System.Drawing.Size(100, 20);
-            this.changestock_product.TabIndex = 36;
-            // 
-            // changeprecio_product
-            // 
-            this.changeprecio_product.Location = new System.Drawing.Point(426, 312);
-            this.changeprecio_product.Name = "changeprecio_product";
-            this.changeprecio_product.Size = new System.Drawing.Size(100, 20);
-            this.changeprecio_product.TabIndex = 37;
-            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.Despensa1;
             this.ClientSize = new System.Drawing.Size(918, 593);
-            this.Controls.Add(this.changeprecio_product);
-            this.Controls.Add(this.changestock_product);
-            this.Controls.Add(this.changename_product);
-            this.Controls.Add(this.price_product);
-            this.Controls.Add(this.stock_product);
-            this.Controls.Add(this.nombre_producto);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.volverProductos);
-            this.Controls.Add(this.agregar_p);
-            this.Controls.Add(this.modificar_producto);
-            this.Controls.Add(this.ShowProducts);
             this.Controls.Add(this.admin_local);
             this.Controls.Add(this.ShowLocals);
             this.Controls.Add(this.salir);
@@ -512,16 +387,5 @@
         private System.Windows.Forms.Button salir;
         private System.Windows.Forms.ListBox ShowLocals;
         private System.Windows.Forms.Button admin_local;
-        private System.Windows.Forms.ListBox ShowProducts;
-        private System.Windows.Forms.Button modificar_producto;
-        private System.Windows.Forms.Button agregar_p;
-        private System.Windows.Forms.Button volverProductos;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label nombre_producto;
-        private System.Windows.Forms.Label stock_product;
-        private System.Windows.Forms.Label price_product;
-        private System.Windows.Forms.TextBox changename_product;
-        private System.Windows.Forms.TextBox changestock_product;
-        private System.Windows.Forms.TextBox changeprecio_product;
     }
 }
