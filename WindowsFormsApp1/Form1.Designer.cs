@@ -60,60 +60,72 @@
             // 
             // Registrarse
             // 
-            this.Registrarse.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Registrarse.BackColor = System.Drawing.SystemColors.Menu;
+            this.Registrarse.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.Foto_con_fondo_azul;
+            this.Registrarse.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.Registrarse.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Registrarse.Location = new System.Drawing.Point(245, 283);
             this.Registrarse.Name = "Registrarse";
             this.Registrarse.Size = new System.Drawing.Size(176, 53);
             this.Registrarse.TabIndex = 0;
             this.Registrarse.Text = "Registrarse";
-            this.Registrarse.UseVisualStyleBackColor = true;
+            this.Registrarse.UseVisualStyleBackColor = false;
             this.Registrarse.Click += new System.EventHandler(this.button1_Click);
             // 
             // BOTONCLIENT
             // 
-            this.BOTONCLIENT.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BOTONCLIENT.BackColor = System.Drawing.SystemColors.Menu;
+            this.BOTONCLIENT.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.Foto_con_fondo_azul;
+            this.BOTONCLIENT.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.BOTONCLIENT.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BOTONCLIENT.Location = new System.Drawing.Point(245, 229);
             this.BOTONCLIENT.Name = "BOTONCLIENT";
             this.BOTONCLIENT.Size = new System.Drawing.Size(176, 48);
             this.BOTONCLIENT.TabIndex = 2;
-            this.BOTONCLIENT.Text = "CLIENTE";
-            this.BOTONCLIENT.UseVisualStyleBackColor = true;
+            this.BOTONCLIENT.Text = "Cliente";
+            this.BOTONCLIENT.UseVisualStyleBackColor = false;
             this.BOTONCLIENT.Visible = false;
             this.BOTONCLIENT.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // BOTONADMIN
             // 
-            this.BOTONADMIN.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BOTONADMIN.BackColor = System.Drawing.SystemColors.Menu;
+            this.BOTONADMIN.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.Foto_con_fondo_azul;
+            this.BOTONADMIN.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.BOTONADMIN.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BOTONADMIN.Location = new System.Drawing.Point(431, 229);
             this.BOTONADMIN.Name = "BOTONADMIN";
-            this.BOTONADMIN.Size = new System.Drawing.Size(176, 48);
+            this.BOTONADMIN.Size = new System.Drawing.Size(219, 48);
             this.BOTONADMIN.TabIndex = 3;
-            this.BOTONADMIN.Text = "ADMINISTRADOR";
-            this.BOTONADMIN.UseVisualStyleBackColor = true;
+            this.BOTONADMIN.Text = "Administrador";
+            this.BOTONADMIN.UseVisualStyleBackColor = false;
             this.BOTONADMIN.Visible = false;
             this.BOTONADMIN.Click += new System.EventHandler(this.BOTONADMIN_Click);
             // 
             // LOGIN
             // 
-            this.LOGIN.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LOGIN.BackColor = System.Drawing.SystemColors.Menu;
+            this.LOGIN.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.Foto_con_fondo_azul;
+            this.LOGIN.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.LOGIN.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LOGIN.Location = new System.Drawing.Point(431, 283);
             this.LOGIN.Name = "LOGIN";
             this.LOGIN.Size = new System.Drawing.Size(180, 53);
             this.LOGIN.TabIndex = 4;
-            this.LOGIN.Text = "LOGIN";
-            this.LOGIN.UseVisualStyleBackColor = true;
+            this.LOGIN.Text = "Login";
+            this.LOGIN.UseVisualStyleBackColor = false;
             this.LOGIN.Click += new System.EventHandler(this.LOGIN_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(238, 129);
+            this.label2.Font = new System.Drawing.Font("Cooper Black", 24F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(233, 129);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(467, 37);
+            this.label2.Size = new System.Drawing.Size(388, 36);
             this.label2.TabIndex = 6;
-            this.label2.Text = "DESEA REGISTRARSE COMO";
+            this.label2.Text = "Desea registrarse como";
             this.label2.Visible = false;
             // 
             // pictureBox1
@@ -157,11 +169,11 @@
             // ru1
             // 
             this.ru1.AutoSize = true;
-            this.ru1.BackColor = System.Drawing.Color.SeaShell;
-            this.ru1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ru1.Location = new System.Drawing.Point(241, 176);
+            this.ru1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.ru1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ru1.Location = new System.Drawing.Point(197, 176);
             this.ru1.Name = "ru1";
-            this.ru1.Size = new System.Drawing.Size(93, 24);
+            this.ru1.Size = new System.Drawing.Size(91, 22);
             this.ru1.TabIndex = 13;
             this.ru1.Text = "NOMBRE";
             this.ru1.Visible = false;
@@ -170,23 +182,25 @@
             // RUT
             // 
             this.RUT.AutoSize = true;
-            this.RUT.BackColor = System.Drawing.Color.White;
-            this.RUT.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RUT.Location = new System.Drawing.Point(241, 204);
+            this.RUT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.RUT.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RUT.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.RUT.Location = new System.Drawing.Point(192, 208);
             this.RUT.Name = "RUT";
-            this.RUT.Size = new System.Drawing.Size(53, 24);
+            this.RUT.Size = new System.Drawing.Size(47, 22);
             this.RUT.TabIndex = 14;
             this.RUT.Text = "RUT ";
             this.RUT.Visible = false;
+            this.RUT.Click += new System.EventHandler(this.RUT_Click);
             // 
             // lmail
             // 
             this.lmail.AutoSize = true;
-            this.lmail.BackColor = System.Drawing.Color.White;
-            this.lmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.lmail.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lmail.Location = new System.Drawing.Point(242, 242);
             this.lmail.Name = "lmail";
-            this.lmail.Size = new System.Drawing.Size(53, 24);
+            this.lmail.Size = new System.Drawing.Size(56, 22);
             this.lmail.TabIndex = 15;
             this.lmail.Text = "MAIL";
             this.lmail.Click += new System.EventHandler(this.lmail_Click);
@@ -194,11 +208,11 @@
             // CLAVE12
             // 
             this.CLAVE12.AutoSize = true;
-            this.CLAVE12.BackColor = System.Drawing.Color.White;
-            this.CLAVE12.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CLAVE12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.CLAVE12.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CLAVE12.Location = new System.Drawing.Point(241, 272);
             this.CLAVE12.Name = "CLAVE12";
-            this.CLAVE12.Size = new System.Drawing.Size(72, 24);
+            this.CLAVE12.Size = new System.Drawing.Size(74, 22);
             this.CLAVE12.TabIndex = 16;
             this.CLAVE12.Text = "CLAVE";
             this.CLAVE12.Click += new System.EventHandler(this.CLAVE12_Click);
@@ -217,11 +231,11 @@
             // CONFCLAVE
             // 
             this.CONFCLAVE.AutoSize = true;
-            this.CONFCLAVE.BackColor = System.Drawing.Color.White;
-            this.CONFCLAVE.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CONFCLAVE.Location = new System.Drawing.Point(194, 300);
+            this.CONFCLAVE.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.CONFCLAVE.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CONFCLAVE.Location = new System.Drawing.Point(171, 300);
             this.CONFCLAVE.Name = "CONFCLAVE";
-            this.CONFCLAVE.Size = new System.Drawing.Size(177, 24);
+            this.CONFCLAVE.Size = new System.Drawing.Size(174, 22);
             this.CONFCLAVE.TabIndex = 18;
             this.CONFCLAVE.Text = "CONFIRME CLAVE";
             // 
@@ -268,8 +282,8 @@
             // registro
             // 
             this.registro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.registro.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.registro.ForeColor = System.Drawing.Color.Navy;
+            this.registro.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.registro.ForeColor = System.Drawing.Color.Black;
             this.registro.Location = new System.Drawing.Point(506, 343);
             this.registro.Name = "registro";
             this.registro.Size = new System.Drawing.Size(150, 50);
@@ -281,46 +295,55 @@
             // 
             // login_administrador
             // 
-            this.login_administrador.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.login_administrador.BackColor = System.Drawing.SystemColors.Menu;
+            this.login_administrador.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.Foto_con_fondo_azul;
+            this.login_administrador.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.login_administrador.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.login_administrador.ForeColor = System.Drawing.SystemColors.Desktop;
             this.login_administrador.Location = new System.Drawing.Point(431, 176);
             this.login_administrador.Margin = new System.Windows.Forms.Padding(2);
             this.login_administrador.Name = "login_administrador";
-            this.login_administrador.Size = new System.Drawing.Size(176, 48);
+            this.login_administrador.Size = new System.Drawing.Size(191, 48);
             this.login_administrador.TabIndex = 25;
             this.login_administrador.Text = "Administrador";
-            this.login_administrador.UseVisualStyleBackColor = true;
+            this.login_administrador.UseVisualStyleBackColor = false;
             this.login_administrador.Click += new System.EventHandler(this.login_administrador_Click);
             // 
             // login_cliente
             // 
-            this.login_cliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.login_cliente.Location = new System.Drawing.Point(245, 176);
+            this.login_cliente.BackColor = System.Drawing.SystemColors.Menu;
+            this.login_cliente.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.Foto_con_fondo_azul;
+            this.login_cliente.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.login_cliente.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.login_cliente.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.login_cliente.Location = new System.Drawing.Point(244, 176);
             this.login_cliente.Margin = new System.Windows.Forms.Padding(2);
             this.login_cliente.Name = "login_cliente";
             this.login_cliente.Size = new System.Drawing.Size(176, 48);
             this.login_cliente.TabIndex = 26;
             this.login_cliente.Text = "Cliente";
-            this.login_cliente.UseVisualStyleBackColor = true;
+            this.login_cliente.UseVisualStyleBackColor = false;
             this.login_cliente.Click += new System.EventHandler(this.login_cliente_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Cooper Black", 24F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label1.Location = new System.Drawing.Point(290, 129);
+            this.label1.Location = new System.Drawing.Point(240, 129);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(321, 37);
+            this.label1.Size = new System.Drawing.Size(345, 36);
             this.label1.TabIndex = 27;
             this.label1.Text = "Desea ingresar como";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // back1
             // 
-            this.back1.BackColor = System.Drawing.Color.Navy;
-            this.back1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.back1.ForeColor = System.Drawing.Color.DarkTurquoise;
+            this.back1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.back1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.back1.ForeColor = System.Drawing.Color.Black;
             this.back1.Location = new System.Drawing.Point(331, 342);
             this.back1.Name = "back1";
             this.back1.Size = new System.Drawing.Size(155, 50);
@@ -348,21 +371,21 @@
             // 
             this.label_info.AutoSize = true;
             this.label_info.BackColor = System.Drawing.Color.Transparent;
-            this.label_info.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_info.Font = new System.Drawing.Font("Century Gothic", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_info.ForeColor = System.Drawing.Color.DarkBlue;
             this.label_info.Location = new System.Drawing.Point(182, 98);
             this.label_info.Name = "label_info";
-            this.label_info.Size = new System.Drawing.Size(731, 20);
+            this.label_info.Size = new System.Drawing.Size(704, 21);
             this.label_info.TabIndex = 30;
             this.label_info.Text = "Esta aplicacion te solucionara tus problemas a la hora de almuerzo, Registrarte o" +
     " Ingresa!";
             // 
             // back_bottom2
             // 
-            this.back_bottom2.BackColor = System.Drawing.Color.Navy;
-            this.back_bottom2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.back_bottom2.ForeColor = System.Drawing.Color.DarkTurquoise;
-            this.back_bottom2.Location = new System.Drawing.Point(329, 342);
+            this.back_bottom2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.back_bottom2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.back_bottom2.ForeColor = System.Drawing.Color.Black;
+            this.back_bottom2.Location = new System.Drawing.Point(331, 343);
             this.back_bottom2.Name = "back_bottom2";
             this.back_bottom2.Size = new System.Drawing.Size(155, 50);
             this.back_bottom2.TabIndex = 31;
@@ -376,7 +399,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.Foto_con_fondo_azul;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(918, 593);
+            this.ClientSize = new System.Drawing.Size(1221, 617);
             this.Controls.Add(this.back_bottom2);
             this.Controls.Add(this.label_info);
             this.Controls.Add(this.label3);
@@ -406,6 +429,7 @@
             this.Controls.Add(this.registro);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
