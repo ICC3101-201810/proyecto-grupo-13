@@ -60,6 +60,7 @@ namespace WindowsFormsApp1
             back1.Visible = false;
             label_info.Visible = false;
             back_bottom2.Visible = false;
+            button1_volver.Hide();
             UserManagment.Deserialize();
 
         }
@@ -112,6 +113,7 @@ namespace WindowsFormsApp1
             label1.Visible = true;
             LOGIN.Visible = false;
             Registrarse.Visible = false;
+            button1_volver.Show();
 
 
 
@@ -412,6 +414,16 @@ namespace WindowsFormsApp1
         private void RUT_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_volver_Click(object sender, EventArgs e)
+        {
+            login_cliente.Hide();
+            login_administrador.Hide();
+            Registrarse.Show();
+            LOGIN.Show();
+            label1.Hide();
+            button1_volver.Hide();
         }
     }
 }

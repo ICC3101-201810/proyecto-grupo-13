@@ -52,17 +52,6 @@
             this.salir = new System.Windows.Forms.Button();
             this.ShowLocals = new System.Windows.Forms.ListBox();
             this.admin_local = new System.Windows.Forms.Button();
-            this.ShowProducts = new System.Windows.Forms.ListBox();
-            this.modificar_producto = new System.Windows.Forms.Button();
-            this.agregar_p = new System.Windows.Forms.Button();
-            this.volverProductos = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.nombre_producto = new System.Windows.Forms.Label();
-            this.stock_product = new System.Windows.Forms.Label();
-            this.price_product = new System.Windows.Forms.Label();
-            this.changename_product = new System.Windows.Forms.TextBox();
-            this.changestock_product = new System.Windows.Forms.TextBox();
-            this.changeprecio_product = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -70,9 +59,10 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.White;
             this.pictureBox1.Image = global::WindowsFormsApp1.Properties.Resources.LOGOFINAL;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(16, 15);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(203, 46);
+            this.pictureBox1.Size = new System.Drawing.Size(271, 57);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -83,9 +73,10 @@
             this.asAdmin.BackColor = System.Drawing.SystemColors.Control;
             this.asAdmin.Font = new System.Drawing.Font("Gabriola", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.asAdmin.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.asAdmin.Location = new System.Drawing.Point(44, 61);
+            this.asAdmin.Location = new System.Drawing.Point(59, 75);
+            this.asAdmin.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.asAdmin.Name = "asAdmin";
-            this.asAdmin.Size = new System.Drawing.Size(114, 50);
+            this.asAdmin.Size = new System.Drawing.Size(142, 63);
             this.asAdmin.TabIndex = 1;
             this.asAdmin.Text = "As Admin";
             this.asAdmin.Click += new System.EventHandler(this.Label1_Click_1);
@@ -96,17 +87,19 @@
             this.Rut_AdminVerificar.BackColor = System.Drawing.Color.Transparent;
             this.Rut_AdminVerificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Rut_AdminVerificar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Rut_AdminVerificar.Location = new System.Drawing.Point(22, 228);
+            this.Rut_AdminVerificar.Location = new System.Drawing.Point(29, 281);
+            this.Rut_AdminVerificar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Rut_AdminVerificar.Name = "Rut_AdminVerificar";
-            this.Rut_AdminVerificar.Size = new System.Drawing.Size(175, 25);
+            this.Rut_AdminVerificar.Size = new System.Drawing.Size(219, 31);
             this.Rut_AdminVerificar.TabIndex = 2;
             this.Rut_AdminVerificar.Text = "Ingrese su RUT";
             // 
             // RUT_ADMIN
             // 
-            this.RUT_ADMIN.Location = new System.Drawing.Point(221, 232);
+            this.RUT_ADMIN.Location = new System.Drawing.Point(295, 286);
+            this.RUT_ADMIN.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.RUT_ADMIN.Name = "RUT_ADMIN";
-            this.RUT_ADMIN.Size = new System.Drawing.Size(203, 20);
+            this.RUT_ADMIN.Size = new System.Drawing.Size(269, 22);
             this.RUT_ADMIN.TabIndex = 3;
             this.RUT_ADMIN.TextChanged += new System.EventHandler(this.RUT_ADMIN_TextChanged);
             this.RUT_ADMIN.KeyDown += new System.Windows.Forms.KeyEventHandler(this.RutAdmin_Enter);
@@ -114,9 +107,10 @@
             // CLAVE_ADMIN
             // 
             this.CLAVE_ADMIN.Enabled = false;
-            this.CLAVE_ADMIN.Location = new System.Drawing.Point(221, 276);
+            this.CLAVE_ADMIN.Location = new System.Drawing.Point(295, 340);
+            this.CLAVE_ADMIN.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.CLAVE_ADMIN.Name = "CLAVE_ADMIN";
-            this.CLAVE_ADMIN.Size = new System.Drawing.Size(203, 20);
+            this.CLAVE_ADMIN.Size = new System.Drawing.Size(269, 22);
             this.CLAVE_ADMIN.TabIndex = 4;
             this.CLAVE_ADMIN.TextChanged += new System.EventHandler(this.CLAVE_ADMIN_TextChanged);
             this.CLAVE_ADMIN.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Password_Enter);
@@ -127,18 +121,19 @@
             this.ClaveAdmin.BackColor = System.Drawing.Color.Transparent;
             this.ClaveAdmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ClaveAdmin.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClaveAdmin.Location = new System.Drawing.Point(22, 276);
+            this.ClaveAdmin.Location = new System.Drawing.Point(29, 340);
+            this.ClaveAdmin.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.ClaveAdmin.Name = "ClaveAdmin";
-            this.ClaveAdmin.Size = new System.Drawing.Size(185, 25);
+            this.ClaveAdmin.Size = new System.Drawing.Size(228, 31);
             this.ClaveAdmin.TabIndex = 5;
             this.ClaveAdmin.Text = "Ingrese su clave";
             // 
             // CrearLocal
             // 
-            this.CrearLocal.Location = new System.Drawing.Point(38, 137);
-            this.CrearLocal.Margin = new System.Windows.Forms.Padding(2);
+            this.CrearLocal.Location = new System.Drawing.Point(51, 169);
+            this.CrearLocal.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.CrearLocal.Name = "CrearLocal";
-            this.CrearLocal.Size = new System.Drawing.Size(159, 46);
+            this.CrearLocal.Size = new System.Drawing.Size(212, 57);
             this.CrearLocal.TabIndex = 6;
             this.CrearLocal.Text = "Crear Local / Borrar Local";
             this.CrearLocal.UseVisualStyleBackColor = true;
@@ -146,10 +141,10 @@
             // 
             // VerLocal
             // 
-            this.VerLocal.Location = new System.Drawing.Point(221, 135);
-            this.VerLocal.Margin = new System.Windows.Forms.Padding(2);
+            this.VerLocal.Location = new System.Drawing.Point(295, 166);
+            this.VerLocal.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.VerLocal.Name = "VerLocal";
-            this.VerLocal.Size = new System.Drawing.Size(150, 46);
+            this.VerLocal.Size = new System.Drawing.Size(200, 57);
             this.VerLocal.TabIndex = 7;
             this.VerLocal.Text = "Ver Local";
             this.VerLocal.UseVisualStyleBackColor = true;
@@ -158,20 +153,20 @@
             // CrearLocales
             // 
             this.CrearLocales.FormattingEnabled = true;
-            this.CrearLocales.Location = new System.Drawing.Point(623, 205);
-            this.CrearLocales.Margin = new System.Windows.Forms.Padding(2);
+            this.CrearLocales.ItemHeight = 16;
+            this.CrearLocales.Location = new System.Drawing.Point(831, 252);
+            this.CrearLocales.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.CrearLocales.Name = "CrearLocales";
-            this.CrearLocales.Size = new System.Drawing.Size(285, 238);
+            this.CrearLocales.Size = new System.Drawing.Size(379, 292);
             this.CrearLocales.TabIndex = 8;
             this.CrearLocales.SelectedIndexChanged += new System.EventHandler(this.CrearLocales_SelectedIndexChanged);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(26, 168);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(35, 207);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(0, 13);
+            this.label2.Size = new System.Drawing.Size(0, 17);
             this.label2.TabIndex = 10;
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
@@ -179,10 +174,9 @@
             // 
             this.label_nombrelocal.AutoSize = true;
             this.label_nombrelocal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_nombrelocal.Location = new System.Drawing.Point(456, 32);
-            this.label_nombrelocal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label_nombrelocal.Location = new System.Drawing.Point(608, 39);
             this.label_nombrelocal.Name = "label_nombrelocal";
-            this.label_nombrelocal.Size = new System.Drawing.Size(187, 20);
+            this.label_nombrelocal.Size = new System.Drawing.Size(230, 25);
             this.label_nombrelocal.TabIndex = 11;
             this.label_nombrelocal.Text = "Ingrese Nombre de Local";
             this.label_nombrelocal.Click += new System.EventHandler(this.label3_Click);
@@ -191,10 +185,9 @@
             // 
             this.label_Direccion.AutoSize = true;
             this.label_Direccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_Direccion.Location = new System.Drawing.Point(456, 73);
-            this.label_Direccion.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label_Direccion.Location = new System.Drawing.Point(608, 90);
             this.label_Direccion.Name = "label_Direccion";
-            this.label_Direccion.Size = new System.Drawing.Size(175, 20);
+            this.label_Direccion.Size = new System.Drawing.Size(215, 25);
             this.label_Direccion.TabIndex = 12;
             this.label_Direccion.Text = "Ingrese Direccion Local";
             // 
@@ -202,27 +195,28 @@
             // 
             this.label_Delivery.AutoSize = true;
             this.label_Delivery.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_Delivery.Location = new System.Drawing.Point(468, 104);
-            this.label_Delivery.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label_Delivery.Location = new System.Drawing.Point(624, 128);
             this.label_Delivery.Name = "label_Delivery";
-            this.label_Delivery.Size = new System.Drawing.Size(126, 20);
+            this.label_Delivery.Size = new System.Drawing.Size(157, 25);
             this.label_Delivery.TabIndex = 13;
             this.label_Delivery.Text = "Ingrese Delivery ";
             this.label_Delivery.Click += new System.EventHandler(this.label_Delivery_Click);
             // 
             // textBox_NombreLocal
             // 
-            this.textBox_NombreLocal.Location = new System.Drawing.Point(692, 32);
+            this.textBox_NombreLocal.Location = new System.Drawing.Point(923, 39);
+            this.textBox_NombreLocal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox_NombreLocal.Name = "textBox_NombreLocal";
-            this.textBox_NombreLocal.Size = new System.Drawing.Size(200, 20);
+            this.textBox_NombreLocal.Size = new System.Drawing.Size(265, 22);
             this.textBox_NombreLocal.TabIndex = 14;
             this.textBox_NombreLocal.KeyDown += new System.Windows.Forms.KeyEventHandler(this.NombreLocal_Enter);
             // 
             // textBox_DireccionLocal
             // 
-            this.textBox_DireccionLocal.Location = new System.Drawing.Point(692, 73);
+            this.textBox_DireccionLocal.Location = new System.Drawing.Point(923, 90);
+            this.textBox_DireccionLocal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox_DireccionLocal.Name = "textBox_DireccionLocal";
-            this.textBox_DireccionLocal.Size = new System.Drawing.Size(200, 20);
+            this.textBox_DireccionLocal.Size = new System.Drawing.Size(265, 22);
             this.textBox_DireccionLocal.TabIndex = 15;
             this.textBox_DireccionLocal.TextChanged += new System.EventHandler(this.textBox_DireccionLocal_TextChanged);
             this.textBox_DireccionLocal.KeyDown += new System.Windows.Forms.KeyEventHandler(this.DireccionLocal_Enter);
@@ -230,10 +224,10 @@
             // DeliverySi
             // 
             this.DeliverySi.AutoSize = true;
-            this.DeliverySi.Location = new System.Drawing.Point(706, 106);
-            this.DeliverySi.Margin = new System.Windows.Forms.Padding(2);
+            this.DeliverySi.Location = new System.Drawing.Point(941, 130);
+            this.DeliverySi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.DeliverySi.Name = "DeliverySi";
-            this.DeliverySi.Size = new System.Drawing.Size(37, 17);
+            this.DeliverySi.Size = new System.Drawing.Size(45, 21);
             this.DeliverySi.TabIndex = 16;
             this.DeliverySi.TabStop = true;
             this.DeliverySi.Text = "Si ";
@@ -243,10 +237,10 @@
             // DeliveryNo
             // 
             this.DeliveryNo.AutoSize = true;
-            this.DeliveryNo.Location = new System.Drawing.Point(778, 107);
-            this.DeliveryNo.Margin = new System.Windows.Forms.Padding(2);
+            this.DeliveryNo.Location = new System.Drawing.Point(1037, 132);
+            this.DeliveryNo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.DeliveryNo.Name = "DeliveryNo";
-            this.DeliveryNo.Size = new System.Drawing.Size(39, 17);
+            this.DeliveryNo.Size = new System.Drawing.Size(47, 21);
             this.DeliveryNo.TabIndex = 17;
             this.DeliveryNo.TabStop = true;
             this.DeliveryNo.Text = "No";
@@ -255,10 +249,10 @@
             // 
             // CreandoLocal
             // 
-            this.CreandoLocal.Location = new System.Drawing.Point(623, 137);
-            this.CreandoLocal.Margin = new System.Windows.Forms.Padding(2);
+            this.CreandoLocal.Location = new System.Drawing.Point(831, 169);
+            this.CreandoLocal.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.CreandoLocal.Name = "CreandoLocal";
-            this.CreandoLocal.Size = new System.Drawing.Size(80, 46);
+            this.CreandoLocal.Size = new System.Drawing.Size(107, 57);
             this.CreandoLocal.TabIndex = 18;
             this.CreandoLocal.Text = "Crear Local";
             this.CreandoLocal.UseVisualStyleBackColor = true;
@@ -266,10 +260,10 @@
             // 
             // Ingresar_boton
             // 
-            this.Ingresar_boton.Location = new System.Drawing.Point(241, 328);
-            this.Ingresar_boton.Margin = new System.Windows.Forms.Padding(2);
+            this.Ingresar_boton.Location = new System.Drawing.Point(321, 404);
+            this.Ingresar_boton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Ingresar_boton.Name = "Ingresar_boton";
-            this.Ingresar_boton.Size = new System.Drawing.Size(137, 46);
+            this.Ingresar_boton.Size = new System.Drawing.Size(183, 57);
             this.Ingresar_boton.TabIndex = 19;
             this.Ingresar_boton.Text = "Ingresar";
             this.Ingresar_boton.UseVisualStyleBackColor = true;
@@ -277,10 +271,10 @@
             // 
             // BorrarLocal_Boton
             // 
-            this.BorrarLocal_Boton.Location = new System.Drawing.Point(706, 137);
-            this.BorrarLocal_Boton.Margin = new System.Windows.Forms.Padding(2);
+            this.BorrarLocal_Boton.Location = new System.Drawing.Point(941, 169);
+            this.BorrarLocal_Boton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BorrarLocal_Boton.Name = "BorrarLocal_Boton";
-            this.BorrarLocal_Boton.Size = new System.Drawing.Size(80, 46);
+            this.BorrarLocal_Boton.Size = new System.Drawing.Size(107, 57);
             this.BorrarLocal_Boton.TabIndex = 20;
             this.BorrarLocal_Boton.Text = "Borrar Local";
             this.BorrarLocal_Boton.UseVisualStyleBackColor = true;
@@ -288,10 +282,10 @@
             // 
             // volver
             // 
-            this.volver.Location = new System.Drawing.Point(800, 137);
-            this.volver.Margin = new System.Windows.Forms.Padding(2);
+            this.volver.Location = new System.Drawing.Point(1067, 169);
+            this.volver.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.volver.Name = "volver";
-            this.volver.Size = new System.Drawing.Size(92, 46);
+            this.volver.Size = new System.Drawing.Size(123, 57);
             this.volver.TabIndex = 21;
             this.volver.Text = "volver";
             this.volver.UseVisualStyleBackColor = true;
@@ -299,10 +293,10 @@
             // 
             // salir
             // 
-            this.salir.Location = new System.Drawing.Point(394, 137);
-            this.salir.Margin = new System.Windows.Forms.Padding(2);
+            this.salir.Location = new System.Drawing.Point(525, 169);
+            this.salir.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.salir.Name = "salir";
-            this.salir.Size = new System.Drawing.Size(136, 46);
+            this.salir.Size = new System.Drawing.Size(181, 57);
             this.salir.TabIndex = 22;
             this.salir.Text = "Salir";
             this.salir.UseVisualStyleBackColor = true;
@@ -314,10 +308,11 @@
             this.ShowLocals.Font = new System.Drawing.Font("Britannic Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ShowLocals.ForeColor = System.Drawing.SystemColors.InactiveCaption;
             this.ShowLocals.FormattingEnabled = true;
-            this.ShowLocals.ItemHeight = 17;
-            this.ShowLocals.Location = new System.Drawing.Point(98, 205);
+            this.ShowLocals.ItemHeight = 22;
+            this.ShowLocals.Location = new System.Drawing.Point(131, 252);
+            this.ShowLocals.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ShowLocals.Name = "ShowLocals";
-            this.ShowLocals.Size = new System.Drawing.Size(326, 191);
+            this.ShowLocals.Size = new System.Drawing.Size(433, 224);
             this.ShowLocals.TabIndex = 24;
             this.ShowLocals.SelectedIndexChanged += new System.EventHandler(this.ShowLocals_SelectedIndexChanged);
             // 
@@ -326,134 +321,21 @@
             this.admin_local.BackColor = System.Drawing.Color.ForestGreen;
             this.admin_local.Font = new System.Drawing.Font("Britannic Bold", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.admin_local.ForeColor = System.Drawing.Color.White;
-            this.admin_local.Location = new System.Drawing.Point(98, 419);
+            this.admin_local.Location = new System.Drawing.Point(131, 516);
+            this.admin_local.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.admin_local.Name = "admin_local";
-            this.admin_local.Size = new System.Drawing.Size(326, 41);
+            this.admin_local.Size = new System.Drawing.Size(435, 50);
             this.admin_local.TabIndex = 25;
             this.admin_local.Text = "Administrar Local";
             this.admin_local.UseVisualStyleBackColor = false;
             this.admin_local.Click += new System.EventHandler(this.admin_local_Click);
             // 
-            // ShowProducts
-            // 
-            this.ShowProducts.BackColor = System.Drawing.Color.Wheat;
-            this.ShowProducts.Font = new System.Drawing.Font("Britannic Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ShowProducts.FormattingEnabled = true;
-            this.ShowProducts.ItemHeight = 16;
-            this.ShowProducts.Location = new System.Drawing.Point(213, 168);
-            this.ShowProducts.Name = "ShowProducts";
-            this.ShowProducts.Size = new System.Drawing.Size(451, 260);
-            this.ShowProducts.TabIndex = 26;
-            // 
-            // modificar_producto
-            // 
-            this.modificar_producto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.modificar_producto.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.modificar_producto.Location = new System.Drawing.Point(79, 489);
-            this.modificar_producto.Name = "modificar_producto";
-            this.modificar_producto.Size = new System.Drawing.Size(150, 57);
-            this.modificar_producto.TabIndex = 27;
-            this.modificar_producto.Text = "Modificar Producto";
-            this.modificar_producto.UseVisualStyleBackColor = false;
-            this.modificar_producto.Click += new System.EventHandler(this.modificar_producto_Click);
-            // 
-            // agregar_p
-            // 
-            this.agregar_p.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.agregar_p.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.agregar_p.Location = new System.Drawing.Point(241, 489);
-            this.agregar_p.Name = "agregar_p";
-            this.agregar_p.Size = new System.Drawing.Size(150, 57);
-            this.agregar_p.TabIndex = 28;
-            this.agregar_p.Text = "Agregar/Quitar Producto";
-            this.agregar_p.UseVisualStyleBackColor = false;
-            // 
-            // volverProductos
-            // 
-            this.volverProductos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.volverProductos.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.volverProductos.Location = new System.Drawing.Point(397, 489);
-            this.volverProductos.Name = "volverProductos";
-            this.volverProductos.Size = new System.Drawing.Size(150, 57);
-            this.volverProductos.TabIndex = 29;
-            this.volverProductos.Text = "Volver";
-            this.volverProductos.UseVisualStyleBackColor = false;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(426, 362);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 31;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // nombre_producto
-            // 
-            this.nombre_producto.AutoSize = true;
-            this.nombre_producto.Location = new System.Drawing.Point(371, 267);
-            this.nombre_producto.Name = "nombre_producto";
-            this.nombre_producto.Size = new System.Drawing.Size(44, 13);
-            this.nombre_producto.TabIndex = 32;
-            this.nombre_producto.Text = "Nombre";
-            // 
-            // stock_product
-            // 
-            this.stock_product.AutoSize = true;
-            this.stock_product.Location = new System.Drawing.Point(371, 293);
-            this.stock_product.Name = "stock_product";
-            this.stock_product.Size = new System.Drawing.Size(35, 13);
-            this.stock_product.TabIndex = 33;
-            this.stock_product.Text = "Stock";
-            this.stock_product.Click += new System.EventHandler(this.stock_product_Click);
-            // 
-            // price_product
-            // 
-            this.price_product.AutoSize = true;
-            this.price_product.Location = new System.Drawing.Point(371, 315);
-            this.price_product.Name = "price_product";
-            this.price_product.Size = new System.Drawing.Size(37, 13);
-            this.price_product.TabIndex = 34;
-            this.price_product.Text = "Precio";
-            // 
-            // changename_product
-            // 
-            this.changename_product.Location = new System.Drawing.Point(426, 260);
-            this.changename_product.Name = "changename_product";
-            this.changename_product.Size = new System.Drawing.Size(100, 20);
-            this.changename_product.TabIndex = 35;
-            // 
-            // changestock_product
-            // 
-            this.changestock_product.Location = new System.Drawing.Point(426, 286);
-            this.changestock_product.Name = "changestock_product";
-            this.changestock_product.Size = new System.Drawing.Size(100, 20);
-            this.changestock_product.TabIndex = 36;
-            // 
-            // changeprecio_product
-            // 
-            this.changeprecio_product.Location = new System.Drawing.Point(426, 312);
-            this.changeprecio_product.Name = "changeprecio_product";
-            this.changeprecio_product.Size = new System.Drawing.Size(100, 20);
-            this.changeprecio_product.TabIndex = 37;
-            // 
             // Form2
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.Despensa1;
-            this.ClientSize = new System.Drawing.Size(918, 593);
-            this.Controls.Add(this.changeprecio_product);
-            this.Controls.Add(this.changestock_product);
-            this.Controls.Add(this.changename_product);
-            this.Controls.Add(this.price_product);
-            this.Controls.Add(this.stock_product);
-            this.Controls.Add(this.nombre_producto);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.volverProductos);
-            this.Controls.Add(this.agregar_p);
-            this.Controls.Add(this.modificar_producto);
-            this.Controls.Add(this.ShowProducts);
+            this.ClientSize = new System.Drawing.Size(1224, 730);
             this.Controls.Add(this.admin_local);
             this.Controls.Add(this.ShowLocals);
             this.Controls.Add(this.salir);
@@ -478,6 +360,7 @@
             this.Controls.Add(this.asAdmin);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.Rut_AdminVerificar);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Form2";
             this.Text = "Form2";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -512,16 +395,5 @@
         private System.Windows.Forms.Button salir;
         private System.Windows.Forms.ListBox ShowLocals;
         private System.Windows.Forms.Button admin_local;
-        private System.Windows.Forms.ListBox ShowProducts;
-        private System.Windows.Forms.Button modificar_producto;
-        private System.Windows.Forms.Button agregar_p;
-        private System.Windows.Forms.Button volverProductos;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label nombre_producto;
-        private System.Windows.Forms.Label stock_product;
-        private System.Windows.Forms.Label price_product;
-        private System.Windows.Forms.TextBox changename_product;
-        private System.Windows.Forms.TextBox changestock_product;
-        private System.Windows.Forms.TextBox changeprecio_product;
     }
 }

@@ -90,6 +90,8 @@ namespace WindowsFormsApp1
             string saldo= Convert.ToString(c.GetDinero());
             label4.Text = "Tu Saldo es  " + saldo;
             label3.Visible = true;
+            textBox1.Hide();
+            textBox2.Hide();
 
         }
         protected override void OnClosed(EventArgs e)

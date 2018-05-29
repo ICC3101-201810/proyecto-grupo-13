@@ -32,8 +32,10 @@ namespace WindowsFormsApp1
             volver.Visible = false;
             salir.Visible = false;
             ShowLocals.Visible = false;
-            ShowProducts.Visible = false;
+            
             admin_local.Visible = false;
+           
+
             
         }
         public bool Verificar()
@@ -288,6 +290,8 @@ namespace WindowsFormsApp1
             volver.Visible = false;
             CrearLocal.Visible = true;
             VerLocal.Visible = true;
+            ShowLocals.Hide();
+            admin_local.Hide();
 
 
         }
@@ -305,6 +309,21 @@ namespace WindowsFormsApp1
             RUT_ADMIN.Text = "";
             CLAVE_ADMIN.Text = "";
             ShowLocals.Visible = false;
+            admin_local.Hide();
+            label_nombrelocal.Hide();
+            textBox_NombreLocal.Hide();
+            textBox_DireccionLocal.Hide();
+            label_Direccion.Hide();
+            label_Delivery.Hide();
+            DeliveryNo.Hide();
+            DeliverySi.Hide();
+            CreandoLocal.Hide();
+            BorrarLocal_Boton.Hide();
+            volver.Hide();
+            CrearLocales.Hide();
+
+
+
 
         }
 
@@ -317,6 +336,8 @@ namespace WindowsFormsApp1
         {
             admin_local.Visible = true;
             ShowLocals.Visible = true;
+            CrearLocal.Hide();
+            volver.Show();
             if (ver_local == true)
             {
                 foreach (Local locals in adminLogeado.locales)
@@ -332,9 +353,10 @@ namespace WindowsFormsApp1
             
             admin_local.Visible = false;
             ShowLocals.Visible = false;
-            ShowProducts.Visible = true;
+            
+            
             string selectItem = ShowLocals.Items[ShowLocals.SelectedIndex].ToString();
-            ShowProducts.Visible = true;
+            
             for (int i = adminLogeado.locales.Count - 1; i >= 0; i--)
             {
 
@@ -348,7 +370,7 @@ namespace WindowsFormsApp1
                     localSeleccionado.GetMenu();
                     foreach (Product products in localSeleccionado.GetMenu())
                     {
-                        ShowProducts.Items.Add(products.GetName() + " " + products.GetPrice() + " " + products.GetStock());
+                        
                     }
 
                 }
@@ -362,6 +384,11 @@ namespace WindowsFormsApp1
         }
 
         private void stock_product_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ShowProducts_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
