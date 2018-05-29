@@ -121,14 +121,23 @@
   <data name="Pizza" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Pizza.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Despensa1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Despensa1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="2000px-Messagebox_info" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\2000px-Messagebox_info.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Sign-Info-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Sign-Info-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="LOGOFINAL" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\LOGOFINAL.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Despensa1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Despensa1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="diversa-comida-mexicana-en-fondo-oscuro_23-2147740705" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\diversa-comida-mexicana-en-fondo-oscuro_23-2147740705.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="depositphotos_123750520-stock-photo-italian-food-ingredients-on-stone" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\depositphotos_123750520-stock-photo-italian-food-ingredients-on-stone.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="fondo 1 poo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\fondo 1 poo.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -145,7 +154,7 @@
   <data name="fondo21-1030x428" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\fondo21-1030x428.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Sign-Info-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Sign-Info-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="food-background" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\food-background.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
