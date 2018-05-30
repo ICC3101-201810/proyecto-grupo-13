@@ -8,7 +8,7 @@ namespace WindowsFormsApp1
     public class Local
     {
         bool delivery;
-        List<Product> menu;
+        public List<Product> menu;
         string direction;
         int accumulatedMoney;
         string name;

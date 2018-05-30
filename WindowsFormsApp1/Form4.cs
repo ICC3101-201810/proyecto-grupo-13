@@ -12,26 +12,19 @@ namespace WindowsFormsApp1
 {
     public partial class Form4 : Form
     {
-        Form2 parent;
+        Form6 parent;
         Local local;
+        Product productoSeleccionado = null;
         bool confirmar;
-        public Form4(Form2 parent, Local local)
+        public Form4(Form6 parent, Local local)
         {
             this.parent = parent;
             this.local = local;
             InitializeComponent();
-            nombre_local.Text = "Local : " + " " + local.GetNameLocal();
-            CreandoProductos.Visible = false;
-            nameText.Visible = false;
-            precio_text.Visible = false;
-            stock_text.Visible = false;
-            nombrep.Visible = false;
-            Stockp.Visible = false;
-            PrecioP.Visible = false;
-            agregar_quitar.Enabled = true;
+            label1.Text = "Local" + " " + local.GetNameLocal();
             foreach (Product products in local.GetMenu())
             {
-                ListProducts.Items.Add(products.GetName() + " " + products.GetPrice() + " " + products.GetStock());
+                ListProducts.Items.Add("Nombre"+ " " + products.GetName() + " " + "Precio :" +" " + products.GetPrice() + " "  + "Stock: " + " "+ products.GetStock());
             }
         }
         protected override void OnClosed(EventArgs e)
@@ -40,23 +33,6 @@ namespace WindowsFormsApp1
             base.OnClosed(e);
         }
 
-        private void agregar_quitar_Click(object sender, EventArgs e)
-        {
-            nameText.Visible = true;
-            nameText.Enabled = true;
-            precio_text.Visible = true;
-            stock_text.Visible = true;
-            nombrep.Visible = true;
-            precio_text.Enabled = false;
-            stock_text.Enabled = false;
-            Stockp.Visible = true;
-            PrecioP.Visible = true;
-            CreandoProductos.Visible = true;
-            ListProducts.Visible = false;
-            Modificar_p.Visible = false;
-           
-  
-        }
 
         private void nombre_enter(object sender, KeyEventArgs e)
         {
@@ -118,7 +94,7 @@ namespace WindowsFormsApp1
         {
             int Stock = Convert.ToInt32(stock_text.Text);
             int precio = Convert.ToInt32(precio_text.Text);
-            CreandoProductos.Items.Add(nameText.Text);
+            ListProducts.Items.Add("Nombre" + " " + nameText.Text + " " + "Precio :" + " " + precio + " " + "Stock: " + " " + Stock);
             if (confirmar == true)
             {
                 Product product = new Product(Stock, nameText.Text, precio);
@@ -133,6 +109,40 @@ namespace WindowsFormsApp1
         private void nameText_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void volver1_Click(object sender, EventArgs e)
+        {
+            
+            Agregarfinal.Hide();
+            eliminar_p.Hide();
+            label1.Hide();
+            nombre_local.Show();
+            nameText.Hide();
+            stock_text.Hide();
+            precio_text.Hide();
+            nombrep.Hide();
+            Stockp.Hide();
+            PrecioP.Hide();
+            ListProducts.Show();
+            Modificar_p.Show();
+        }
+
+        private void eliminar_p_Click(object sender, EventArgs e)
+        {
+            string guardarSelect = ListProducts.Items[ListProducts.SelectedIndex].ToString();
+            int removeAt;
+            removeAt = Convert.ToInt32(ListProducts.SelectedIndex);
+            ListProducts.Items.RemoveAt(removeAt);
+            for (int i = local.menu.Count - 1; i >= 0; i--)
+            {
+
+                if (guardarSelect == local.menu[i].GetName())
+                {
+                    local.menu.RemoveAt(i);
+                }
+            }
+            
         }
     }
 }

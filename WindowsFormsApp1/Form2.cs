@@ -15,28 +15,11 @@ namespace WindowsFormsApp1
         public Form2()
         {
             InitializeComponent();
-            DeliverySi.Enabled = false;
-            DeliveryNo.Enabled = false;
-            CrearLocal.Visible = false;
-            VerLocal.Visible = false;
-            textBox_NombreLocal.Visible = false;
-            label_nombrelocal.Visible = false;
-            textBox_DireccionLocal.Visible = false;
-            label_Direccion.Visible = false;
-            label_Delivery.Visible = false;
-            DeliverySi.Visible = false;
-            DeliveryNo.Visible = false;
-            CreandoLocal.Visible = false;
-            BorrarLocal_Boton.Visible = false;
-            CrearLocales.Visible = false;
-            volver.Visible = false;
-            salir.Visible = false;
-            ShowLocals.Visible = false;
-            admin_local.Visible = false;
+            CrearLocal.Hide();
+            admin_pedidos.Hide();
+            salir.Hide();
+            nombre_admin.Hide();
            
-
-            
-            
         }
         public bool Verificar()
         {
@@ -45,9 +28,9 @@ namespace WindowsFormsApp1
         public Admin admin;
         Admin adminLogeado = null;
         public Local local1;
-        bool ver_local = true;
-        bool ver_local2 = true;
-        Local localSeleccionado = null;
+        //bool ver_local = true;
+        //bool ver_local2 = true;
+        
 
 
         private void Label1_Click_1(object sender, EventArgs e)
@@ -110,33 +93,9 @@ namespace WindowsFormsApp1
         
         private void CrearLocal_Click(object sender, EventArgs e)
         {
-            CrearLocal.Visible = false;
-            VerLocal.Visible = false;
-            textBox_NombreLocal.Visible = true;
-            label_nombrelocal.Visible = true;
-            textBox_DireccionLocal.Visible = true;
-            label_Direccion.Visible = true;
-            label_Delivery.Visible = true;
-            DeliverySi.Visible = true;
-            DeliveryNo.Visible = true;
-            CreandoLocal.Visible = true;
-            BorrarLocal_Boton.Visible = true;
-            CrearLocales.Visible = true;
-            volver.Visible = true;
-            
-            if (ver_local2 == true)
-            {
-                foreach (Local locals in adminLogeado.locales)
-                {
-                    CrearLocales.Items.Add(locals.GetNameLocal());
-                    ver_local2 = false;
-                   
-                }
-            }
-            
-           
-
-
+            Form6 form6 = new Form6(this, adminLogeado);
+            form6.Show();
+            this.Hide();
         }
 
         private void label1_Click_1(object sender, EventArgs e)
@@ -161,69 +120,34 @@ namespace WindowsFormsApp1
 
         private void NombreLocal_Enter(object sender, KeyEventArgs e)
         {
-            if ( e.KeyCode == Keys.Enter)
-            {
-                if (textBox_NombreLocal.Text != null)
-                {
-                    textBox_DireccionLocal.Enabled = true;
-                    confirmar = true;
-                }
-                else
-                {
-                    MessageBox.Show("Debes ingresar un Nombre");
-                }
-            }
+            
         }
 
         private void DireccionLocal_Enter(object sender, KeyEventArgs e)
         {
-            if ( e.KeyCode == Keys.Enter)
-            {
-                if (textBox_DireccionLocal.Text != null)
-                {
-                    DeliverySi.Enabled = true;
-                    DeliveryNo.Enabled = true;
-                    
-                }
-            }
+            
+            
         }
         public bool confirmar { get; set; }
         private void DeliverySi_CheckedChanged(object sender, EventArgs e)
         {
-            if (confirmar== true)
-            {
-                CreandoLocal.Visible = true;
-                confirmar = true;
-            }
+            
             
 
         }
 
         private void DeliveryNo_CheckedChanged(object sender, EventArgs e)
         {
-            if (confirmar == true)
-            {
-                CreandoLocal.Visible = true;
-                confirmar = true;
-            }
+            
         }
 
         private void CreandoLocal_Click(object sender, EventArgs e)
         {
-            CrearLocales.Items.Add(textBox_NombreLocal.Text);
-            if (confirmar == true)
-            {
-        
-                Local local = new Local(true, null, textBox_DireccionLocal.Text, 0, textBox_NombreLocal.Text, "0");
-                UserManagment.CreateLocal(local);
-                adminLogeado.AgregarLocal(local);
-                MessageBox.Show("Tu local ha sido creado");
-                textBox_NombreLocal.Text = "";
-                textBox_DireccionLocal.Text = "";   
+            
                 //ShowLocals.Items.Add(local.GetNameLocal());
                 
             
-            }
+            
            
         }
 
@@ -236,13 +160,15 @@ namespace WindowsFormsApp1
         {
             adminLogeado = admin;
             CrearLocal.Visible = true;
-            VerLocal.Visible = true;
+            admin_pedidos.Show();
             RUT_ADMIN.Visible = false;
             Rut_AdminVerificar.Visible = false;
             CLAVE_ADMIN.Visible = false;
             ClaveAdmin.Visible = false;
             Ingresar_boton.Visible = false;
             salir.Visible = true;
+            nombre_admin.Show();
+            nombre_admin.Text = "Bienvenido" + " " + adminLogeado.GetName();
         }
 
         private void textBox_DireccionLocal_TextChanged(object sender, EventArgs e)
@@ -253,50 +179,16 @@ namespace WindowsFormsApp1
 
         private void BorrarLocal_Boton_Click(object sender, EventArgs e)
         {
-            string guardarSelect = CrearLocales.Items[CrearLocales.SelectedIndex].ToString();
-            int removeAt;
-            removeAt = Convert.ToInt32(CrearLocales.SelectedIndex);
-            CrearLocales.Items.RemoveAt(removeAt);
-            ShowLocals.Items.RemoveAt(removeAt);
+            
+            
 
-            for (int i =adminLogeado.locales.Count -1; i>=0; i--)
-            {
-                 
-                 if (guardarSelect == adminLogeado.locales[i].GetNameLocal())
-                 {
-                    
-                    adminLogeado.locales.RemoveAt(i);
-                    
-
-                 }
-            }
-            for (int j = UserManagment.locales.Count - 1; j >= 0 ; j--)
-            {
-                if (guardarSelect == UserManagment.locales[j].GetNameLocal())
-                {
-                    UserManagment.locales.RemoveAt(j);
-                }
-            }
+            
 
         }
 
         private void volver_Click(object sender, EventArgs e)
         {
-            textBox_NombreLocal.Visible = false;
-            label_nombrelocal.Visible = false;
-            textBox_DireccionLocal.Visible = false;
-            label_Direccion.Visible = false;
-            label_Delivery.Visible = false;
-            DeliveryNo.Visible = false;
-            DeliverySi.Visible = false;
-            CreandoLocal.Visible = false;
-            BorrarLocal_Boton.Visible = false;
-            CrearLocales.Visible = false;
-            volver.Visible = false;
-            CrearLocal.Visible = true;
-            VerLocal.Visible = true;
-            ShowLocals.Hide();
-            admin_local.Hide();
+           
 
 
         }
@@ -310,26 +202,10 @@ namespace WindowsFormsApp1
             Ingresar_boton.Visible = true;
             salir.Visible = false;
             CrearLocal.Visible = false;
-            VerLocal.Visible = false;
+            admin_pedidos.Hide();
             RUT_ADMIN.Text = "";
             CLAVE_ADMIN.Text = "";
-            ShowLocals.Visible = false;
-            admin_local.Hide();
-            label_nombrelocal.Hide();
-            textBox_NombreLocal.Hide();
-            textBox_DireccionLocal.Hide();
-            label_Direccion.Hide();
-            label_Delivery.Hide();
-            DeliveryNo.Hide();
-            DeliverySi.Hide();
-            CreandoLocal.Hide();
-            BorrarLocal_Boton.Hide();
-            volver.Hide();
-            CrearLocales.Hide();
-
-
-
-
+            nombre_admin.Hide();
         }
 
         private void ShowLocals_SelectedIndexChanged(object sender, EventArgs e)
@@ -338,43 +214,14 @@ namespace WindowsFormsApp1
         }
         private void VerLocal_Click(object sender, EventArgs e)
         {
-            admin_local.Visible = true;
-            ShowLocals.Visible = true;
-            CrearLocal.Hide();
-            volver.Show();
-            if (ver_local == true)
-            {
-                
-               foreach (Local locals in adminLogeado.locales)
-               {
-                        ShowLocals.Items.Add(locals.GetNameLocal());
-                        ver_local = false;
-               }
-                
-            }
             
         }
 
         private void admin_local_Click(object sender, EventArgs e)
         {
             
-            admin_local.Visible = false;
-            ShowLocals.Visible = false;
-            string selectItem = ShowLocals.Items[ShowLocals.SelectedIndex].ToString();
-            for (int i = adminLogeado.locales.Count - 1; i >= 0; i--)
-            {
-
-                if (selectItem == adminLogeado.locales[i].GetNameLocal())
-                {
-
-                    localSeleccionado = adminLogeado.locales[i];
-                    Form4 form4 = new Form4(this, localSeleccionado = adminLogeado.locales[i]);
-                    form4.Show();
-                    this.Hide();
-                    localSeleccionado.GetMenu();
-
-                }
-            }
+            
+            
            
         }
 
