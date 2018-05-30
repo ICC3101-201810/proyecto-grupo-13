@@ -37,13 +37,18 @@ namespace WindowsFormsApp1
             InitializeComponent();
             Client c1 = new Client("Paz Torres", "cptorres@miuandes.cl", "paz45", 193226000, "pezdorado", "0210025", 500000);
             Local l1 = new Local(false, null, "Las Condes 456", 0, "Subway", "LC1");
+            Local l2 = new Local(true, null, "Uandes", 0, "Coffe Time", "LC2");
             Admin a1 = new Admin("Matias Cabezas", "mcabezas@miuandes.cl", "weedlover", 192439396, null);
             a1.AgregarLocal(l1);
+            a1.AgregarLocal(l2);
             UserManagment.CreateAdmin(a1);
             UserManagment.AddClient(c1);
             UserManagment.CreateLocal(l1);
+            UserManagment.CreateLocal(l2);
             Product p1 = new Product(45, "BMT", 3000);
+            Product p2 = new Product(500, "Capuccino Vainilla", 890);
             l1.AddProduct(p1);
+            l2.AddProduct(p2);
             String path = Directory.GetCurrentDirectory();
             ru1.Visible = false;
             RUT.Visible = false;

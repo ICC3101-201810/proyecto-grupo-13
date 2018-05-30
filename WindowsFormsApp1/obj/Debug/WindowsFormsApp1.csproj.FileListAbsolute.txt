@@ -12,3 +12,5 @@ C:\Users\Paz Torres\Desktop\proyecto-grupo-13\WindowsFormsApp1\obj\Debug\Windows
 C:\Users\Paz Torres\Desktop\proyecto-grupo-13\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
 C:\Users\Paz Torres\Desktop\proyecto-grupo-13\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
 C:\Users\Paz Torres\Desktop\proyecto-grupo-13\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form6.resources
+C:\Users\Paz Torres\Desktop\proyecto-grupo-13\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form7.resources
+C:\Users\Paz Torres\Desktop\proyecto-grupo-13\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form8.resources

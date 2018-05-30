@@ -13,18 +13,17 @@ namespace WindowsFormsApp1
     public partial class Form4 : Form
     {
         Form6 parent;
-        Local local;
-        Product productoSeleccionado = null;
+        Local localLogeado;
         bool confirmar;
-        public Form4(Form6 parent, Local local)
+        public Form4(Form6 parent, Local localLogeado)
         {
             this.parent = parent;
-            this.local = local;
+            this.localLogeado = localLogeado;
             InitializeComponent();
-            label1.Text = "Local" + " " + local.GetNameLocal();
-            foreach (Product products in local.GetMenu())
+            label1.Text = "Local" + " " + localLogeado.GetNameLocal();
+            foreach (Product products in localLogeado.menu)
             {
-                ListProducts.Items.Add("Nombre"+ " " + products.GetName() + " " + "Precio :" +" " + products.GetPrice() + " "  + "Stock: " + " "+ products.GetStock());
+                ListProducts.Items.Add("Nombre" + " " + products.GetName());
             }
         }
         protected override void OnClosed(EventArgs e)
@@ -94,11 +93,11 @@ namespace WindowsFormsApp1
         {
             int Stock = Convert.ToInt32(stock_text.Text);
             int precio = Convert.ToInt32(precio_text.Text);
-            ListProducts.Items.Add("Nombre" + " " + nameText.Text + " " + "Precio :" + " " + precio + " " + "Stock: " + " " + Stock);
+            ListProducts.Items.Add("Nombre" + " " + nameText.Text);
             if (confirmar == true)
             {
                 Product product = new Product(Stock, nameText.Text, precio);
-                local.AddProduct(product);
+                localLogeado.AddProduct(product);
                 nameText.Text = "";
                 precio_text.Text = "";
                 stock_text.Text = "";
@@ -134,12 +133,12 @@ namespace WindowsFormsApp1
             int removeAt;
             removeAt = Convert.ToInt32(ListProducts.SelectedIndex);
             ListProducts.Items.RemoveAt(removeAt);
-            for (int i = local.menu.Count - 1; i >= 0; i--)
+            for (int i = localLogeado.menu.Count - 1; i >= 0; i--)
             {
-
-                if (guardarSelect == local.menu[i].GetName())
+            if (guardarSelect == localLogeado.menu[i].GetName())
                 {
-                    local.menu.RemoveAt(i);
+                    localLogeado.menu.RemoveAt(i);
+                    
                 }
             }
             

@@ -118,17 +118,29 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="Foto-con-fondo-azul" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Foto-con-fondo-azul.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="pegatina_circulo_rojo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pegatina_circulo_rojo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="LOGOFINAL" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\LOGOFINAL.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="carrito" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\carrito.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fundo-de-malha-de-gradiente-borrado-abstrato_1159-3172" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fundo-de-malha-de-gradiente-borrado-abstrato_1159-3172.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fondo 1 poo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fondo 1 poo.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Pizza" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Pizza.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Imagen 1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Imagen 1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="fondo21-1030x428" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\fondo21-1030x428.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="food" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\food.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="food-background" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\food-background.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -139,25 +151,52 @@
   <data name="Sign-Info-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Sign-Info-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Despensa1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Despensa1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="fotoxcomidax" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fotoxcomidax.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Foto-con-fondo-azul" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Foto-con-fondo-azul.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="comprar_boton" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\comprar_boton.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="depositphotos_149002667-stock-photo-fresh-tasty-italian-pizza-fast" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\depositphotos_149002667-stock-photo-fresh-tasty-italian-pizza-fast.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="fondo 1 poo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\fondo 1 poo.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="botoncompra" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\botoncompra.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="deliciosa-comida-mexicana-en-fondo-azul_23-2147740747" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\deliciosa-comida-mexicana-en-fondo-azul_23-2147740747.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="wallpaperjam.com-22422" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\wallpaperjam.com-22422.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fondo-de-comida-rapida_1457-25" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fondo-de-comida-rapida_1457-25.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="depositphotos_123750520-stock-photo-italian-food-ingredients-on-stone" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\depositphotos_123750520-stock-photo-italian-food-ingredients-on-stone.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="diversa-comida-mexicana-en-fondo-oscuro_23-2147740705" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\diversa-comida-mexicana-en-fondo-oscuro_23-2147740705.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="LOGOFINAL" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LOGOFINAL.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Despensa1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Despensa1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="boton_comprar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\boton_comprar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="deliciosa-comida-mexicana-en-fondo-azul_23-2147740747" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\deliciosa-comida-mexicana-en-fondo-azul_23-2147740747.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="info-309081_960_720" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\info-309081_960_720.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="fondo5" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\fondo5.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="diversa-comida-mexicana-en-fondo-oscuro_23-2147740705" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\diversa-comida-mexicana-en-fondo-oscuro_23-2147740705.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="formspay" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\formspay.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

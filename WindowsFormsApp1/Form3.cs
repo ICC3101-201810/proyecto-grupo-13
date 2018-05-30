@@ -13,7 +13,7 @@ namespace WindowsFormsApp1
     public partial class Form3 : Form
     {
         Form1 parent;
-        public Form3(Form1 parent) 
+        public Form3(Form1 parent)
         {
             InitializeComponent();
             this.parent = parent;
@@ -21,10 +21,14 @@ namespace WindowsFormsApp1
             button1.Visible = false;
             label3.Visible = false;
             label4.Visible = false;
+            listLocals.Hide();
+            verlocal.Hide();
+            verlocal.Enabled = true;
         }
-      
+
         Client clogeado = null;
         Client c;
+        Local localSeleccionado = null;
         public bool verificar;
         private void label2_Click(object sender, EventArgs e)
         {
@@ -88,10 +92,18 @@ namespace WindowsFormsApp1
             label2.Visible = false;
             button1.Visible = false;
             string saldo= Convert.ToString(c.GetDinero());
-            label4.Text = "Tu Saldo es  " + saldo;
+            label4.Text = "Bievenido" + " " + clogeado.GetName();
             label3.Visible = true;
             textBox1.Hide();
             textBox2.Hide();
+            listLocals.Show();
+            verlocal.Show();
+            foreach (Local local in UserManagment.locales)
+            {
+                listLocals.Items.Add(local.GetNameLocal());
+                listLocals.Items.Add("-------------------------------");
+
+            }
 
         }
         protected override void OnClosed(EventArgs e)
@@ -113,6 +125,35 @@ namespace WindowsFormsApp1
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void listLocals_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void verlocal_Click(object sender, EventArgs e)
+        {
+            string selectItem = listLocals.Items[listLocals.SelectedIndex].ToString();
+            for (int i = UserManagment.locales.Count - 1; i >= 0; i--)
+            {
+
+                if (selectItem == UserManagment.locales[i].GetNameLocal())
+                {
+                    localSeleccionado = UserManagment.locales[i];
+                    Form7 form7 = new Form7(this, localSeleccionado = UserManagment.locales[i], clogeado, label6.Text);
+                    localSeleccionado.GetMenu();
+                    form7.Show();
+                    this.Hide();
+                    
+                }
+                
+            }
         }
     }
 }

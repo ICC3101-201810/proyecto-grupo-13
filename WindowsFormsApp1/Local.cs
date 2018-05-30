@@ -13,7 +13,7 @@ namespace WindowsFormsApp1
         int accumulatedMoney;
         string name;
         string code;
-        public Local(bool Delivery, List<Product> Menu, string Direccion, int DineroAcumulado, string Nombre, string Codigo)
+        public Local(bool Delivery, List<Product> menu, string Direccion, int DineroAcumulado, string Nombre, string Codigo)
         {
             this.delivery = Delivery;
             this.menu = new List<Product>();

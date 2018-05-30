@@ -79,6 +79,18 @@
     <Compile Include="Form6.Designer.cs">
       <DependentUpon>Form6.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form7.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form7.Designer.cs">
+      <DependentUpon>Form7.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form8.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form8.Designer.cs">
+      <DependentUpon>Form8.cs</DependentUpon>
+    </Compile>
     <Compile Include="Local.cs" />
     <Compile Include="ManejoDeUser.cs" />
     <Compile Include="Producto.cs" />
@@ -101,6 +113,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form6.resx">
       <DependentUpon>Form6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form7.resx">
+      <DependentUpon>Form7.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form8.resx">
+      <DependentUpon>Form8.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -163,6 +181,45 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\food-background.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fundo-de-malha-de-gradiente-borrado-abstrato_1159-3172.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\carrito.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pegatina_circulo_rojo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\botoncompra.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Imagen 1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\boton_comprar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\comprar_boton.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wallpaperjam.com-22422.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\food.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fotoxcomidax.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fondo-de-comida-rapida_1457-25.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\info-309081_960_720.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\formspay.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
