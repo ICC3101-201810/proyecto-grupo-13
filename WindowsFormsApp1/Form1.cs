@@ -45,9 +45,11 @@ namespace WindowsFormsApp1
             UserManagment.AddClient(c1);
             UserManagment.CreateLocal(l1);
             UserManagment.CreateLocal(l2);
-            Product p1 = new Product(45, "BMT", 3000);
+            Product p1 = new Product(45, "Sandwich BMT", 3000);
             Product p2 = new Product(500, "Capuccino Vainilla", 890);
+            Product p3 = new Product(150, "Ice Tea", 900);
             l1.AddProduct(p1);
+            l1.AddProduct(p3);
             l2.AddProduct(p2);
             String path = Directory.GetCurrentDirectory();
             ru1.Visible = false;

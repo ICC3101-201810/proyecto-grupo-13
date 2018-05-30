@@ -17,13 +17,12 @@ namespace WindowsFormsApp1
         Client client;
         Product productoLogeado = null;
         List<Product> carrito_client = new List<Product>();
-        string contador;
-        public Form7(Form3 parent,Local local,Client client, string contador)
+        int contador;
+        public Form7(Form3 parent,Local local,Client client)
         {
             this.parent = parent;
             this.local = local;
             this.client = client;
-            this.contador = contador;
             InitializeComponent();
             label1.Text = "Local Ubicado en" + " " + local.GetDirection();
             label2.Text = "Delivery" + " " + local.GetDelivery();
@@ -52,9 +51,8 @@ namespace WindowsFormsApp1
                 productoLogeado = menus[i];
                 if (selectItem == productoLogeado.GetName())
                 {
-                    int contador_final = Convert.ToInt32(contador);
-                    contador_final++;
-                    string c = Convert.ToString(contador_final);
+                    contador++;
+                    string c = Convert.ToString(contador);
                     p_acumulado.Text =c;
                     carrito_client.Add(productoLogeado);
 

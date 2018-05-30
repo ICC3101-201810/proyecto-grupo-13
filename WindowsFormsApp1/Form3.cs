@@ -146,7 +146,7 @@ namespace WindowsFormsApp1
                 if (selectItem == UserManagment.locales[i].GetNameLocal())
                 {
                     localSeleccionado = UserManagment.locales[i];
-                    Form7 form7 = new Form7(this, localSeleccionado = UserManagment.locales[i], clogeado, label6.Text);
+                    Form7 form7 = new Form7(this, localSeleccionado = UserManagment.locales[i], clogeado);
                     localSeleccionado.GetMenu();
                     form7.Show();
                     this.Hide();

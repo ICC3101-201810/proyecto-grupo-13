@@ -39,7 +39,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.listLocals = new System.Windows.Forms.ListBox();
             this.verlocal = new System.Windows.Forms.Button();
-            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -178,15 +177,6 @@
             this.verlocal.UseVisualStyleBackColor = false;
             this.verlocal.Click += new System.EventHandler(this.verlocal_Click);
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(509, 77);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(13, 13);
-            this.label6.TabIndex = 11;
-            this.label6.Text = "0";
-            // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -195,7 +185,6 @@
             this.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.fondo21_1030x428;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(918, 593);
-            this.Controls.Add(this.label6);
             this.Controls.Add(this.verlocal);
             this.Controls.Add(this.listLocals);
             this.Controls.Add(this.label5);
@@ -231,6 +220,5 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ListBox listLocals;
         private System.Windows.Forms.Button verlocal;
-        public System.Windows.Forms.Label label6;
     }
 }

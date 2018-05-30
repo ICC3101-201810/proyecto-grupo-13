@@ -12,7 +12,7 @@ namespace WindowsFormsApp1
 
     public static class UserManagment
     {
-        static List<Client> clients = new List<Client>();
+        static public List<Client> clients = new List<Client>();
         static List<Admin> admins = new List<Admin>();
         static public List<Local> locales = new List<Local>();
         static public Bank bank;
