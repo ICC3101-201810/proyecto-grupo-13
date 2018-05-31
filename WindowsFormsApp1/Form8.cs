@@ -19,7 +19,7 @@ namespace WindowsFormsApp1
         List<Product> carrito;
         Client client;
         
-        public Form8(Form7 parent, Product product, Local local, List<Product> carrito, Client client, Form3 masterparent)
+        public Form8(Form7 parent, Product product, List<Product> carrito, Client client, Form3 masterparent,Local local)
         {
             this.parent = parent;
             this.product = product;
@@ -49,7 +49,7 @@ namespace WindowsFormsApp1
         {
             if (cant > 0)
             {
-                Form9 form9 = new Form9(this, cant , client, masterparent);
+                Form9 form9 = new Form9(this, cant , client, masterparent,local, carrito);
                 form9.Show();
                 this.Hide();
             }

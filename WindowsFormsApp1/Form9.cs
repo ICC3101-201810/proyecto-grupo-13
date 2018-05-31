@@ -16,12 +16,16 @@ namespace WindowsFormsApp1
         Form8 parent;
         int pago;
         Client client;
-        public Form9(Form8 parent, int pago, Client client, Form3 masterparent)
+        Local local;
+        List<Product> carrito;
+        public Form9(Form8 parent, int pago, Client client, Form3 masterparent,Local local, List<Product>carrito)
         {
             this.parent = parent;
             this.pago = pago;
             this.client = client;
             this.masterparent = masterparent;
+            this.local = local;
+            this.carrito = carrito;
             InitializeComponent();
             label3.Text = "Tu Saldo es" + " " + client.GetDinero().ToString();
             label2.Text = "Total a pagar" + "$" + pago.ToString();
@@ -87,9 +91,10 @@ namespace WindowsFormsApp1
         private void pagar_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Tu Compra ha sido realizada con exito");
-            label3.Text = "Tu Saldo es" +" " + client.GetDinero().ToString();
-        }
 
+            label3.Text = "Tu Saldo es" + " " + client.GetDinero().ToString();
+            
+        }   
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
             textBox2.PasswordChar = '*';

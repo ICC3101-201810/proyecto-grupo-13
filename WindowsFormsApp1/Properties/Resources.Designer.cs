@@ -103,6 +103,26 @@ namespace WindowsFormsApp1.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap comida {
+            get {
+                object obj = ResourceManager.GetObject("comida", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap comida1 {
+            get {
+                object obj = ResourceManager.GetObject("comida1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap comprar_boton {
             get {
                 object obj = ResourceManager.GetObject("comprar_boton", resourceCulture);
@@ -263,6 +283,16 @@ namespace WindowsFormsApp1.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap fundo_do_alimento_com_bifes_e_tempero_da_carne_crua_63588826 {
+            get {
+                object obj = ResourceManager.GetObject("fundo-do-alimento-com-bifes-e-tempero-da-carne-crua-63588826", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Imagen_1 {
             get {
                 object obj = ResourceManager.GetObject("Imagen 1", resourceCulture);
@@ -316,6 +346,16 @@ namespace WindowsFormsApp1.Properties {
         internal static System.Drawing.Bitmap Sign_Info_icon {
             get {
                 object obj = ResourceManager.GetObject("Sign-Info-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tartan_wooden_background_1205_2120 {
+            get {
+                object obj = ResourceManager.GetObject("tartan-wooden-background_1205-2120", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
