@@ -62,7 +62,7 @@ namespace WindowsFormsApp1
 
         private void carrrito_click(object sender, EventArgs e)
         {
-            Form8 form8 = new Form8(this,productoLogeado, local, carrito_client);
+            Form8 form8 = new Form8(this,productoLogeado, local, carrito_client, client, parent);
             form8.Show();
             this.Hide();
         }

@@ -15,3 +15,20 @@ C:\Users\Paz Torres\Desktop\proyecto-grupo-13\WindowsFormsApp1\obj\Debug\Windows
 C:\Users\Paz Torres\Desktop\proyecto-grupo-13\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form7.resources
 C:\Users\Paz Torres\Desktop\proyecto-grupo-13\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form8.resources
 C:\Users\Paz Torres\Desktop\proyecto-grupo-13\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form9.resources
+C:\Users\ING\Desktop\proyecto-grupo-13\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+C:\Users\ING\Desktop\proyecto-grupo-13\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+C:\Users\ING\Desktop\proyecto-grupo-13\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+C:\Users\ING\Desktop\proyecto-grupo-13\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csprojResolveAssemblyReference.cache
+C:\Users\ING\Desktop\proyecto-grupo-13\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form1.resources
+C:\Users\ING\Desktop\proyecto-grupo-13\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form2.resources
+C:\Users\ING\Desktop\proyecto-grupo-13\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form3.resources
+C:\Users\ING\Desktop\proyecto-grupo-13\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form4.resources
+C:\Users\ING\Desktop\proyecto-grupo-13\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form6.resources
+C:\Users\ING\Desktop\proyecto-grupo-13\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form7.resources
+C:\Users\ING\Desktop\proyecto-grupo-13\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form8.resources
+C:\Users\ING\Desktop\proyecto-grupo-13\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form9.resources
+C:\Users\ING\Desktop\proyecto-grupo-13\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+C:\Users\ING\Desktop\proyecto-grupo-13\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.Cache
+C:\Users\ING\Desktop\proyecto-grupo-13\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
+C:\Users\ING\Desktop\proyecto-grupo-13\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+C:\Users\ING\Desktop\proyecto-grupo-13\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb

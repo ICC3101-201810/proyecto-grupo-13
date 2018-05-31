@@ -37,6 +37,7 @@
             this.paso = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -70,9 +71,9 @@
             this.Confirmar_Pedido.CheckOnClick = true;
             this.Confirmar_Pedido.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Confirmar_Pedido.FormattingEnabled = true;
-            this.Confirmar_Pedido.Location = new System.Drawing.Point(23, 296);
+            this.Confirmar_Pedido.Location = new System.Drawing.Point(20, 299);
             this.Confirmar_Pedido.Name = "Confirmar_Pedido";
-            this.Confirmar_Pedido.Size = new System.Drawing.Size(241, 200);
+            this.Confirmar_Pedido.Size = new System.Drawing.Size(244, 172);
             this.Confirmar_Pedido.TabIndex = 6;
             this.Confirmar_Pedido.SelectedIndexChanged += new System.EventHandler(this.Conf_Pedido);
             // 
@@ -102,13 +103,14 @@
             // 
             // Nombre_Producto
             // 
-            this.Nombre_Producto.BackColor = System.Drawing.Color.Khaki;
+            this.Nombre_Producto.BackColor = System.Drawing.Color.Aquamarine;
+            this.Nombre_Producto.Enabled = false;
             this.Nombre_Producto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Nombre_Producto.FormattingEnabled = true;
             this.Nombre_Producto.ItemHeight = 20;
-            this.Nombre_Producto.Location = new System.Drawing.Point(282, 292);
+            this.Nombre_Producto.Location = new System.Drawing.Point(263, 299);
             this.Nombre_Producto.Name = "Nombre_Producto";
-            this.Nombre_Producto.Size = new System.Drawing.Size(240, 204);
+            this.Nombre_Producto.Size = new System.Drawing.Size(259, 164);
             this.Nombre_Producto.TabIndex = 11;
             // 
             // paso
@@ -142,12 +144,23 @@
             this.label1.TabIndex = 14;
             this.label1.Text = "Escribe un Mensaje al Local";
             // 
+            // textBox2
+            // 
+            this.textBox2.BackColor = System.Drawing.Color.Aquamarine;
+            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox2.Enabled = false;
+            this.textBox2.Location = new System.Drawing.Point(263, 457);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(259, 13);
+            this.textBox2.TabIndex = 15;
+            // 
             // Form8
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.wallpaperjam_com_22422;
             this.ClientSize = new System.Drawing.Size(918, 593);
+            this.Controls.Add(this.textBox2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.paso);
@@ -175,5 +188,6 @@
         private System.Windows.Forms.Label paso;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox textBox2;
     }
 }

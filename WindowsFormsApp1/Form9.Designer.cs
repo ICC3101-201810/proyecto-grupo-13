@@ -36,6 +36,7 @@
             this.pagar = new System.Windows.Forms.Button();
             this.label_pagar = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -87,6 +88,7 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(190, 31);
             this.textBox2.TabIndex = 10;
+            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             this.textBox2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.clave_enter);
             // 
             // pagar
@@ -99,6 +101,7 @@
             this.pagar.TabIndex = 11;
             this.pagar.Text = "PAGAR";
             this.pagar.UseVisualStyleBackColor = false;
+            this.pagar.Click += new System.EventHandler(this.pagar_Click);
             // 
             // label_pagar
             // 
@@ -112,11 +115,23 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Lucida Sans", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(286, 20);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
+            this.label2.Size = new System.Drawing.Size(70, 22);
             this.label2.TabIndex = 13;
             this.label2.Text = "label2";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Britannic Bold", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(12, 295);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(86, 30);
+            this.label3.TabIndex = 14;
+            this.label3.Text = "label3";
             // 
             // Form9
             // 
@@ -124,6 +139,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.ClientSize = new System.Drawing.Size(545, 334);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label_pagar);
             this.Controls.Add(this.pagar);
@@ -150,5 +166,6 @@
         private System.Windows.Forms.Button pagar;
         private System.Windows.Forms.Label label_pagar;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
     }
 }

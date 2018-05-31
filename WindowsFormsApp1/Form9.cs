@@ -12,20 +12,35 @@ namespace WindowsFormsApp1
 {
     public partial class Form9 : Form
     {
+        Form3 masterparent;
         Form8 parent;
         int pago;
-        public Form9(Form8 parent, int pago)
+        Client client;
+        public Form9(Form8 parent, int pago, Client client, Form3 masterparent)
         {
             this.parent = parent;
             this.pago = pago;
-            // label2.Text = "A Pagar" + " "+ "$"+  Convert.ToString(pago);
+            this.client = client;
+            this.masterparent = masterparent;
             InitializeComponent();
+            label3.Text = "Tu Saldo es" + " " + client.GetDinero().ToString();
+            label2.Text = "Total a pagar" + "$" + pago.ToString();
             textBox2.Enabled = false;
+           
+
+
         }
-        Client client;
+        protected override void OnClosed(EventArgs e)
+        {
+
+            masterparent.Show();
+            base.OnClosed(e);
+        }
         bool confirmar;
+        int dinero_cliente; 
         private void enter_ncuenta(object sender, KeyEventArgs e)
         {
+            
             if (e.KeyCode == Keys.Enter)
             {
                 foreach (Client c in UserManagment.clients)
@@ -52,13 +67,8 @@ namespace WindowsFormsApp1
                         confirmar = true;
                         if (c.GetDinero() > 0)
                         {
-                            int dinero_cliente;
-                            dinero_cliente = c.GetDinero() - pago;
-                            c.DecreaseWallet(dinero_cliente);
-                            this.Hide();
-                            
-                            
-
+                          
+                            c.DecreaseWallet(pago);
                         }
                         else
                         {
@@ -72,6 +82,22 @@ namespace WindowsFormsApp1
 
                 }
             }
+        }
+
+        private void pagar_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Tu Compra ha sido realizada con exito");
+            label3.Text = "Tu Saldo es" +" " + client.GetDinero().ToString();
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+            textBox2.PasswordChar = '*';
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

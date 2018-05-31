@@ -138,6 +138,7 @@
             this.label4.Size = new System.Drawing.Size(112, 57);
             this.label4.TabIndex = 7;
             this.label4.Text = "Saldo";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label5
             // 

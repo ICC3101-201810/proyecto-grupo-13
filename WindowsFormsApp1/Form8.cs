@@ -12,17 +12,21 @@ namespace WindowsFormsApp1
 {
     public partial class Form8 : Form
     {
+        Form3 masterparent;
         Form7 parent;
         Product product;
         Local local;
         List<Product> carrito;
+        Client client;
         
-        public Form8(Form7 parent, Product product, Local local, List<Product> carrito)
+        public Form8(Form7 parent, Product product, Local local, List<Product> carrito, Client client, Form3 masterparent)
         {
             this.parent = parent;
             this.product = product;
             this.local = local;
+            this.client = client;
             this.carrito = new List<Product>();
+            this.masterparent = masterparent;
             InitializeComponent();
             foreach (Product p in carrito)
             {
@@ -45,7 +49,7 @@ namespace WindowsFormsApp1
         {
             if (cant > 0)
             {
-                Form9 form9 = new Form9(this, cant);
+                Form9 form9 = new Form9(this, cant , client, masterparent);
                 form9.Show();
                 this.Hide();
             }
@@ -62,7 +66,7 @@ namespace WindowsFormsApp1
                     money = Convert.ToString(cant_money);
                     money = Confirmar_Pedido.Items[Confirmar_Pedido.SelectedIndex].ToString();
                     cant = cant + Convert.ToInt32(money);
-                    cant_money.Text = Convert.ToString(cant);
+                    cant_money.Text = "Total a pagar:" + " " + "$" + Convert.ToString(cant);
                 }
                 else
                 {
