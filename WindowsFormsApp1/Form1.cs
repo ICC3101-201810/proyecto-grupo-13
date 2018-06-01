@@ -69,16 +69,15 @@ namespace WindowsFormsApp1
             back1.Visible = false;
             label_info.Visible = false;
             back_bottom2.Visible = false;
-            button1_volver.Hide();
-            UserManagment.Deserialize();
-            UserManagment.Deserialize_local();
-            UserManagment.Serialize_admin();
             
+            UserManagment.Deserialize();
+            //UserManagment.Deserialize_local();
+            UserManagment.Serialize_admin();
         }
         protected override void OnClosed(EventArgs e)
         {
             UserManagment.Serialize();
-            UserManagment.Serialize_local();
+            //UserManagment.Serialize_local();
             UserManagment.Serialize_admin();
             base.OnClosed(e);
         }
@@ -90,7 +89,7 @@ namespace WindowsFormsApp1
             Registrarse.Visible = false;
             label2.Visible = true;
             back1.Visible = Visible;
-
+            back_bottom2.Visible = true;
         }
         private void button1_Click_1(object sender, EventArgs e)
         {
@@ -110,35 +109,25 @@ namespace WindowsFormsApp1
             label2.Visible = false;
             back1.Visible = false;
             back_bottom2.Visible = true;
-            
-
         }
         private void BOTONADMIN_Click(object sender, EventArgs e) 
         {
             back1.Visible = false;
-
+            CrearAdmin crearAdmin = new CrearAdmin(this);
+            crearAdmin.Show();
+            this.Hide();
         }
         private void LOGIN_Click(object sender, EventArgs e)
         {
-           
             login_cliente.Visible = true;
             login_administrador.Visible = true;
             label1.Visible = true;
             LOGIN.Visible = false;
             Registrarse.Visible = false;
-            button1_volver.Show();
-
-
-
-                 
-
+            
         }
-        private void ru1_Click(object sender, EventArgs e)
-        {
-        }
-        private void MAIL_TextChanged(object sender, EventArgs e)
-        {
-        }
+        private void ru1_Click(object sender, EventArgs e) { }
+        private void MAIL_TextChanged(object sender, EventArgs e) { }
         private void RUT1_TextChanged(object sender, EventArgs e)
         {
             RUT1.MaxLength = 9;
@@ -168,14 +157,16 @@ namespace WindowsFormsApp1
         }
         private void clientenombre_TextChanged(object sender, EventArgs e)
         {
-           
+            clientenombre.MaxLength = 20;
         }
         private void MAIL_textbox_TextChanged(object sender, EventArgs e)
         {
+            MAIL_textbox.MaxLength = 15;
         }
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
             textBox1.PasswordChar = '*';
+            textBox1.MaxLength = 15;
         }
         private void ConfirmarClave(object sender, KeyEventArgs e)
         {
@@ -195,7 +186,6 @@ namespace WindowsFormsApp1
                     CLAVE12.Visible = false;
                     CONFCLAVE.Visible = false;
                     clavecuenta.Visible = true;
-                    
                 }
                 else
                 {
@@ -206,6 +196,7 @@ namespace WindowsFormsApp1
         private void verclave_TextChanged(object sender, EventArgs e)
         {
             verclave.PasswordChar = '*';
+            verclave.MaxLength = 10;
         }
         private void clave_enter(object sender, KeyEventArgs e)
         {
@@ -256,15 +247,12 @@ namespace WindowsFormsApp1
                 MessageBox.Show("No puedes dejar un campo vacio");
             }
         }
-
-        private void lmail_Click(object sender, EventArgs e)
-        {
-        }
+        private void lmail_Click(object sender, EventArgs e) { }
         private void Enter_Nombre(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
-                if (clientenombre.Text == null)
+                if (String.IsNullOrWhiteSpace(clientenombre.Text))
                 {
                     MessageBox.Show("No Puede estar este campo vacío");
                     RUT1.Enabled = false;
@@ -282,9 +270,9 @@ namespace WindowsFormsApp1
         {
             if (e.KeyCode == Keys.Enter)
             {
-                if (MAIL_textbox.Text == null)
+                if (String.IsNullOrWhiteSpace(MAIL_textbox.Text))
                 {
-                    MessageBox.Show("Ni puede estar este campo vacio");
+                    MessageBox.Show("No puede estar este campo vacio");
                 }
                 else
                 {
@@ -295,14 +283,11 @@ namespace WindowsFormsApp1
         private void nCuenta_TextChanged(object sender, EventArgs e)
         {
             nCuenta.MaxLength = 12;
-            
-
-            
-
         }
         private void clavecuenta_TextChanged(object sender, EventArgs e)
         {
             clavecuenta.PasswordChar = '*';
+            clavecuenta.MaxLength = 4;
         }
         private void BACK_Click(object sender, EventArgs e)
         {
@@ -316,7 +301,7 @@ namespace WindowsFormsApp1
         {
             if (e.KeyCode == Keys.Enter)
             {
-                if (nCuenta.Text == null)
+                if (String.IsNullOrWhiteSpace(nCuenta.Text))
                 {
                     MessageBox.Show("No puede estar este campo vacio");
                 }
@@ -331,37 +316,29 @@ namespace WindowsFormsApp1
         {
             if (e.KeyCode == Keys.Enter)
             {
-                if (nCuenta.Text == null)
+                if (String.IsNullOrWhiteSpace(nCuenta.Text))
                 {
                     MessageBox.Show("No puede estar este campo vacio");
                 }
                 else
                 {
                     registro.Visible = true;
-                   
                 }
             }
         }
-        private void CLAVE12_Click(object sender, EventArgs e)
-        {
-        }
-
+        private void CLAVE12_Click(object sender, EventArgs e) { }
         private void login_administrador_Click(object sender, EventArgs e)
         {
             this.Hide();
             Form2 f2 = new Form2();
             f2.Show();
         }
-
         private void login_cliente_Click(object sender, EventArgs e)
         {
             this.Hide();
             Form3 f3 = new Form3(this);
             f3.Show();
-
-
         }
-
         private void back1_Click(object sender, EventArgs e)
         {
             BOTONADMIN.Visible = false;
@@ -372,17 +349,11 @@ namespace WindowsFormsApp1
             registro.Visible = false;
 
         }
-
         private void info(object sender, EventArgs e)
         {
             label_info.Visible = true;
         }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
+        private void label3_Click(object sender, EventArgs e) { }
         private void noinfo(object sender, EventArgs e)
         {
             label_info.Visible = false;
@@ -414,21 +385,9 @@ namespace WindowsFormsApp1
             registro.Visible = false;
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void RUT_Click(object sender, EventArgs e)
-        {
-
-        }
-
+        private void label1_Click(object sender, EventArgs e) { }
+        private void Form1_Load(object sender, EventArgs e) { }
+        private void RUT_Click(object sender, EventArgs e) { }
         private void button1_volver_Click(object sender, EventArgs e)
         {
             login_cliente.Hide();
@@ -436,7 +395,7 @@ namespace WindowsFormsApp1
             Registrarse.Show();
             LOGIN.Show();
             label1.Hide();
-            button1_volver.Hide();
+           
         }
     }
 }

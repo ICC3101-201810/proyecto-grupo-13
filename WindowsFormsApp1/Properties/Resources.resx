@@ -145,6 +145,9 @@
   <data name="diversa-comida-mexicana-en-fondo-oscuro_23-2147740705" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\diversa-comida-mexicana-en-fondo-oscuro_23-2147740705.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="fundo-do-alimento-com-bifes-e-tempero-da-carne-crua-63588826" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fundo-do-alimento-com-bifes-e-tempero-da-carne-crua-63588826.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="depositphotos_123750520-stock-photo-italian-food-ingredients-on-stone" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\depositphotos_123750520-stock-photo-italian-food-ingredients-on-stone.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -156,6 +159,9 @@
   </data>
   <data name="LOGOFINAL" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\LOGOFINAL.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="boton_comprar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\boton_comprar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="fundo-de-malha-de-gradiente-borrado-abstrato_1159-3172" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\fundo-de-malha-de-gradiente-borrado-abstrato_1159-3172.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -187,9 +193,6 @@
   <data name="pegatina_circulo_rojo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pegatina_circulo_rojo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="boton_comprar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\boton_comprar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="depositphotos_149002667-stock-photo-fresh-tasty-italian-pizza-fast" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\depositphotos_149002667-stock-photo-fresh-tasty-italian-pizza-fast.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -208,7 +211,7 @@
   <data name="tartan-wooden-background_1205-2120" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tartan-wooden-background_1205-2120.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="fundo-do-alimento-com-bifes-e-tempero-da-carne-crua-63588826" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\fundo-do-alimento-com-bifes-e-tempero-da-carne-crua-63588826.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="03" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\03.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

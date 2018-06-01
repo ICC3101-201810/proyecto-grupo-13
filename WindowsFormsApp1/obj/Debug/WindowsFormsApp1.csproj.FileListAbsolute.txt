@@ -33,3 +33,5 @@ C:\Users\ING\Desktop\proyecto-grupo-13\WindowsFormsApp1\obj\Debug\WindowsFormsAp
 C:\Users\ING\Desktop\proyecto-grupo-13\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
 C:\Users\ING\Desktop\proyecto-grupo-13\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
 C:\Users\Paz Torres\Desktop\proyecto-grupo-13\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form10.resources
+C:\Users\ING\Desktop\proyecto-grupo-13\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.CrearAdmin.resources
+C:\Users\ING\Desktop\proyecto-grupo-13\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form10.resources

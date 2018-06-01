@@ -56,7 +56,7 @@ namespace WindowsFormsApp1
                 stream.Close();
             }
         }
-        public static void Serialize_local()
+        /*public static void Serialize_local()
         {
             IFormatter formatter = new BinaryFormatter();
             Stream stream = new FileStream("locales.bin", FileMode.Create, FileAccess.Write);
@@ -72,7 +72,7 @@ namespace WindowsFormsApp1
                 locales = (List<Local>)formatter.Deserialize(stream);
                 stream.Close();
             }
-        }
+    }*/
         public static void AddClient(Client client)
         {
             clients.Add(client);
