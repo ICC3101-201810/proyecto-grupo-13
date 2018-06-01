@@ -141,5 +141,25 @@ namespace WindowsFormsApp1
                 }
             }
         }
+
+        private void admin_pedidos_Click(object sender, EventArgs e)
+        {
+
+            string selectItem = CrearLocales.Items[CrearLocales.SelectedIndex].ToString();
+            for (int i = adminLogeado.locales.Count - 1; i >= 0; i--)
+            {
+
+                if (selectItem == adminLogeado.locales[i].GetNameLocal())
+                {
+
+                    localSeleccionado = adminLogeado.locales[i];
+                    Form10 form10 = new Form10(this, adminLogeado, localSeleccionado = adminLogeado.locales[i]);
+                    form10.Show();
+                    this.Hide();
+
+                }
+            }
+            //Form10 form10 = new Form10(this,adminLogeado,)
+        }
     }
 }

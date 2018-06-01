@@ -16,7 +16,6 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
             CrearLocal.Hide();
-            admin_pedidos.Hide();
             salir.Hide();
             nombre_admin.Hide();
            
@@ -160,7 +159,6 @@ namespace WindowsFormsApp1
         {
             adminLogeado = admin;
             CrearLocal.Visible = true;
-            admin_pedidos.Show();
             RUT_ADMIN.Visible = false;
             Rut_AdminVerificar.Visible = false;
             CLAVE_ADMIN.Visible = false;
@@ -202,7 +200,6 @@ namespace WindowsFormsApp1
             Ingresar_boton.Visible = true;
             salir.Visible = false;
             CrearLocal.Visible = false;
-            admin_pedidos.Hide();
             RUT_ADMIN.Text = "";
             CLAVE_ADMIN.Text = "";
             nombre_admin.Hide();

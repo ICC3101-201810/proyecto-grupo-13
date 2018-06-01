@@ -44,6 +44,7 @@ namespace WindowsFormsApp1
             base.OnClosed(e);
         }
         bool confirmar;
+        Pedido pedidoLog = null;
         private void enter_ncuenta(object sender, KeyEventArgs e)
         {
             
@@ -95,11 +96,15 @@ namespace WindowsFormsApp1
             MessageBox.Show("Tu Compra ha sido realizada con exito");
 
             label3.Text = "Tu Saldo es" + " " + client.GetDinero().ToString();
-            for (int i = carrito.Count -1; i>=0; i--)
+            for (int i =0 ; i<carrito.Count; i++)
             {
                 productoLogeado = carrito[i];
                 productoLogeado.DecreaseStock();
-                Pedido pedido = new Pedido(client.GetName(), productoLogeado.GetName(), mensaje, local.GetDirection());
+                Random random = new Random();
+                int n_pedido = random.Next(0, 1500000);
+                MessageBox.Show(n_pedido.ToString());
+                string codigo = n_pedido.ToString();
+                Pedido pedido = new Pedido(client.GetName(), productoLogeado.GetName(), mensaje, local.GetDirection(), "001");
                 foreach (Local local_ in UserManagment.locales)
                 {
                     if (local_.GetDirection() == local.GetDirection())
@@ -108,7 +113,9 @@ namespace WindowsFormsApp1
 
                     }
                 }
-            }
+            }   
+               
+            
             
         }   
         private void textBox2_TextChanged(object sender, EventArgs e)
@@ -117,6 +124,11 @@ namespace WindowsFormsApp1
         }
 
         private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form9_Load(object sender, EventArgs e)
         {
 
         }

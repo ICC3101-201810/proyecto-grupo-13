@@ -18,7 +18,7 @@ namespace WindowsFormsApp1
         Local local;
         List<Product> carrito;
         Client client;
-        
+
         public Form8(Form7 parent, Product product, Local local, List<Product> carrito, Client client, Form3 masterparent)
         {
             this.parent = parent;
@@ -32,12 +32,13 @@ namespace WindowsFormsApp1
             {
                 Confirmar_Pedido.Items.Add(p.GetPrice());
                 Nombre_Producto.Items.Add(p.GetName());
-               
-            }
 
+            }
         }
+
         int cant;
         Product productoLogeado = null;
+        List<Product> carro_final = new List<Product>();
         protected override void OnClosed(EventArgs e)
         {
             parent.Show();
@@ -49,7 +50,7 @@ namespace WindowsFormsApp1
         {
             if (cant > 0)
             {
-                Form9 form9 = new Form9(this, cant , client, masterparent,local, carrito, textBox1.Text);
+                Form9 form9 = new Form9(this, cant , client, masterparent,local, carro_final, textBox1.Text);
                 form9.Show();
                 this.Hide();
             }
@@ -60,6 +61,7 @@ namespace WindowsFormsApp1
         {
             if (Confirmar_Pedido.CheckOnClick == true)
             {
+               
                 if (Confirmar_Pedido.GetItemChecked(Confirmar_Pedido.SelectedIndex) == true)
                 {
                     string money;
@@ -67,6 +69,11 @@ namespace WindowsFormsApp1
                     money = Confirmar_Pedido.Items[Confirmar_Pedido.SelectedIndex].ToString();
                     cant = cant + Convert.ToInt32(money);
                     cant_money.Text = "Total a pagar:" + " " + "$" + Convert.ToString(cant);
+                    foreach(Product p in carrito)
+                    {
+                        carro_final.Add(p);
+                    }
+
                 }
                 else
                 {
@@ -78,10 +85,12 @@ namespace WindowsFormsApp1
                     {
                         cant = -cant;
                         cant_money.Text = "Total a pagar:" + " " +"$"+ Convert.ToString(cant);
+                        
                     }
                     else
                     {
                         cant_money.Text = "Total a pagar:" + " " + "$"+ Convert.ToString(cant);
+                   
                     }
                     
                     

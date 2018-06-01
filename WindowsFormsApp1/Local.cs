@@ -8,6 +8,7 @@ using System.Runtime.Serialization.Formatters.Binary;
 using System.IO;
 namespace WindowsFormsApp1
 {
+    [Serializable()]
     public class Local
     {
         bool delivery;

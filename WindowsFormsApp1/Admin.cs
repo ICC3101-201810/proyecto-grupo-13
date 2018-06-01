@@ -4,8 +4,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Runtime.Serialization;
+using System.Runtime.Serialization.Formatters.Binary;
+using System.IO;
 namespace WindowsFormsApp1
 {
+    [Serializable()]
     public class Admin : Usser
     {
         public List<Local> locales;
