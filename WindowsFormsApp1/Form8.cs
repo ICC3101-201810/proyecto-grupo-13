@@ -37,6 +37,7 @@ namespace WindowsFormsApp1
         }
 
         int cant;
+        bool efectivo;
         Product productoLogeado = null;
         List<Product> carro_final = new List<Product>();
         protected override void OnClosed(EventArgs e)
@@ -72,6 +73,19 @@ namespace WindowsFormsApp1
                     foreach(Product p in carrito)
                     {
                         carro_final.Add(p);
+                        if (efectivo == true)
+                        {
+                            Random random = new Random();
+                            string codigo = random.Next(0, 150000).ToString();
+                            Pedido pedido = new Pedido(client.GetName(), p.GetName(), textBox1.Text, local.GetDirection(), codigo);
+                            foreach(Local localsito in UserManagment.locales)
+                            {
+                                if (localsito.GetDirection()== local.GetDirection())
+                                {
+                                    local.pedidos.Add(pedido);
+                                }
+                            }
+                        }
                     }
 
                 }
@@ -103,6 +117,11 @@ namespace WindowsFormsApp1
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            efectivo = true;
         }
     }
 }

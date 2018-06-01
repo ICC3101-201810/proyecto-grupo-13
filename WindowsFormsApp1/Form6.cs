@@ -126,14 +126,14 @@ namespace WindowsFormsApp1
         private void admin_local_Click(object sender, EventArgs e)
         {
             string selectItem = CrearLocales.Items[CrearLocales.SelectedIndex].ToString();
-            for (int i = adminLogeado.locales.Count - 1; i >= 0; i--)
+            for (int i = UserManagment.locales.Count - 1; i >= 0; i--)
             {
 
-                if (selectItem == adminLogeado.locales[i].GetNameLocal())
+                if (selectItem == UserManagment.locales[i].GetNameLocal())
                 {
 
                     localSeleccionado = adminLogeado.locales[i];
-                    Form4 form4 = new Form4(this, localSeleccionado = adminLogeado.locales[i]);
+                    Form4 form4 = new Form4(this, localSeleccionado = UserManagment.locales[i]);
                     form4.Show();
                     this.Hide();
                     localSeleccionado.GetMenu();
@@ -146,14 +146,14 @@ namespace WindowsFormsApp1
         {
 
             string selectItem = CrearLocales.Items[CrearLocales.SelectedIndex].ToString();
-            for (int i = adminLogeado.locales.Count - 1; i >= 0; i--)
+            for (int i = UserManagment.locales.Count - 1; i >= 0; i--)
             {
 
-                if (selectItem == adminLogeado.locales[i].GetNameLocal())
+                if (selectItem == UserManagment.locales[i].GetNameLocal())
                 {
 
-                    localSeleccionado = adminLogeado.locales[i];
-                    Form10 form10 = new Form10(this, adminLogeado, localSeleccionado = adminLogeado.locales[i]);
+                    localSeleccionado = UserManagment.locales[i];
+                    Form10 form10 = new Form10(this, adminLogeado, localSeleccionado);
                     form10.Show();
                     this.Hide();
 
