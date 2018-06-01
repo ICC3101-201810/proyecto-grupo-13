@@ -36,9 +36,11 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
             Client c1 = new Client("Paz Torres", "cptorres@miuandes.cl", "paz45", 193226000, "pezdorado", "0210025", 500000);
-            Local l1 = new Local(false, null, "Las Condes 456", 0, "Subway", "LC1");
-            Local l2 = new Local(true, null, "Uandes", 0, "Coffe Time", "LC2");
+            Local l1 = new Local(false, null, "Las Condes 456", 0, "Subway", "LC1",null);
+            Local l2 = new Local(true, null, "Uandes", 0, "Coffe Time", "LC2",null);
             Admin a1 = new Admin("Matias Cabezas", "mcabezas@miuandes.cl", "weedlover", 192439396, null);
+            Pedido pedido = new Pedido("Paz Torres", "BMT", "Delivery en ciruelos 12.30", "Las Condes 456");
+            l1.pedidos.Add(pedido);
             a1.AgregarLocal(l1);
             a1.AgregarLocal(l2);
             UserManagment.CreateAdmin(a1);
@@ -69,11 +71,15 @@ namespace WindowsFormsApp1
             back_bottom2.Visible = false;
             button1_volver.Hide();
             UserManagment.Deserialize();
-
+            UserManagment.Deserialize_local();
+            UserManagment.Serialize_admin();
+            
         }
         protected override void OnClosed(EventArgs e)
         {
             UserManagment.Serialize();
+            UserManagment.Serialize_local();
+            UserManagment.Serialize_admin();
             base.OnClosed(e);
         }
         private void button1_Click(object sender, EventArgs e)

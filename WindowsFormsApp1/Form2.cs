@@ -239,5 +239,11 @@ namespace WindowsFormsApp1
         {
 
         }
+
+        private void admin_pedidos_Click(object sender, EventArgs e)
+        {
+            
+
+        }
     }
 }

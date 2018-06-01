@@ -91,7 +91,7 @@ namespace WindowsFormsApp1
             CrearLocales.Items.Add(textBox_NombreLocal.Text);
             if (confirmar == true)
             {
-                Local local = new Local(true, null, textBox_DireccionLocal.Text, 0, textBox_NombreLocal.Text, "0");
+                Local local = new Local(true, null, textBox_DireccionLocal.Text, 0, textBox_NombreLocal.Text, "0", null);
                 UserManagment.CreateLocal(local);
                 adminLogeado.AgregarLocal(local);
                 MessageBox.Show("Tu local ha sido creado");

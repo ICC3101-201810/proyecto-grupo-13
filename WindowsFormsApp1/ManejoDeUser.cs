@@ -39,6 +39,40 @@ namespace WindowsFormsApp1
                 stream.Close();
             }
         }
+        public static void Serialize_admin()
+        {
+            IFormatter formatter = new BinaryFormatter();
+            Stream stream = new FileStream("admins.bin", FileMode.Create, FileAccess.Write);
+            formatter.Serialize(stream, clients);
+            stream.Close();
+        }
+        public static void Deserialize_admin()
+        {
+            if (File.Exists("admins.bin"))
+            {
+                IFormatter formatter = new BinaryFormatter();
+                Stream stream = new FileStream("admins.bin", FileMode.Open, FileAccess.Read);
+                admins = (List<Admin>)formatter.Deserialize(stream);
+                stream.Close();
+            }
+        }
+        public static void Serialize_local()
+        {
+            IFormatter formatter = new BinaryFormatter();
+            Stream stream = new FileStream("locales.bin", FileMode.Create, FileAccess.Write);
+            formatter.Serialize(stream, clients);
+            stream.Close();
+        }
+        public static void Deserialize_local()
+        {
+            if (File.Exists("locales.bin"))
+            {
+                IFormatter formatter = new BinaryFormatter();
+                Stream stream = new FileStream("admins.bin", FileMode.Open, FileAccess.Read);
+                locales = (List<Local>)formatter.Deserialize(stream);
+                stream.Close();
+            }
+        }
         public static void AddClient(Client client)
         {
             clients.Add(client);
@@ -533,7 +567,7 @@ namespace WindowsFormsApp1
             delivery = Console.ReadLine();
             if (delivery == "1")
             {
-                Local local = new Local(true, null, direction, 0, name, code);
+                Local local = new Local(true, null, direction, 0, name, code, null);
                 admin.AgregarLocal(local);
                 CreateLocal(local);
                 Console.WriteLine(" => TU LOCAL SE HA CREADO CON EXITO!!");
@@ -541,7 +575,7 @@ namespace WindowsFormsApp1
             }
             else if (delivery == "2")
             {
-                Local local = new Local(false, null, direction, 0, name, code);
+                Local local = new Local(false, null, direction, 0, name, code, null);
                 admin.AgregarLocal(local);
                 CreateLocal(local);
                 Console.WriteLine(" => TU LOCAL SE CREO!!");

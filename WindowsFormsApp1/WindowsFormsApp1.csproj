@@ -105,6 +105,7 @@
     </Compile>
     <Compile Include="Local.cs" />
     <Compile Include="ManejoDeUser.cs" />
+    <Compile Include="Pedido.cs" />
     <Compile Include="Producto.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

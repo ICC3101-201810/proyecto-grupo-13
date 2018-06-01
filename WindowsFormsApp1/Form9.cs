@@ -18,7 +18,8 @@ namespace WindowsFormsApp1
         Client client;
         Local local;
         List<Product> carrito;
-        public Form9(Form8 parent, int pago, Client client, Form3 masterparent,Local local, List<Product>carrito)
+        string mensaje;
+        public Form9(Form8 parent, int pago, Client client, Form3 masterparent,Local local, List<Product>carrito, string mensaje)
         {
             this.parent = parent;
             this.pago = pago;
@@ -26,6 +27,7 @@ namespace WindowsFormsApp1
             this.masterparent = masterparent;
             this.local = local;
             this.carrito = carrito;
+            this.mensaje = mensaje;
             InitializeComponent();
             label3.Text = "Tu Saldo es" + " " + client.GetDinero().ToString();
             label2.Text = "Total a pagar" + "$" + pago.ToString();
@@ -34,6 +36,7 @@ namespace WindowsFormsApp1
 
 
         }
+        Product productoLogeado = null;
         protected override void OnClosed(EventArgs e)
         {
 
@@ -41,7 +44,6 @@ namespace WindowsFormsApp1
             base.OnClosed(e);
         }
         bool confirmar;
-        int dinero_cliente; 
         private void enter_ncuenta(object sender, KeyEventArgs e)
         {
             
@@ -93,6 +95,20 @@ namespace WindowsFormsApp1
             MessageBox.Show("Tu Compra ha sido realizada con exito");
 
             label3.Text = "Tu Saldo es" + " " + client.GetDinero().ToString();
+            for (int i = carrito.Count -1; i>=0; i--)
+            {
+                productoLogeado = carrito[i];
+                productoLogeado.DecreaseStock();
+                Pedido pedido = new Pedido(client.GetName(), productoLogeado.GetName(), mensaje, local.GetDirection());
+                foreach (Local local_ in UserManagment.locales)
+                {
+                    if (local_.GetDirection() == local.GetDirection())
+                    {
+                        local_.pedidos.Add(pedido);
+
+                    }
+                }
+            }
             
         }   
         private void textBox2_TextChanged(object sender, EventArgs e)

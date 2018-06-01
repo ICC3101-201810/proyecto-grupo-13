@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Runtime.Serialization;
+using System.Runtime.Serialization.Formatters.Binary;
+using System.IO;
 namespace WindowsFormsApp1
 {
     public class Local
@@ -13,7 +16,8 @@ namespace WindowsFormsApp1
         int accumulatedMoney;
         string name;
         string code;
-        public Local(bool Delivery, List<Product> menu, string Direccion, int DineroAcumulado, string Nombre, string Codigo)
+        public List<Pedido> pedidos;
+        public Local(bool Delivery, List<Product> menu, string Direccion, int DineroAcumulado, string Nombre, string Codigo, List<Pedido>pedidos)
         {
             this.delivery = Delivery;
             this.menu = new List<Product>();
@@ -21,6 +25,24 @@ namespace WindowsFormsApp1
             this.accumulatedMoney = DineroAcumulado;
             this.name = Nombre;
             this.code = Codigo;
+            this.pedidos =  new List<Pedido>();
+        }
+        public void Serialize()
+        {
+            IFormatter formatter = new BinaryFormatter();
+            Stream stream = new FileStream("menu.bin", FileMode.Create, FileAccess.Write);
+            formatter.Serialize(stream, menu);
+            stream.Close();
+        }
+        public void Deserialize()
+        {
+            if (File.Exists("menu.bin"))
+            {
+                IFormatter formatter = new BinaryFormatter();
+                Stream stream = new FileStream("menu.bin", FileMode.Open,FileAccess.Read);
+                menu = (List<Product>)formatter.Deserialize(stream);
+                stream.Close();
+            }
         }
         public void AddProduct(Product product)
         {

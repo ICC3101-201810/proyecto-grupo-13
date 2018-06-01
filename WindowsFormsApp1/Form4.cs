@@ -23,7 +23,7 @@ namespace WindowsFormsApp1
             label1.Text = "Local" + " " + localLogeado.GetNameLocal();
             foreach (Product products in localLogeado.menu)
             {
-                ListProducts.Items.Add("Nombre" + " " + products.GetName());
+                ListProducts.Items.Add(products.GetName());
             }
         }
         protected override void OnClosed(EventArgs e)
@@ -93,7 +93,7 @@ namespace WindowsFormsApp1
         {
             int Stock = Convert.ToInt32(stock_text.Text);
             int precio = Convert.ToInt32(precio_text.Text);
-            ListProducts.Items.Add("Nombre" + " " + nameText.Text);
+            ListProducts.Items.Add(nameText.Text);
             if (confirmar == true)
             {
                 Product product = new Product(Stock, nameText.Text, precio);

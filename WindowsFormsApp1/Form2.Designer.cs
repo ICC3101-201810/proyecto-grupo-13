@@ -174,6 +174,7 @@
             this.admin_pedidos.TabIndex = 26;
             this.admin_pedidos.Text = "Administar Pedidos";
             this.admin_pedidos.UseVisualStyleBackColor = false;
+            this.admin_pedidos.Click += new System.EventHandler(this.admin_pedidos_Click);
             // 
             // nombre_admin
             // 

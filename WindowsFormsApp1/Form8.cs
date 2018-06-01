@@ -19,13 +19,13 @@ namespace WindowsFormsApp1
         List<Product> carrito;
         Client client;
         
-        public Form8(Form7 parent, Product product, List<Product> carrito, Client client, Form3 masterparent,Local local)
+        public Form8(Form7 parent, Product product, Local local, List<Product> carrito, Client client, Form3 masterparent)
         {
             this.parent = parent;
             this.product = product;
             this.local = local;
+            this.carrito = carrito;
             this.client = client;
-            this.carrito = new List<Product>();
             this.masterparent = masterparent;
             InitializeComponent();
             foreach (Product p in carrito)
@@ -49,7 +49,7 @@ namespace WindowsFormsApp1
         {
             if (cant > 0)
             {
-                Form9 form9 = new Form9(this, cant , client, masterparent,local, carrito);
+                Form9 form9 = new Form9(this, cant , client, masterparent,local, carrito, textBox1.Text);
                 form9.Show();
                 this.Hide();
             }
@@ -90,6 +90,10 @@ namespace WindowsFormsApp1
             }
            
         }
-        
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

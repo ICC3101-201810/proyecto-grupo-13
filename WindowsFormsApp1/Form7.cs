@@ -40,12 +40,12 @@ namespace WindowsFormsApp1
         {
             parent.Show();
             base.OnClosed(e);
-        }   
+        }
         private void selecc_p_Click(object sender, EventArgs e)
         {
             List<Product> menus = local.GetMenu();
-            string selectItem = productos.Items[productos.SelectedIndex].ToString();
-            
+            // por esto
+            string selectItem = productos.SelectedItem.ToString();
             for (int i = menus.Count - 1; i >= 0; i--)
             {
                 productoLogeado = menus[i];
@@ -53,16 +53,21 @@ namespace WindowsFormsApp1
                 {
                     contador++;
                     string c = Convert.ToString(contador);
-                    p_acumulado.Text =c;
+                    p_acumulado.Text = c;
+                    MessageBox.Show(productoLogeado.GetName());
                     carrito_client.Add(productoLogeado);
-
+                   
+                    // agrega todos los productos del listbox
                 }
             }
+
         }
+            
+        
 
         private void carrrito_click(object sender, EventArgs e)
         {
-            Form8 form8 = new Form8(this,productoLogeado, local, carrito_client, client, parent,local);
+            Form8 form8 = new Form8(this,productoLogeado, local, carrito_client, client, parent);
             form8.Show();
             this.Hide();
         }
