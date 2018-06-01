@@ -35,6 +35,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
+            this.listBox2 = new System.Windows.Forms.ListBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -44,9 +45,9 @@
             this.listBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBox1.FormattingEnabled = true;
             this.listBox1.ItemHeight = 25;
-            this.listBox1.Location = new System.Drawing.Point(12, 161);
+            this.listBox1.Location = new System.Drawing.Point(216, 150);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(490, 379);
+            this.listBox1.Size = new System.Drawing.Size(463, 254);
             this.listBox1.TabIndex = 0;
             this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
@@ -90,7 +91,7 @@
             // 
             this.button1.BackColor = System.Drawing.Color.Lime;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(508, 161);
+            this.button1.Location = new System.Drawing.Point(685, 161);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(182, 55);
             this.button1.TabIndex = 8;
@@ -101,7 +102,7 @@
             // 
             this.button2.BackColor = System.Drawing.Color.Yellow;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(508, 267);
+            this.button2.Location = new System.Drawing.Point(688, 247);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(182, 55);
             this.button2.TabIndex = 9;
@@ -112,12 +113,23 @@
             // 
             this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(508, 365);
+            this.button3.Location = new System.Drawing.Point(689, 339);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(182, 55);
             this.button3.TabIndex = 10;
-            this.button3.Text = "Clear";
+            this.button3.Text = "Limpiar";
             this.button3.UseVisualStyleBackColor = false;
+            // 
+            // listBox2
+            // 
+            this.listBox2.BackColor = System.Drawing.Color.Silver;
+            this.listBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listBox2.FormattingEnabled = true;
+            this.listBox2.ItemHeight = 25;
+            this.listBox2.Location = new System.Drawing.Point(30, 150);
+            this.listBox2.Name = "listBox2";
+            this.listBox2.Size = new System.Drawing.Size(172, 254);
+            this.listBox2.TabIndex = 11;
             // 
             // Form10
             // 
@@ -126,6 +138,7 @@
             this.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.fundo_do_alimento_com_bifes_e_tempero_da_carne_crua_63588826;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(950, 593);
+            this.Controls.Add(this.listBox2);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -151,5 +164,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.ListBox listBox2;
     }
 }

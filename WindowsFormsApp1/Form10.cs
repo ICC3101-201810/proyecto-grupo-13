@@ -12,13 +12,13 @@ namespace WindowsFormsApp1
 {
     public partial class Form10 : Form
     {
-        Form2 parent;
+        Form6 parent;
         Admin a;
         Local local;
-        // Form10 form10 = new Form10(this, adminLogeado, local1);
+        // Form10 form10 = new Form10(this, admin|Logeado, local1);
         //form10.Show();
          // this.Hide(); poner en forms de locales :D 
-        public Form10(Form2 parent, Admin a, Local local)
+        public Form10(Form6 parent, Admin a, Local local)
         {
             this.parent = parent;
             this.a = a;
@@ -26,7 +26,9 @@ namespace WindowsFormsApp1
             InitializeComponent();
             foreach (Pedido pedido in local.pedidos)
             {
-                listBox1.Items.Add(pedido.GetName());
+                listBox1.Items.Add(pedido.GetName() + pedido.GetNameCliente()+ pedido.GetMensaje());
+                listBox2.Items.Add(pedido.Getcodigo_identificador());
+           
             }
         }
 

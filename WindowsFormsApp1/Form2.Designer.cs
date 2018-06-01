@@ -38,7 +38,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.Ingresar_boton = new System.Windows.Forms.Button();
             this.salir = new System.Windows.Forms.Button();
-            this.admin_pedidos = new System.Windows.Forms.Button();
             this.nombre_admin = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -154,27 +153,14 @@
             // 
             this.salir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.salir.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.salir.Location = new System.Drawing.Point(446, 136);
+            this.salir.Location = new System.Drawing.Point(238, 137);
             this.salir.Margin = new System.Windows.Forms.Padding(2);
             this.salir.Name = "salir";
-            this.salir.Size = new System.Drawing.Size(136, 46);
+            this.salir.Size = new System.Drawing.Size(182, 46);
             this.salir.TabIndex = 22;
             this.salir.Text = "Salir";
             this.salir.UseVisualStyleBackColor = false;
             this.salir.Click += new System.EventHandler(this.salir_Click);
-            // 
-            // admin_pedidos
-            // 
-            this.admin_pedidos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.admin_pedidos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.admin_pedidos.Location = new System.Drawing.Point(247, 137);
-            this.admin_pedidos.Margin = new System.Windows.Forms.Padding(2);
-            this.admin_pedidos.Name = "admin_pedidos";
-            this.admin_pedidos.Size = new System.Drawing.Size(177, 46);
-            this.admin_pedidos.TabIndex = 26;
-            this.admin_pedidos.Text = "Administar Pedidos";
-            this.admin_pedidos.UseVisualStyleBackColor = false;
-            this.admin_pedidos.Click += new System.EventHandler(this.admin_pedidos_Click);
             // 
             // nombre_admin
             // 
@@ -195,7 +181,6 @@
             this.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.Despensa1;
             this.ClientSize = new System.Drawing.Size(950, 593);
             this.Controls.Add(this.nombre_admin);
-            this.Controls.Add(this.admin_pedidos);
             this.Controls.Add(this.salir);
             this.Controls.Add(this.Ingresar_boton);
             this.Controls.Add(this.label2);
@@ -226,7 +211,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button Ingresar_boton;
         private System.Windows.Forms.Button salir;
-        private System.Windows.Forms.Button admin_pedidos;
         private System.Windows.Forms.Label nombre_admin;
     }
 }
