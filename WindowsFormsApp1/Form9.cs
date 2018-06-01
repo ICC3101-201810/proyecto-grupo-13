@@ -110,7 +110,6 @@ namespace WindowsFormsApp1
                     if (local_.GetDirection() == local.GetDirection())
                     {
                         local_.pedidos.Add(pedido);
-
                     }
                 }
             }   
